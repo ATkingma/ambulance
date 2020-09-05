@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EndPos
+  - Des1
+  - Des2
+  - Des3
+  - Des4
+  - Des5
+  - Des6
+  - Des7
+  - GameManager
   layers:
   - Default
   - TransparentFX
