@@ -13,6 +13,7 @@ TagManager:
   - Des6
   - Des7
   - GameManager
+  - Des
   layers:
   - Default
   - TransparentFX
