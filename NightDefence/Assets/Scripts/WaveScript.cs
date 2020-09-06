@@ -98,7 +98,6 @@ public class WaveScript : MonoBehaviour
          {
             maxEnemies += waves[waveCount].enemies[0].amount;
             waves[waveCount].enemies[0].NextRoundCount += waves[waveCount].enemies[0].amount;
-            print("test");
         }
         if (waves[waveCount].enemiePrefabAmount[1] == true)
         {

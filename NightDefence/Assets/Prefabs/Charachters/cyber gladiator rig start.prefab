@@ -2789,8 +2789,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locations: []
-  endLocation: {fileID: 0}
-  basehp: {fileID: 0}
+  endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
+    type: 3}
+  basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
   index: 0
   damage: 50
   MaxDestinations: 7
@@ -2800,6 +2801,7 @@ MonoBehaviour:
   Plus1: 0
   burn: 0
   givingVaraible: 0
+  endPosBool: 0
   gameManager: []
 --- !u!195 &3870359108823549363
 NavMeshAgent:
@@ -2812,9 +2814,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 180
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

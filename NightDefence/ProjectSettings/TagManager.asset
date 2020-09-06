@@ -16,6 +16,7 @@ TagManager:
   - Des
   - Tower
   - Grid
+  - Enemie
   layers:
   - Default
   - TransparentFX

@@ -8,10 +8,12 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
     public GameObject endLocation, basehp;
     public int index, damage, MaxDestinations;
     public float slowAmount,burningDamage,enemieHealth;
-    public bool Plus1,burn,givingVaraible;
+    public bool Plus1,burn,givingVaraible, endPosBool;
     public GameObject[] gameManager;
-    private void Start()
+    public Vector3 testing;
+    public void Start()
     {
+        testing = endLocation.transform.position;
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des1"));
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des2"));
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des3"));
@@ -21,7 +23,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des7"));
         gameManager = GameObject.FindGameObjectsWithTag("GameManager");
     }
-        void Update()
+    public void Update()
     {
         enemieHealth = gameObject.GetComponent<HealthScript>().health;
         if (burn == true)
@@ -34,8 +36,15 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
         }
         if (index < MaxDestinations)
         {
-            UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-            agent.destination = locations[index].transform.position;
+            if (endPosBool == false)
+            {
+                UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+                agent.destination = locations[index].transform.position;
+            }
+        }
+        if (index == MaxDestinations)
+        {
+            EindPos();
         }
     }
     public IEnumerator IndexPlus()
@@ -47,6 +56,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
     }
     public void EindPos()
     {
+        endPosBool = true;
         UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.destination = endLocation.transform.position;
     }
@@ -59,10 +69,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
                 if (index < MaxDestinations)
                 {
                     StartCoroutine(IndexPlus());
-                }
-                if (index == MaxDestinations)
-                {
-                    EindPos();
+
                 }
             }
         }
@@ -81,10 +88,8 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
             }
     }
     public IEnumerator EndDesDestroy()
-    {
-      
-        //hier miss geld weg halen ook ;)
-        
+    {   
+        //hier miss geld weg halen ook ;)        
         basehp.GetComponent<HealthScript>().DoDamage(damage);
         if (givingVaraible == false)
         {
@@ -104,8 +109,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
         GiveVariableToWaveScript();
         }
         yield return new WaitForSeconds(0.5f);
-        //destroyen
-        
+        //destroyen       
     }
     public IEnumerator BurningDamage()
     {
@@ -122,7 +126,6 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
     public void GiveVariableToWaveScript()
     {
         givingVaraible = true;
-        gameManager[0].GetComponent<WaveScript>().enemiesDied++;
-        
+        gameManager[0].GetComponent<WaveScript>().enemiesDied++;     
     }
 }
