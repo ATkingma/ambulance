@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7886515870382039018}
   - component: {fileID: 25175625769612409}
   - component: {fileID: 6896833438994290731}
-  - component: {fileID: 959310988268292269}
   - component: {fileID: 3480605176896821973}
   - component: {fileID: 2939764398474631345}
+  - component: {fileID: -8988539717105825540}
   m_Layer: 0
   m_Name: enemie
   m_TagString: Untagged
@@ -115,33 +115,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &959310988268292269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524321400279823012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20420a8821114d34c835456ca91a3b26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locations: []
-  endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
-    type: 3}
-  basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
-  index: 0
-  damage: 58
-  MaxDestinations: 7
-  slowAmount: 4
-  burningDamage: 2
-  enemieHealth: 0
-  Plus1: 0
-  burn: 0
-  givingVaraible: 0
-  endPosBool: 0
-  gameManager: []
 --- !u!195 &3480605176896821973
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -177,3 +150,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &-8988539717105825540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524321400279823012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4e5400601ffe24d816e6088c400855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locations: []
+  endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
+    type: 3}
+  basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
+  index: 0
+  damage: 55
+  MaxDestinations: 7
+  slowAmount: 4
+  burningDamage: 4
+  enemieHealth: 0
+  Plus1: 0
+  burn: 0
+  givingVaraible: 0
+  gameManager: []
