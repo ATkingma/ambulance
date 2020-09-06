@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8316725789654763307, guid: 8b19019399f0afc4fb4f381965a8a46c, type: 3}
-  bulletSpeed: 100
+  bulletSpeed: 60
   left: {fileID: 3383537363886668493}
   right: {fileID: 3383537364829577138}
   toggle: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootOrigin: {fileID: 3383537364641468090}
-  rotationDamping: 4
+  rotationDamping: 10
   cooldown: 0
   attacksPerSec: 0
   enemies:

@@ -17,7 +17,7 @@ public class BasicBulletBehavior : MonoBehaviour
         {
             if (col.gameObject.tag == "Enemy")
             {
-                //col.gameObject.GetComponent<Health>().Health(givenDamage);
+                col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage);
                 Destroy(gameObject);
                 expired = true;
             }

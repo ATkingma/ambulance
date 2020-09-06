@@ -2803,6 +2803,7 @@ MonoBehaviour:
   givingVaraible: 0
   endPosBool: 0
   gameManager: []
+  testing: {x: 0, y: 0, z: 0}
 --- !u!195 &3870359108823549363
 NavMeshAgent:
   m_ObjectHideFlags: 0

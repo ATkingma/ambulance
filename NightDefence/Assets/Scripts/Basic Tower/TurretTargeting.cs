@@ -26,7 +26,7 @@ public class TurretTargeting : MonoBehaviour
         if(targetPos != null && targets.Count > 0)
         {
             Vector3 lookPos = targetPos.position - transform.position;
-            lookPos.y -= 2.5f;
+            lookPos.y -= 0.5f;
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
         }
