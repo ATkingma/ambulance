@@ -14,6 +14,8 @@ TagManager:
   - Des7
   - GameManager
   - Des
+  - Tower
+  - Grid
   layers:
   - Default
   - TransparentFX
@@ -23,9 +25,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - BasicTower
+  - Buildable
+  - Enemy
   - 
   - 
   - 
