@@ -13,8 +13,8 @@ public class CameraMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        moveDir.x = Input.GetAxisRaw("Horizontal");
-        moveDir.z = Input.GetAxisRaw("Vertical");
+        moveDir.z = -Input.GetAxisRaw("Horizontal");
+        moveDir.x = Input.GetAxisRaw("Vertical");
 
         controller.Move(-moveDir.normalized);
     }

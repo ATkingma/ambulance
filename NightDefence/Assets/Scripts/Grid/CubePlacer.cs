@@ -49,14 +49,17 @@ public class CubePlacer : MonoBehaviour
                     gridCollider.GetComponent<BoxCollider>().enabled = false;
                     upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
                 }
-                if (gObject.tag == "Grid")
+                else
                 {
-                    PlaceTower(hitInfo[i].point);
-                    if (!towerPositions.Contains(finalPosition))
+                    if (gObject.tag == "Grid")
                     {
-                        uiIsON = true;
-                        towerShop.SetActive(true);
-                        gridCollider.GetComponent<BoxCollider>().enabled = false;
+                        PlaceTower(hitInfo[i].point);
+                        if (!towerPositions.Contains(finalPosition))
+                        {
+                            uiIsON = true;
+                            towerShop.SetActive(true);
+                            gridCollider.GetComponent<BoxCollider>().enabled = false;
+                        }
                     }
                 }
             }
