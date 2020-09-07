@@ -42,6 +42,7 @@ public class TurretTargeting : MonoBehaviour
                 }
             }
         }
+        Targeting();
         //raycast vision
         Debugf();
     }
@@ -51,8 +52,6 @@ public class TurretTargeting : MonoBehaviour
         if(enemyInRange.tag == "Enemy")
         {
             targets.Add(enemyInRange.transform);
-
-            Targeting();
         }
     }
     //check enemy out of range
@@ -61,12 +60,12 @@ public class TurretTargeting : MonoBehaviour
         if (enemyOutOfRange.tag == "Enemy")
         {
             targets.Remove(enemyOutOfRange.transform);
-            Targeting();
         }
     }
 
     public void Targeting()
     {
+        targets.RemoveAll(GameObject => GameObject == null);
         if (targets.Count > 0)
         {
             targetPos = targets[0].gameObject.transform;

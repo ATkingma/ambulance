@@ -11,7 +11,7 @@ public class CubePlacer : MonoBehaviour
 
     public GameObject towerShop, upgradeShop, gridCollider;
     public LayerMask placable;
-    private bool uiIsON;
+    private bool uiIsON = false;
 
     public List<Vector3> towerPositions;
 
@@ -26,6 +26,14 @@ public class CubePlacer : MonoBehaviour
         if(uiIsON == false)
         {
             Raycast();
+        }
+        if (towerShop.activeInHierarchy || upgradeShop.activeInHierarchy)
+        {
+            uiIsON = true;
+        }
+        else
+        {
+            uiIsON = false;
         }
     }
 
@@ -42,23 +50,25 @@ public class CubePlacer : MonoBehaviour
             {
                 RaycastHit hit = hitInfo[i];
                 GameObject gObject = hit.transform.gameObject;
+
                 if (gObject.tag == "Tower")
                 {
-                    uiIsON = true;
                     upgradeShop.SetActive(true);
                     gridCollider.GetComponent<BoxCollider>().enabled = false;
                     upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
                 }
                 else
                 {
-                    if (gObject.tag == "Grid")
+                    if (!upgradeShop.activeInHierarchy)
                     {
-                        PlaceTower(hitInfo[i].point);
-                        if (!towerPositions.Contains(finalPosition))
+                        if (gObject.tag == "Grid")
                         {
-                            uiIsON = true;
-                            towerShop.SetActive(true);
-                            gridCollider.GetComponent<BoxCollider>().enabled = false;
+                            PlaceTower(hitInfo[i].point);
+                            if (!towerPositions.Contains(finalPosition))
+                            {
+                                towerShop.SetActive(true);
+                                gridCollider.GetComponent<BoxCollider>().enabled = false;
+                            }
                         }
                     }
                 }
@@ -80,7 +90,6 @@ public class CubePlacer : MonoBehaviour
         towerPositions.Add(finalPosition);
         towerShop.SetActive(false);
         gridCollider.GetComponent<BoxCollider>().enabled = true;
-        uiIsON = false;
     }
     #endregion
     #region upgrades
@@ -88,7 +97,6 @@ public class CubePlacer : MonoBehaviour
     {
         upgradeShop.SetActive(false);
         gridCollider.GetComponent<BoxCollider>().enabled = true;
-        uiIsON = false;
     }
 
 

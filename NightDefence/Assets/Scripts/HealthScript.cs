@@ -8,6 +8,7 @@ public class HealthScript : MonoBehaviour
     
     public void DoDamage(float oof)
     {
+        print("OOF");
         health -= oof;
     }
 }
