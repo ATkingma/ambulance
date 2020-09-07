@@ -104,7 +104,7 @@ public class EnemieSCript : MonoBehaviour
             GiveVariableToWaveScript();
         }
         yield return new WaitForSeconds(0.5f);
-        //destroyen
+        Destroy(gameObject);
 
     }
     public IEnumerator BurningDamage()
