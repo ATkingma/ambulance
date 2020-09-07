@@ -32389,8 +32389,89 @@ MonoBehaviour:
       NextRoundCount: 0
       amountChanged: 1
     enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 4
+    enemies:
+    - enemiePrefab: {fileID: 1524321400279823012, guid: 8bafa3755f65b4f4c894a8614d2c8470,
+        type: 3}
+      spawnRate: 0
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
   spawnPoint: {fileID: 641505954}
-  maxWave: 2
+  maxWave: 10
   waveCount: 0
   prevuisWaveCount: 0
   maxEnemies: 0
