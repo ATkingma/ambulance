@@ -13,22 +13,26 @@ public class DamageCalculation : MonoBehaviour
     public GameObject tower, barrel;
     private float end_Damage, end_Speed, attackPerSec;
 
+    private float upgradePoint_Damage = -1, upgradePoint_Speed = -1;
+
     private void Start()
     {
-        AttackDamage_Basic(default);
-        AttackSpeed_Basic(default);
+        AttackDamage_Basic();
+        AttackSpeed_Basic();
     }
-    public void AttackDamage_Basic(float upgradePoints)
+    public void AttackDamage_Basic()
     {
-        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoints);
+        upgradePoint_Damage++;
+        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint_Damage);
         barrel.GetComponent<BasicTower>().RecieveDamage(end_Damage);
     }
-    public void AttackSpeed_Basic(float upgradePoints)
+    public void AttackSpeed_Basic()
     {
-        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoints);
-        if (upgradePoints > 0)
+        upgradePoint_Speed++;
+        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoint_Speed);
+        if (upgradePoint_Speed > 0)
         {
-            attackPerSec = baseSpeed_Basic - (upgradeSpeed / upgradePoints);
+            attackPerSec = 1 / (baseSpeed_Basic - upgradeSpeed * upgradePoint_Speed);
         }
         else
         {

@@ -13,12 +13,16 @@ public class TurretTargeting : MonoBehaviour
     private float nextFire;
     public LayerMask enemies;
     public List<Transform> targets;
+    public List<float> upgradeValues;
+
+    public float upgradeCost, upgradeCount;
 
     RaycastHit hit;
 
     private void Start()
     {
         List<Transform> targets = new List<Transform>(1000);
+        List<Transform> upgradeValues = new List<Transform>(1000);
     }
     private void Update()
     {
@@ -80,6 +84,12 @@ public class TurretTargeting : MonoBehaviour
     {
         cooldown = givenSpeed;
         attacksPerSec = perSec;
+        UpgradeCost();
+    }
+    public void UpgradeCost()
+    {
+        upgradeCount++;
+        upgradeCost = upgradeValues[(int)upgradeCount];
     }
 
     public void Debugf()

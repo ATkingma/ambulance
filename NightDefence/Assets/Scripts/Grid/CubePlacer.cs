@@ -96,6 +96,7 @@ public class CubePlacer : MonoBehaviour
     public void CloseShop()
     {
         upgradeShop.SetActive(false);
+        towerShop.SetActive(false);
         gridCollider.GetComponent<BoxCollider>().enabled = true;
     }
 
