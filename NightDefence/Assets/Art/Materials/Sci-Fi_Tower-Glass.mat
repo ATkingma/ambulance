@@ -10,7 +10,7 @@ Material:
   m_Name: Sci-Fi_Tower-Glass
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -74,5 +74,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 2, g: 0.65900004, b: 0.51, a: 1}
+    - _EmissionColor: {r: 2.670157, g: 0.7590766, b: 0.5500522, a: 1}
   m_BuildTextureStacks: []

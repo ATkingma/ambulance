@@ -17,6 +17,7 @@ TagManager:
   - Tower
   - Grid
   - Enemy
+  - Emission
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - BasicTower
   - Buildable
   - Enemy
-  - 
+  - Emission
   - 
   - 
   - 
