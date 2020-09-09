@@ -14,8 +14,10 @@ public class TurretTargeting : MonoBehaviour
     public LayerMask enemies;
     public List<Transform> targets;
     public List<float> upgradeValues;
+    public bool rangeOn;
 
     public float upgradeCost, upgradeCount;
+    public ParticleSystem.MainModule mainParticles;
 
     RaycastHit hit;
 
@@ -23,6 +25,7 @@ public class TurretTargeting : MonoBehaviour
     {
         List<Transform> targets = new List<Transform>(1000);
         List<Transform> upgradeValues = new List<Transform>(1000);
+        mainParticles = gameObject.transform.parent.GetComponentInChildren<ParticleSystem>().main;
     }
     private void Update()
     {
@@ -47,6 +50,7 @@ public class TurretTargeting : MonoBehaviour
             }
         }
         Targeting();
+        RangeActive();
         //raycast vision
         Debugf();
     }
@@ -90,6 +94,23 @@ public class TurretTargeting : MonoBehaviour
     {
         upgradeCount++;
         upgradeCost = upgradeValues[(int)upgradeCount];
+    }
+
+    public void RangeActive()
+    {
+        if (rangeOn == false)
+        {
+            mainParticles.maxParticles = 0;
+        }
+        else
+        {
+            mainParticles.startLifetime = 2;
+            mainParticles.maxParticles = 10000;
+        }
+        if (FindObjectOfType<UpgradeSelect>() == null)
+        {
+            rangeOn = false;
+        }
     }
 
     public void Debugf()

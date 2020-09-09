@@ -54,6 +54,7 @@ public class CubePlacer : MonoBehaviour
                 if (gObject.tag == "Tower")
                 {
                     upgradeShop.SetActive(true);
+                    gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
                     gridCollider.GetComponent<BoxCollider>().enabled = false;
                     upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
                 }
