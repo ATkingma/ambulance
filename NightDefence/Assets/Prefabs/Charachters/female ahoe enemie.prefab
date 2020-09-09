@@ -1241,6 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
+  centjes: 10
 --- !u!114 &1817676929819091892
 MonoBehaviour:
   m_ObjectHideFlags: 0
