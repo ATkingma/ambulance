@@ -83,11 +83,11 @@ public class WaveScript : MonoBehaviour
         {
             if (isNextMap == true)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(1);
             }
-            else
+            if (isNextMap == false)
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(2);
             }
         }
     }
