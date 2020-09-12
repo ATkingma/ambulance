@@ -67,7 +67,7 @@ public class WaveScript : MonoBehaviour
             }
         }
     }
-    private void Update()
+    public void Update()
     {
         EndRoundCheck();
         EnemieSpawner();
@@ -110,7 +110,7 @@ public class WaveScript : MonoBehaviour
             waves[waveCount].enemies[2].NextRoundCount += waves[waveCount].enemies[2].amount;
         }
     }
-    private void Start()
+    public void Start()
     {
         EnemieAmountCounting();
         prevuisWaveCount -= 1;
