@@ -68670,6 +68670,27 @@ MonoBehaviour:
       NextRoundCount: 0
       amountChanged: 1
     enemiePrefabAmount: 010000
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2
+      amount: 6
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
+        type: 3}
+      spawnRate: 6
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
+        type: 3}
+      spawnRate: 6
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
   spawnPoint: {fileID: 641505954}
   maxWave: 10
   waveCount: 0
