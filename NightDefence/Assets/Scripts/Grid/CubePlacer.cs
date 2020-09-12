@@ -50,7 +50,6 @@ public class CubePlacer : MonoBehaviour
             {
                 RaycastHit hit = hitInfo[i];
                 GameObject gObject = hit.transform.gameObject;
-
                 if (gObject.tag == "Tower")
                 {
                     upgradeShop.SetActive(true);

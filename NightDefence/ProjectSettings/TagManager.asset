@@ -18,6 +18,7 @@ TagManager:
   - Grid
   - Enemy
   - Emission
+  - Road
   layers:
   - Default
   - TransparentFX
