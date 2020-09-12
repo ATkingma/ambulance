@@ -15,7 +15,6 @@ public class TurretTargeting : MonoBehaviour
     public List<Transform> targets;
     public List<float> upgradeValues;
     public bool rangeOn;
-
     public float upgradeCost, upgradeCount;
     public ParticleSystem.MainModule mainParticles;
 

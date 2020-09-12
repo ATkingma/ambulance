@@ -8,14 +8,19 @@ public class BasicTower : MonoBehaviour
     public float bulletSpeed;
     public Transform left, right;
     public bool toggle;
-
+    public GameObject audioData;
     public float end_Damage;
 
+    private void Update()
+    {
+        audioData = GameObject.FindGameObjectWithTag("Boem");
+    }
     public void Fire()
     {
         Rigidbody clone;
         if (toggle == true)
         {
+
             clone = Instantiate(bullet, left.position, Quaternion.LookRotation(transform.forward));
             clone.gameObject.GetComponent<BasicBulletBehavior>().givenDamage = end_Damage;
             clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
@@ -28,6 +33,7 @@ public class BasicTower : MonoBehaviour
             clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
             Toggle();
         }
+        audioData.GetComponent<AudioSource>().Play();
     }
 
     public void RecieveDamage(float dmg)

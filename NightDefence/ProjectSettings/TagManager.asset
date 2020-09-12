@@ -19,6 +19,7 @@ TagManager:
   - Enemy
   - Emission
   - Road
+  - Boem
   layers:
   - Default
   - TransparentFX

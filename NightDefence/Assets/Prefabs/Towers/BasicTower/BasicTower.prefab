@@ -261,6 +261,8 @@ MonoBehaviour:
   left: {fileID: 3383537363886668493}
   right: {fileID: 3383537364829577138}
   toggle: 0
+  audioData: {fileID: 4972861423214496965, guid: 128e3d69919104e439b3595012c0ed3a,
+    type: 3}
   end_Damage: 0
 --- !u!1 &3383537364829577133
 GameObject:
