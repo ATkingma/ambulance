@@ -10,11 +10,6 @@ public class BasicTower : MonoBehaviour
     public bool toggle;
     public GameObject audioData;
     public float end_Damage;
-
-    private void Update()
-    {
-        audioData = GameObject.FindGameObjectWithTag("Boem");
-    }
     public void Fire()
     {
         Rigidbody clone;
