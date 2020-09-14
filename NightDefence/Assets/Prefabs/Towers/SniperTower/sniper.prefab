@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2843413063353656856}
   - component: {fileID: 40851617355305682}
   m_Layer: 0
-  m_Name: sniper bot
+  m_Name: sniper
   m_TagString: SniperTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 05c46b02adb5a874a8af1aa8d53d0488, type: 3}
+  - {fileID: 2100000, guid: ea44f30bd1500b84a8eed4fdadeaacfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8316725789654763307, guid: 8b19019399f0afc4fb4f381965a8a46c, type: 3}
   bulletSpeed: 120
-  end_Damage: 0
+  end_Damage: 60
 --- !u!1 &6741068825306010580
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,7 +5100,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 411281f85c318dd4ba05fa0ae13d67cc, type: 3}
+  - {fileID: 2100000, guid: 229b854e3e330d44a87215ae56b03b39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5150,7 +5150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootOrigin: {fileID: 6456761849105658925}
   rotationDamping: 5
-  cooldown: 0
+  cooldown: 4
   attacksPerSec: 0
   enemies:
     serializedVersion: 2
@@ -5211,6 +5211,8 @@ MonoBehaviour:
   upgradeDamage: 10
   baseSpeed_Basic: 3
   upgradeSpeed: 0.1
-  attackPerSec: 0
   tower: {fileID: 7626464773228631044}
   barrel: {fileID: 6456761849105658927}
+  end_Damage: 0
+  end_Speed: 0
+  attackPerSec: 0
