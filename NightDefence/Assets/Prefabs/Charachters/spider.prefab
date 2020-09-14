@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 22012358206122412}
   - component: {fileID: 22012358206122413}
   m_Layer: 10
-  m_Name: spider_rig_new
+  m_Name: spider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +790,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8424210138279083368, guid: f7ad946448c9ebe40830c6183bae0ec4, type: 3}
+  - {fileID: 2100000, guid: 55decc2d1b13242448bdae6a112fe43e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
