@@ -43,7 +43,15 @@ public class TurretTargeting : MonoBehaviour
             {
                 if(Time.time > nextFire)
                 {
-                    shootOrigin.GetComponent<BasicTower>().Fire();
+                    if (gameObject.transform.parent.tag == "BasicTower")
+                    {
+                        shootOrigin.GetComponent<BasicTower>().Fire();
+                    }
+                    if (gameObject.transform.parent.tag == "SniperTower")
+                    {
+                        shootOrigin.GetComponent<SniperTower>().Fire();
+                    }
+
                     nextFire = Time.time + cooldown;
                 }
             }

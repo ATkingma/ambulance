@@ -20,6 +20,11 @@ TagManager:
   - Emission
   - Road
   - Boem
+  - BasicTower
+  - SniperTower
+  - SlowTower
+  - ShotgunTower
+  - LaserTower
   layers:
   - Default
   - TransparentFX
