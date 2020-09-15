@@ -13,32 +13,17 @@ public class DamageCalculation : MonoBehaviour
     public GameObject tower, barrel;
     public float end_Damage, end_Speed, attackPerSec;
 
-    private float upgradePoint_Damage = -1, upgradePoint_Speed = -1;
+    public float upgradePoint;
 
-    private void Start()
-    {
-        //if(gameObject.transform.parent.tag == "BasicTower")
-        //{
-        //    AttackDamage_Basic();
-        //    AttackSpeed_Basic();
-        //}
-        //if(gameObject.transform.parent.tag == "SniperTower")
-        //{
-        //    AttackDamage_Sniper();
-        //    AttackSpeed_Sniper();
-        //}
-    }
     public void UpgradesRecieved(int towerNumber)
     {
         if(towerNumber == 10)
         {
-            AttackDamage_Basic();
-            AttackSpeed_Basic();
+            Attack_Basic();
         }
         if (towerNumber == 11)
         {
-            AttackDamage_Sniper();
-            AttackSpeed_Sniper();
+            Attack_Sniper();
         }
         // moet nog toe gevoegd worden
         //if (towerNumber == 12)
@@ -58,19 +43,16 @@ public class DamageCalculation : MonoBehaviour
         //}
     }
     #region basic
-    public void AttackDamage_Basic()
+    public void Attack_Basic()
     {
-        upgradePoint_Damage++;
-        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint_Damage);
+        upgradePoint++;
+        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint);
         barrel.GetComponent<BasicTower>().RecieveDamage(end_Damage);
-    }
-    public void AttackSpeed_Basic()
-    {
-        upgradePoint_Speed++;
-        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoint_Speed);
-        if (upgradePoint_Speed > 0)
+
+        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoint);
+        if (upgradePoint > 0)
         {
-            attackPerSec = 1 / (baseSpeed_Basic - upgradeSpeed * upgradePoint_Speed);
+            attackPerSec = 1 / (baseSpeed_Basic - upgradeSpeed * upgradePoint);
         }
         else
         {
@@ -80,19 +62,16 @@ public class DamageCalculation : MonoBehaviour
     }
     #endregion
     #region sniper
-    public void AttackDamage_Sniper()
+    public void Attack_Sniper()
     {
-        upgradePoint_Damage++;
-        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint_Damage);
+        upgradePoint++;
+        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint);
         barrel.GetComponent<SniperTower>().RecieveDamage(end_Damage);
-    }
-    public void AttackSpeed_Sniper()
-    {
-        upgradePoint_Speed++;
-        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoint_Speed);
-        if (upgradePoint_Speed > 0)
+
+        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoint);
+        if (upgradePoint > 0)
         {
-            attackPerSec = 1 / (baseSpeed_Basic - upgradeSpeed * upgradePoint_Speed);
+            attackPerSec = 1 / (baseSpeed_Basic - upgradeSpeed * upgradePoint);
         }
         else
         {
