@@ -9,15 +9,16 @@ public class CubePlacer : MonoBehaviour
     private Transform select;
     public Vector3 finalPosition;
 
-    public GameObject towerShop, upgradeShop, gridCollider;
+    public GameObject towerShop, upgradeShop, menuUI, gridCollider;
     public LayerMask placable;
     private bool uiIsON = false;
-
+    private GameObject uiScript;
     public List<Vector3> towerPositions;
 
     private void Awake()
     {
-        List<Vector3> towerPositions = new List<Vector3>();
+        uiScript = FindObjectOfType<UIScript>().gameObject;
+        List <Vector3> towerPositions = new List<Vector3>();
         grid = FindObjectOfType<Grid>();
     }
 
@@ -26,10 +27,12 @@ public class CubePlacer : MonoBehaviour
         if(uiIsON == false)
         {
             Raycast();
+            gridCollider.GetComponent<BoxCollider>().enabled = true;
         }
-        if (towerShop.activeInHierarchy || upgradeShop.activeInHierarchy)
+        if (towerShop.activeInHierarchy || upgradeShop.activeInHierarchy || menuUI.activeInHierarchy)
         {
             uiIsON = true;
+            gridCollider.GetComponent<BoxCollider>().enabled = false;
         }
         else
         {
@@ -52,7 +55,7 @@ public class CubePlacer : MonoBehaviour
                 GameObject gObject = hit.transform.gameObject;
                 if (gObject.tag == "Tower")
                 {
-                    upgradeShop.SetActive(true);
+                    uiScript.GetComponent<UIScript>().UpgradeShopOn();
                     upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
                     gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
                     gridCollider.GetComponent<BoxCollider>().enabled = false;
@@ -66,7 +69,7 @@ public class CubePlacer : MonoBehaviour
                             PlaceTower(hitInfo[i].point);
                             if (!towerPositions.Contains(finalPosition))
                             {
-                                towerShop.SetActive(true);
+                                uiScript.GetComponent<UIScript>().TowerShopOn();
                                 gridCollider.GetComponent<BoxCollider>().enabled = false;
                             }
                         }
@@ -86,18 +89,16 @@ public class CubePlacer : MonoBehaviour
     {
         select = tower;
         Instantiate(select, finalPosition, Quaternion.identity);
-        //select = null;
         towerPositions.Add(finalPosition);
-        towerShop.SetActive(false);
-        gridCollider.GetComponent<BoxCollider>().enabled = true;
+        uiScript.GetComponent<UIScript>().UIOff();
+        uiScript.GetComponent<UIScript>().InGameUIOn();
     }
     #endregion
     #region upgrades
     public void CloseShop()
     {
-        upgradeShop.SetActive(false);
-        towerShop.SetActive(false);
-        gridCollider.GetComponent<BoxCollider>().enabled = true;
+        uiScript.GetComponent<UIScript>().UIOff();
+        uiScript.GetComponent<UIScript>().InGameUIOn();
     }
 
 

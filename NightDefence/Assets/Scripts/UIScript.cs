@@ -8,15 +8,21 @@ public class UIScript : MonoBehaviour
 {
     public Text money, baseHP, EnemiesAlive;
     public int wave, enemiesAlive;
-    public GameObject basis,ingameUi,InGameMenu,GameManager;
-    public bool escape;
+    public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, GameManager;
+    public bool toggle;
+
+
     public void Update()
     {
         InGameUIUpdate();
+        EscapeButton();
+    }
+
+    public void EscapeButton()
+    {
         if (Input.GetButtonDown("Esc"))
         {
             ESCMenu();
-            print("koek");
         }
     }
     public void InGameUIUpdate()
@@ -29,27 +35,64 @@ public class UIScript : MonoBehaviour
     }
     public void ESCMenu()
     {
-        if (escape == false)
-        {
-            ingameUi.gameObject.SetActive(false);
-            InGameMenu.gameObject.SetActive(true);
-            escape = true;
-        }
-        if (escape == true)
-        {
-            InGameMenu.gameObject.SetActive(false);
-            ingameUi.gameObject.SetActive(true);
-            escape = false;
-        }
+        UIOff();
+        InGameMenuOn();
+        Toggle();
     }
+    //buttons
     public void Options()
     {
-      
+
     }
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
     }
+
+    //toggles
+    public void Toggle()
+    {
+        toggle = !toggle;
+    }
+    #region uiOn
+    public void InGameUIOn()
+    {
+        UIOff();
+        ingameUi.SetActive(true);
+    }
+    public void InGameMenuOn()
+    {
+        UIOff();
+        if (toggle == false)
+        {
+            inGameMenu.SetActive(true);
+        }
+        else
+        {
+            InGameUIOn();
+        }
+    }
+    public void TowerShopOn()
+    {
+        UIOff();
+        InGameUIOn();
+        towerShop.SetActive(true);
+    }
+    public void UpgradeShopOn()
+    {
+        UIOff();
+        InGameUIOn();
+        upgradeShop.SetActive(true);
+    }
+    #endregion
+    public void UIOff()
+    {
+        ingameUi.SetActive(false);
+        inGameMenu.SetActive(false);
+        towerShop.SetActive(false);
+        upgradeShop.SetActive(false);
+    }
+
     public void QuitGame()
     {
       Application.Quit();

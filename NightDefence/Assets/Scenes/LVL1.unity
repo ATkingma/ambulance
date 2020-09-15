@@ -22140,6 +22140,21 @@ PrefabInstance:
       propertyPath: ingameUi
       value: 
       objectReference: {fileID: 1791996}
+    - target: {fileID: 5077811730097231172, guid: e09094ac41c2cad45a13781b5cb89a4d,
+        type: 3}
+      propertyPath: inGameMenu
+      value: 
+      objectReference: {fileID: 772879431}
+    - target: {fileID: 5077811730097231172, guid: e09094ac41c2cad45a13781b5cb89a4d,
+        type: 3}
+      propertyPath: towerShop
+      value: 
+      objectReference: {fileID: 1640274985}
+    - target: {fileID: 5077811730097231172, guid: e09094ac41c2cad45a13781b5cb89a4d,
+        type: 3}
+      propertyPath: upgradeShop
+      value: 
+      objectReference: {fileID: 2082988369}
     - target: {fileID: 5283177488902388461, guid: e09094ac41c2cad45a13781b5cb89a4d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -22166,6 +22181,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1214299030849939901, guid: c3d0b10cf6c41f842acf4f57b5609bc7,
         type: 3}
+    - target: {fileID: 8638318050814690978, guid: e09094ac41c2cad45a13781b5cb89a4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8696383225442976340, guid: e09094ac41c2cad45a13781b5cb89a4d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -35656,6 +35676,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9120466853492400755, guid: 2defac1221e0b9d46a260d7dfd24fe3d,
     type: 3}
   m_PrefabInstance: {fileID: 771736668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &772879431 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1613723083195867232, guid: e09094ac41c2cad45a13781b5cb89a4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 442959467}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &774218991
 PrefabInstance:
@@ -51476,6 +51502,7 @@ MonoBehaviour:
   finalPosition: {x: 0, y: 0, z: 0}
   towerShop: {fileID: 1640274985}
   upgradeShop: {fileID: 2082988369}
+  menuUI: {fileID: 772879431}
   gridCollider: {fileID: 943227330}
   placable:
     serializedVersion: 2
