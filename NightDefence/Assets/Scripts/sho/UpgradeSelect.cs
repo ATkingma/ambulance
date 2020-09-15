@@ -23,8 +23,7 @@ public class UpgradeSelect : MonoBehaviour
     {
         selectedTower = tower;
         parent = selectedTower.transform.parent.gameObject;
-        stats[1].text = tower.transform.parent.GetComponentInChildren<DamageCalculation>().attackPerSec.ToString() + " /sec";
-        stats[0].text = tower.transform.parent.GetComponentInChildren<DamageCalculation>().end_Damage.ToString() + " Damage";
+        stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F2") + " /sec";
         UpgradeSelection();
     }
 
@@ -35,11 +34,13 @@ public class UpgradeSelect : MonoBehaviour
         if (parent.tag == "BasicTower")
         {
             towerSelect = 10;
+            stats[0].text = selectedTower.GetComponentInChildren<BasicTower>().end_Damage.ToString() + " Damage";
         }
         //sniper
         if (parent.tag == "SniperTower")
         {
             towerSelect = 11;
+            stats[0].text = selectedTower.GetComponentInChildren<SniperTower>().end_Damage.ToString() + " Damage";
         }
         //slow
         if (selectedTower.transform.parent.tag == "SlowTower")
@@ -60,8 +61,10 @@ public class UpgradeSelect : MonoBehaviour
     //checking if you have enough centjes
     public void Tower()
     {
-        //print("basic");
-        FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<TurretTargeting>().upgradeCost, towerSelect);
+        if(selectedTower.transform.parent.GetComponentInChildren<DamageCalculation>().upgradePoint < 5)
+        {
+            FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<TurretTargeting>().upgradeCost, towerSelect);
+        }
     }
 
     //upgrade the tower

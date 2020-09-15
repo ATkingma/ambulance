@@ -5239,6 +5239,7 @@ MonoBehaviour:
   end_Damage: 0
   end_Speed: 0
   attackPerSec: 0
+  upgradePoint: 0
 --- !u!1 &7319361034425659285
 GameObject:
   m_ObjectHideFlags: 0
@@ -5352,7 +5353,7 @@ MonoBehaviour:
   shootOrigin: {fileID: 3383537364641468090}
   rotationDamping: 10
   cooldown: 1
-  attacksPerSec: 0
+  attacksPerSec: 1
   enemies:
     serializedVersion: 2
     m_Bits: 1024
@@ -5362,7 +5363,12 @@ MonoBehaviour:
   - 30
   - 35
   - 40
+  - 45
+  - 50
+  - 55
+  - 60
   rangeOn: 0
+  invokeStarted: 0
   upgradeCost: 20
   upgradeCount: 0
 --- !u!1001 &6675139439206434997
