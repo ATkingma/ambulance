@@ -5051,6 +5051,7 @@ GameObject:
   - component: {fileID: 8274899487139116497}
   - component: {fileID: 7626464773228631042}
   - component: {fileID: 7626464773228631045}
+  - component: {fileID: 1345638682253170665}
   m_Layer: 0
   m_Name: sniper top
   m_TagString: Untagged
@@ -5150,7 +5151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootOrigin: {fileID: 6456761849105658925}
   rotationDamping: 5
-  cooldown: 4
+  cooldown: 5
   attacksPerSec: 0
   enemies:
     serializedVersion: 2
@@ -5162,8 +5163,27 @@ MonoBehaviour:
   - 50
   - 60
   rangeOn: 0
+  invokeStarted: 0
   upgradeCost: 20
   upgradeCount: 0
+--- !u!114 &1345638682253170665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626464773228631044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070c249d1e902bf408417af953c102f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sniper0: {fileID: 2100000, guid: 7a768ddabd0c647479d5cf5245efc379, type: 2}
+  sniper1: {fileID: 2100000, guid: fc9d421510670184ea3668eea03f791c, type: 2}
+  sniper2: {fileID: 2100000, guid: f447e7763586f414a901f4ffd696138c, type: 2}
+  sniper3: {fileID: 2100000, guid: 8a68ef37fa2eb344e91da843b5d52562, type: 2}
+  sniper4: {fileID: 2100000, guid: 713eb468d591ee244b5bec6277107213, type: 2}
+  sniper5: {fileID: 2100000, guid: 229b854e3e330d44a87215ae56b03b39, type: 2}
 --- !u!1 &8321721925932122693
 GameObject:
   m_ObjectHideFlags: 0

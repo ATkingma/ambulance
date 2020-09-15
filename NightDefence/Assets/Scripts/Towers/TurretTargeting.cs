@@ -14,10 +14,9 @@ public class TurretTargeting : MonoBehaviour
     public LayerMask enemies;
     public List<Transform> targets;
     public List<float> upgradeValues;
-    public bool rangeOn;
+    public bool rangeOn, invokeStarted;
     public float upgradeCost, upgradeCount;
     public ParticleSystem.MainModule mainParticles;
-
     RaycastHit hit;
 
     private void Start()
@@ -50,9 +49,16 @@ public class TurretTargeting : MonoBehaviour
                     if (gameObject.transform.parent.tag == "SniperTower")
                     {
                         shootOrigin.GetComponent<SniperTower>().Fire();
+
+                        if (invokeStarted == false)
+                        {
+                            invokeStarted = true;
+                            SniperTowerMatChangeoff();
+                        }
                     }
 
                     nextFire = Time.time + cooldown;
+                    
                 }
             }
         }
@@ -123,5 +129,35 @@ public class TurretTargeting : MonoBehaviour
     public void Debugf()
     {
         Debug.DrawRay(transform.position + transform.up * 0.85f,transform.forward * (GetComponent<CapsuleCollider>().radius * 0.3f), Color.red, 0.5f);
+    }
+    public void SniperTowerMatChangeoff()
+    {
+        gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper0;
+        Invoke("SniperTowerMatChange1", 1.0f);
+    }
+    public void SniperTowerMatChange1()
+    {
+        gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper1;
+        Invoke("SniperTowerMatChange2", 1.0f);
+    }
+    public void SniperTowerMatChange2()
+    {
+        gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper2;
+        Invoke("SniperTowerMatChange3", 1.0f);
+    }
+    public void SniperTowerMatChange3()
+    {
+        gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper3;
+        Invoke("SniperTowerMatChange4", 1.0f);
+    }
+    public void SniperTowerMatChange4()
+    {
+        gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper4;
+        Invoke("SniperTowerMatChange5", 1.0f);
+    }
+    public void SniperTowerMatChange5()
+    {
+        gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper5;
+        invokeStarted = false;
     }
 }

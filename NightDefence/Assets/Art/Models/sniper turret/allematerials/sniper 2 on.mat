@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bot
+  m_Name: sniper 2 on
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 2
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 9b60bdb7bcfc5c243a4413e15d0cbdf9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4dce381030aa00143a948794a3fcdb65, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,15 +36,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: cfaab044eb8f6be459fbed9ce2184380, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8dd0534af5a2f0b489cdf5e8a06cebad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ef4b12c70a286864e877836d9c80f9bb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3722b4651fb86524b8d23a080115764b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 188ad10fb9c70c14cbbbc36cbc9f5c97, type: 3}
+        m_Texture: {fileID: 2800000, guid: e6a58c8de521cc541b1b542f62b783fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -74,5 +74,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.064723365, g: 0, b: 0.9359262, a: 1}
+    - _EmissionColor: {r: 0, g: 0.16419765, b: 0.764151, a: 1}
   m_BuildTextureStacks: []
