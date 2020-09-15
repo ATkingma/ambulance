@@ -18,6 +18,7 @@ public class TurretTargeting : MonoBehaviour
     public float upgradeCost, upgradeCount;
     public ParticleSystem.MainModule mainParticles;
     RaycastHit hit;
+    private bool hitEnemy;
 
     private void Start()
     {
@@ -31,7 +32,6 @@ public class TurretTargeting : MonoBehaviour
         if(targetPos != null && targets.Count > 0)
         {
             Vector3 lookPos = targetPos.position - transform.position;
-            lookPos.y -= 0.5f;
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
         }
@@ -39,8 +39,8 @@ public class TurretTargeting : MonoBehaviour
         if (Physics.Raycast(transform.position + transform.up * 0.85f, transform.forward, out hit, GetComponent<CapsuleCollider>().radius * 0.3f, enemies))
         {
             if (hit.transform.tag == "Enemy")
-            {
-                if(Time.time > nextFire)
+            { 
+                if (Time.time > nextFire)
                 {
                     if (gameObject.transform.parent.tag == "BasicTower")
                     {
@@ -56,9 +56,7 @@ public class TurretTargeting : MonoBehaviour
                             SniperTowerMatChangeoff();
                         }
                     }
-
                     nextFire = Time.time + cooldown;
-                    
                 }
             }
         }
@@ -90,10 +88,6 @@ public class TurretTargeting : MonoBehaviour
         if (targets.Count > 0)
         {
             targetPos = targets[0].gameObject.transform;
-        }
-        else
-        {
-            return;
         }
     }
 

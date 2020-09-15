@@ -8104,7 +8104,7 @@ Transform:
   - {fileID: 2014445332}
   - {fileID: 641505955}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &149113662
 GameObject:
@@ -10063,8 +10063,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.630194, y: 47.01956, z: 12.465809}
-  m_Center: {x: 8.815097, y: 23.00978, z: -5.7329044}
+  m_Size: {x: 15.225431, y: 47.01956, z: 12.465809}
+  m_Center: {x: 10.517478, y: 23.00978, z: -5.7329044}
 --- !u!1001 &230682729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29842,11 +29842,24 @@ MeshCollider:
   m_GameObject: {fileID: 552345320}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &552345322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552345320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.540041, y: 50.755062, z: 10.89758}
+  m_Center: {x: 9.513345, y: 24.877531, z: 0.0679245}
 --- !u!1001 &553253167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44682,7 +44695,7 @@ PrefabInstance:
     - target: {fileID: 1934989516528379126, guid: dbbb90c6881f59f4dae556cd4f0cd4f4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1934989516528379126, guid: dbbb90c6881f59f4dae556cd4f0cd4f4,
         type: 3}
@@ -54015,6 +54028,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sci-FI_Tower01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096175894900953175, guid: 3d4af09d35344b64c90c7e6f3a5077b7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d4af09d35344b64c90c7e6f3a5077b7, type: 3}
@@ -73659,7 +73677,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2079244713
 MonoBehaviour:
@@ -80866,7 +80884,7 @@ PrefabInstance:
     - target: {fileID: 6114793078479043175, guid: 790e226d18a91ee4b9ef40d8e1ff79d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6114793078479043175, guid: 790e226d18a91ee4b9ef40d8e1ff79d6,
         type: 3}

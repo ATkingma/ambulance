@@ -6,10 +6,12 @@ public class BasicBulletBehavior : MonoBehaviour
 {
     public float givenDamage;
     private bool expired = false;
+    Rigidbody rb;
 
     private void Start()
     {
-        Destroy(gameObject, 10);
+        Destroy(gameObject, 4);
+        rb = GetComponent<Rigidbody>();
     }
     private void OnCollisionEnter(Collision col)
     {
@@ -17,9 +19,13 @@ public class BasicBulletBehavior : MonoBehaviour
         {
             if (col.gameObject.tag == "Enemy")
             {
-                col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage);
-                Destroy(gameObject);
                 expired = true;
+                Destroy(gameObject, 2);
+                col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage);
+                gameObject.GetComponent<BoxCollider>().enabled = false;
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                gameObject.GetComponent<Light>().enabled = false;
+                rb.isKinematic = true;
             }
         }
     }
