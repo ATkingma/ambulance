@@ -85,7 +85,7 @@ public class EnemieSCript : MonoBehaviour
 
         //hier miss geld weg halen ook ;)
 
-        basehp.GetComponent<HealthScript>().DoDamage(damage);
+        basehp.GetComponent<HealthScript>().DoDamage(damage, default);
         if (givingVaraible == false)
         {
             GiveVariableToWaveScript();
