@@ -1243,6 +1243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   centjes: 10
+  burnDamage: 0
+  burning: 0
+  isBurning: 0
 --- !u!114 &1817676929819091892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5782,6 +5785,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988467997293370969, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.23730862
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988467997293370969, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.2956631
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988467997293370969, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9528302
       objectReference: {fileID: 0}
     - target: {fileID: 5224200502386995292, guid: 2e0ae4b5f46975e49937251f7c68630f,
         type: 3}

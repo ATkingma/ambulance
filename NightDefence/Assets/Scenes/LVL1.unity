@@ -37227,6 +37227,275 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 792704722}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &792842714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792842715}
+  - component: {fileID: 792842716}
+  m_Layer: 0
+  m_Name: wavescript opslaan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &792842715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792842714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.231867, y: 6.420541, z: 9.195877}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2079244712}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792842716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792842714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297d626c0b4c75e4787413dd39e90f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 1
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2.5
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 5
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 1
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2.5
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010100
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 1
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2.5
+      amount: 5
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010100
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2
+      amount: 8
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010100
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 8
+      amount: 4
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 6
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 5
+      amount: 8
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 25
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 4
+      amount: 8
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 25
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 4
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  spawnPoint: {fileID: 641505954}
+  maxWave: 10
+  waveCount: 0
+  prevuisWaveCount: 0
+  maxEnemies: 0
+  enemiesDied: 0
+  roundCoolDown: 15
+  nextSpawn:
+  - 0
+  - 0
+  - 0
+  resettingRound: 0
+  checkedAgain: 0
+  amountIsChanging: 0
+  isNextMap: 0
 --- !u!4 &794799024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9120466853492400755, guid: 2defac1221e0b9d46a260d7dfd24fe3d,
@@ -74639,211 +74908,211 @@ MonoBehaviour:
   waves:
   - WaveTime: 10
     enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 1
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2.5
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 5
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010000
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 1
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2.5
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010100
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 1
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2.5
+      amount: 5
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010100
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2
+      amount: 8
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010100
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
     - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
         type: 3}
       spawnRate: 2
       amount: 10
       NextRoundCount: 0
       amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 1
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
     - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 2
+      amount: 10
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 8
+      amount: 4
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 6
+      amount: 6
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 20
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1.5
+      amount: 15
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
+        type: 3}
+      spawnRate: 5
+      amount: 8
+      NextRoundCount: 0
+      amountChanged: 1
+    enemiePrefabAmount: 010101
+  - WaveTime: 10
+    enemies:
+    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
+        type: 3}
+      spawnRate: 0.5
+      amount: 25
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
         type: 3}
       spawnRate: 1
       amount: 20
       NextRoundCount: 0
       amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
         type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010100
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010100
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010100
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010100
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
+      spawnRate: 4
+      amount: 8
       NextRoundCount: 0
       amountChanged: 1
     enemiePrefabAmount: 010101
   - WaveTime: 10
     enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
     - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
         type: 3}
-      spawnRate: 6
+      spawnRate: 0.5
+      amount: 25
+      NextRoundCount: 0
+      amountChanged: 1
+    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      spawnRate: 1
       amount: 20
       NextRoundCount: 0
       amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
+    - enemiePrefab: {fileID: 8488968479601292632, guid: a9e554f4f36eb1941937a5cfe627f4ba,
         type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010101
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
+      spawnRate: 4
       amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010101
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010101
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
-      NextRoundCount: 0
-      amountChanged: 1
-    enemiePrefabAmount: 010101
-  - WaveTime: 10
-    enemies:
-    - enemiePrefab: {fileID: 1817676929819091880, guid: edcb9a28dadb30e42b874bcfc892e047,
-        type: 3}
-      spawnRate: 2
-      amount: 10
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 6729199306620448713, guid: 91f01ea7c4c26af4c84aa18c51c135e0,
-        type: 3}
-      spawnRate: 6
-      amount: 20
-      NextRoundCount: 0
-      amountChanged: 1
-    - enemiePrefab: {fileID: 5847212238479984306, guid: 7753dcb4ef8e52c40a661e3b45086ab5,
-        type: 3}
-      spawnRate: 6
-      amount: 5
       NextRoundCount: 0
       amountChanged: 1
     enemiePrefabAmount: 010101
@@ -74872,9 +75141,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 42.398315, y: -4.347292, z: 0.9744415}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 792842715}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2079244713
 MonoBehaviour:
@@ -82081,7 +82351,7 @@ PrefabInstance:
     - target: {fileID: 6114793078479043175, guid: 790e226d18a91ee4b9ef40d8e1ff79d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6114793078479043175, guid: 790e226d18a91ee4b9ef40d8e1ff79d6,
         type: 3}
