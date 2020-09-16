@@ -10,21 +10,33 @@ public class BasicTower : MonoBehaviour
     public bool toggle;
     public GameObject audioData;
     public float end_Damage;
+    public bool basicLvl5;
+    public float burnDamagerecieve;
+
     public void Fire()
     {
         Rigidbody clone;
         if (toggle == true)
         {
-
             clone = Instantiate(bullet, left.position, Quaternion.LookRotation(transform.forward));
+            if(basicLvl5 == true)
+            {
+                clone.gameObject.GetComponent<BasicBulletBehavior>().burningEffect = true;
+            }
             clone.gameObject.GetComponent<BasicBulletBehavior>().givenDamage = end_Damage;
+            clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
             clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
             Toggle();
         }
         else
         {
             clone = Instantiate(bullet, right.position, Quaternion.LookRotation(transform.forward));
+            if (basicLvl5 == true)
+            {
+                clone.gameObject.GetComponent<BasicBulletBehavior>().burningEffect = true;
+            }
             clone.gameObject.GetComponent<BasicBulletBehavior>().givenDamage = end_Damage;
+            clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
             clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
             Toggle();
         }
