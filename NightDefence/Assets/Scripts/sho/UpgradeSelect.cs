@@ -23,7 +23,7 @@ public class UpgradeSelect : MonoBehaviour
     {
         selectedTower = tower;
         parent = selectedTower.transform.parent.gameObject;
-        stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F2") + " /sec";
+        stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
         UpgradeSelection();
     }
 
@@ -73,6 +73,22 @@ public class UpgradeSelect : MonoBehaviour
         selectedTower.transform.parent.GetComponentInChildren<DamageCalculation>().UpgradesRecieved(towerSelect);
 
         CloseShop();
+    }
+
+    public void SellTower()
+    {
+        FindObjectOfType<UIScript>().SellMenuOn();
+    }
+    public void SellIsTrue()
+    {
+        FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<TurretTargeting>().upgradeCost * 0.5f);
+        FindObjectOfType<UIScript>().InGameUIOn();
+        Destroy(parent);
+        select.RemoveTower();
+    }
+    public void SellIsFalse()
+    {
+        FindObjectOfType<UIScript>().SellMenuOff();
     }
 
     //close the shop

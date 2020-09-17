@@ -35,6 +35,7 @@ public class BasicBulletBehavior : MonoBehaviour
                 if (bounceEffect == true)
                 {
                     bounceAmount--;
+                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
                     nextTarget = FindObjectOfType<HealthScript>().gameObject;
                     transform.LookAt(nextTarget.transform, Vector3.up);
                     rb.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);

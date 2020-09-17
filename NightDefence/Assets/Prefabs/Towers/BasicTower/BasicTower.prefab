@@ -5235,7 +5235,7 @@ MonoBehaviour:
   baseDamage_Basic: 20
   upgradeDamage: 5
   baseSpeed_Basic: 1
-  upgradeSpeed: 0.1
+  upgradeSpeed: 0.2
   tower: {fileID: 7319361034425659285}
   barrel: {fileID: 3383537364641468085}
   end_Damage: 0

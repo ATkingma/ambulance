@@ -11,7 +11,7 @@ public class DamageCalculation : MonoBehaviour
     public float upgradeSpeed;
 
     public GameObject tower, barrel;
-    public float end_Damage, end_Speed, attackPerSec;
+    public float end_Damage, end_Speed, attackPerSec = 1;
 
     public float upgradePoint;
 
@@ -49,16 +49,12 @@ public class DamageCalculation : MonoBehaviour
         end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint);
         barrel.GetComponent<BasicTower>().RecieveDamage(end_Damage);
 
-        end_Speed = baseSpeed_Basic - (upgradeSpeed * upgradePoint);
-        if (upgradePoint > 0)
-        {
-            attackPerSec = 1 / (baseSpeed_Basic - upgradeSpeed * upgradePoint);
-        }
-        else
-        {
-            attackPerSec = 1;
-        }
-        tower.GetComponent<TurretTargeting>().RecieveAttackSpeed(end_Speed, attackPerSec);
+        float fl = 0;
+        end_Speed = baseSpeed_Basic + (upgradeSpeed * upgradePoint);
+        attackPerSec = end_Speed;
+        fl = end_Speed / (end_Speed * end_Speed);
+
+        tower.GetComponent<TurretTargeting>().RecieveAttackSpeed(fl, attackPerSec);
         if (upgradePoint == 5)
         {
             barrel.GetComponent<BasicTower>().basicLvl5 = true;
@@ -73,7 +69,7 @@ public class DamageCalculation : MonoBehaviour
         barrel.GetComponent<SniperTower>().RecieveDamage(end_Damage);
 
         end_Speed = 5;
-        attackPerSec = 0.2f;
+        attackPerSec = 5;
         tower.GetComponent<TurretTargeting>().RecieveAttackSpeed(end_Speed, attackPerSec);
         if(upgradePoint == 5)
         {

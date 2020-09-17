@@ -8,7 +8,7 @@ public class UIScript : MonoBehaviour
 {
     public Text money, baseHP, EnemiesAlive;
     public int wave, enemiesAlive;
-    public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, GameManager;
+    public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, sellPanel, GameManager;
     public bool toggle;
 
 
@@ -84,6 +84,16 @@ public class UIScript : MonoBehaviour
         InGameUIOn();
         upgradeShop.SetActive(true);
     }
+    public void SellMenuOn()
+    {
+        sellPanel.SetActive(true);
+        upgradeShop.SetActive(false);
+    }
+    public void SellMenuOff()
+    {
+        sellPanel.SetActive(false);
+        upgradeShop.SetActive(true);
+    }
     #endregion
     public void UIOff()
     {
@@ -91,6 +101,7 @@ public class UIScript : MonoBehaviour
         inGameMenu.SetActive(false);
         towerShop.SetActive(false);
         upgradeShop.SetActive(false);
+        sellPanel.SetActive(false);
     }
 
     public void QuitGame()
