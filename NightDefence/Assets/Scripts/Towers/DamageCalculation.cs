@@ -5,9 +5,9 @@ using UnityEngine;
 public class DamageCalculation : MonoBehaviour
 {
     [Header("BasicTower stats")]
-    public float baseDamage_Basic;
+    public float baseDamage;
     public float upgradeDamage;
-    public float baseSpeed_Basic;
+    public float baseSpeed;
     public float upgradeSpeed;
 
     public GameObject tower, barrel;
@@ -31,11 +31,10 @@ public class DamageCalculation : MonoBehaviour
         //    AttackDamage_Slow();
         //    AttackSpeed_Slow();
         //}
-        //if (towerNumber == 13)
-        //{
-        //    AttackDamage_Shotgun();
-        //    AttackSpeed_Shotgun();
-        //}
+        if (towerNumber == 13)
+        {
+            Attack_Shotgun();
+        }
         //if (towerNumber == 14)
         //{
         //    AttackDamage_Laser();
@@ -46,11 +45,11 @@ public class DamageCalculation : MonoBehaviour
     public void Attack_Basic()
     {
         upgradePoint++;
-        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint);
+        end_Damage = baseDamage + (upgradeDamage * upgradePoint);
         barrel.GetComponent<BasicTower>().RecieveDamage(end_Damage);
 
         float fl = 0;
-        end_Speed = baseSpeed_Basic + (upgradeSpeed * upgradePoint);
+        end_Speed = baseSpeed + (upgradeSpeed * upgradePoint);
         attackPerSec = end_Speed;
         fl = end_Speed / (end_Speed * end_Speed);
 
@@ -65,7 +64,7 @@ public class DamageCalculation : MonoBehaviour
     public void Attack_Sniper()
     {
         upgradePoint++;
-        end_Damage = baseDamage_Basic + (upgradeDamage * upgradePoint);
+        end_Damage = baseDamage + (upgradeDamage * upgradePoint);
         barrel.GetComponent<SniperTower>().RecieveDamage(end_Damage);
 
         end_Speed = 5;
@@ -74,6 +73,27 @@ public class DamageCalculation : MonoBehaviour
         if(upgradePoint == 5)
         {
             barrel.GetComponent<SniperTower>().sniperLvl5 = true;
+        }
+    }
+    #endregion
+    #region slow
+    #endregion
+    #region shotgun
+    public void Attack_Shotgun()
+    {
+        upgradePoint++;
+        end_Damage = baseDamage + (upgradeDamage * upgradePoint);
+        barrel.GetComponent<ShotgunTower>().RecieveDamage(end_Damage);
+
+        float fl = 0;
+        end_Speed = baseSpeed + (upgradeSpeed * upgradePoint);
+        attackPerSec = end_Speed;
+        fl = end_Speed / (end_Speed * end_Speed);
+
+        tower.GetComponent<TurretTargeting>().RecieveAttackSpeed(fl, attackPerSec);
+        if (upgradePoint == 5)
+        {
+            barrel.GetComponent<ShotgunTower>().shotgunLvl5 = true;
         }
     }
     #endregion

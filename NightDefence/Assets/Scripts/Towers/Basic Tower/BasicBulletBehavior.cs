@@ -13,18 +13,30 @@ public class BasicBulletBehavior : MonoBehaviour
     public float burnDamage;
 
     //sniper
-    public bool bounceEffect;
+    public bool bounceEffect, scatterEffect;
     public int bounceAmount = 1;
     private GameObject nextTarget;
+
+    //shotgun
+    RaycastHit hit;
+    public LayerMask mask;
+    public float scatterStartRange;
 
     private void Start()
     {
         Destroy(gameObject, 4);
+        transform.GetComponent<Collider>().enabled = false;
+        ColliderOn();
+        Invoke("ColliderOn", 0.1f);
         rb = GetComponent<Rigidbody>();
+        rb.velocity = transform.TransformDirection(0,0,bulletSpeed);
     }
     private void Update()
     {
         IsBouncable();
+        Debugf();
+
+        //transform.rotation = Quaternion.LookRotation(transform.TransformDirection(transform.forward));
     }
     private void OnCollisionEnter(Collision col)
     {
@@ -36,6 +48,7 @@ public class BasicBulletBehavior : MonoBehaviour
                 {
                     bounceAmount--;
                     col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
+
                     nextTarget = FindObjectOfType<HealthScript>().gameObject;
                     transform.LookAt(nextTarget.transform, Vector3.up);
                     rb.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
@@ -44,7 +57,7 @@ public class BasicBulletBehavior : MonoBehaviour
                 {
                     expired = true;
                     Destroy(gameObject, 2);
-                    if(burningEffect == true)
+                    if (burningEffect == true)
                     {
                         burnDamage = 50;
                     }
@@ -59,9 +72,18 @@ public class BasicBulletBehavior : MonoBehaviour
     }
     private void IsBouncable()
     {
-        if(bounceAmount == 0)
+        if (bounceAmount == 0)
         {
             bounceEffect = false;
         }
+    }
+    public void ColliderOn()
+    {
+        transform.GetComponent<Collider>().enabled = true;
+    }
+
+    public void Debugf()
+    {
+        Debug.DrawRay(transform.position, transform.forward * scatterStartRange, Color.red);
     }
 }

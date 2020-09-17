@@ -17,14 +17,19 @@ public class TurretTargeting : MonoBehaviour
     public bool rangeOn, invokeStarted;
     public float upgradeCost, upgradeCount;
     public ParticleSystem.MainModule mainParticles;
+    public float range, upOffsetRaycast;
     RaycastHit hit;
-    private bool hitEnemy;
 
     private void Start()
     {
         List<Transform> targets = new List<Transform>(1000);
         List<Transform> upgradeValues = new List<Transform>(1000);
         mainParticles = gameObject.transform.parent.GetComponentInChildren<ParticleSystem>().main;
+
+        if(transform.parent.tag == "BasicTower" || transform.parent.tag == "SniperTower" || transform.parent.tag == "SlowTower")
+        {
+            range /= 0.3f;
+        }
     }
     private void Update()
     {
@@ -36,7 +41,7 @@ public class TurretTargeting : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
         }
         //raycast
-        if (Physics.Raycast(transform.position + transform.up * 0.85f, transform.forward, out hit, GetComponent<CapsuleCollider>().radius * 0.3f, enemies))
+        if (Physics.Raycast(transform.position + transform.up * upOffsetRaycast, transform.forward, out hit, range, enemies))
         {
             if (hit.transform.tag == "Enemy")
             { 
@@ -49,12 +54,19 @@ public class TurretTargeting : MonoBehaviour
                     if (gameObject.transform.parent.tag == "SniperTower")
                     {
                         shootOrigin.GetComponent<SniperTower>().Fire();
-
                         if (invokeStarted == false)
                         {
                             invokeStarted = true;
                             SniperTowerMatChangeoff();
                         }
+                    }
+                    if (gameObject.transform.parent.tag == "SlowTower")
+                    {
+                        shootOrigin.GetComponent<BasicTower>().Fire();
+                    }
+                    if (gameObject.transform.parent.tag == "ShotgunTower")
+                    {
+                        shootOrigin.GetComponent<ShotgunTower>().Fire();
                     }
                     nextFire = Time.time + cooldown;
                 }
@@ -122,8 +134,17 @@ public class TurretTargeting : MonoBehaviour
 
     public void Debugf()
     {
-        Debug.DrawRay(transform.position + transform.up * 0.85f,transform.forward * (GetComponent<CapsuleCollider>().radius * 0.3f), Color.red, 0.5f);
+        if(transform.tag == "ShotgunTower")
+        {
+            Debug.DrawRay(transform.position, transform.forward * range, Color.red, 0.5f);
+        }
+        else
+        {
+            Debug.DrawRay(transform.position + transform.up * 0.85f, transform.forward * range, Color.red, 0.5f);
+        }
     }
+
+
     public void SniperTowerMatChangeoff()
     {
         gameObject.GetComponent<Renderer>().material = gameObject.GetComponent<MaterialHolder>().sniper0;

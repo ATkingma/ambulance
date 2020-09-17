@@ -5232,9 +5232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage_Basic: 20
+  baseDamage: 0
   upgradeDamage: 5
-  baseSpeed_Basic: 1
+  baseSpeed: 0
   upgradeSpeed: 0.2
   tower: {fileID: 7319361034425659285}
   barrel: {fileID: 3383537364641468085}
@@ -5373,6 +5373,8 @@ MonoBehaviour:
   invokeStarted: 0
   upgradeCost: 20
   upgradeCount: 0
+  range: 55
+  upOffsetRaycast: 0.85
 --- !u!1001 &6675139439206434997
 PrefabInstance:
   m_ObjectHideFlags: 0

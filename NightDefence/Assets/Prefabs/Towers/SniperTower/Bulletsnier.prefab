@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1227490818144682425}
   - component: {fileID: 3701247821014107666}
   - component: {fileID: 1595012806636651401}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Bulletsnier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,6 +128,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   givenDamage: 0
+  bulletSpeed: 0
+  burningEffect: 0
+  burnDamage: 0
+  bounceEffect: 0
+  scatterEffect: 0
+  bounceAmount: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  scatterStartRange: 0
 --- !u!108 &1595012806636651401
 Light:
   m_ObjectHideFlags: 0
@@ -199,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809442357019173431}
   - component: {fileID: 348640332809806713}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
