@@ -132,11 +132,10 @@ MonoBehaviour:
   burningEffect: 0
   burnDamage: 0
   bounceEffect: 0
-  scatterEffect: 0
   bounceAmount: 1
   mask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   scatterStartRange: 0
 --- !u!108 &1595012806636651401
 Light:

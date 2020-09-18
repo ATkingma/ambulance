@@ -67,8 +67,8 @@ public class DamageCalculation : MonoBehaviour
         end_Damage = baseDamage + (upgradeDamage * upgradePoint);
         barrel.GetComponent<SniperTower>().RecieveDamage(end_Damage);
 
-        end_Speed = 5;
-        attackPerSec = 5;
+        end_Speed = 1;
+        attackPerSec = 0.2f;
         tower.GetComponent<TurretTargeting>().RecieveAttackSpeed(end_Speed, attackPerSec);
         if(upgradePoint == 5)
         {

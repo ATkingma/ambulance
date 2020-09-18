@@ -973,7 +973,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 33.5
+      value: 26
       mode: 0
       spread: 0
       speed:
@@ -5151,7 +5151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootOrigin: {fileID: 6456761849105658925}
-  rotationDamping: 5
+  rotationDamping: 10
   cooldown: 5
   attacksPerSec: 0.2
   enemies:
@@ -5234,10 +5234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 60
   upgradeDamage: 10
-  baseSpeed: 0
-  upgradeSpeed: 0.1
+  baseSpeed: 0.2
+  upgradeSpeed: 0
   tower: {fileID: 7626464773228631044}
   barrel: {fileID: 6456761849105658927}
   end_Damage: 0

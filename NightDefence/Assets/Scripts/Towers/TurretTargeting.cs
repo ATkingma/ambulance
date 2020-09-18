@@ -44,31 +44,34 @@ public class TurretTargeting : MonoBehaviour
         if (Physics.Raycast(transform.position + transform.up * upOffsetRaycast, transform.forward, out hit, range, enemies))
         {
             if (hit.transform.tag == "Enemy")
-            { 
-                if (Time.time > nextFire)
+            {
+                if (targets.Contains(hit.transform))
                 {
-                    if (gameObject.transform.parent.tag == "BasicTower")
+                    if (Time.time > nextFire)
                     {
-                        shootOrigin.GetComponent<BasicTower>().Fire();
-                    }
-                    if (gameObject.transform.parent.tag == "SniperTower")
-                    {
-                        shootOrigin.GetComponent<SniperTower>().Fire();
-                        if (invokeStarted == false)
+                        if (gameObject.transform.parent.tag == "BasicTower")
                         {
-                            invokeStarted = true;
-                            SniperTowerMatChangeoff();
+                            shootOrigin.GetComponent<BasicTower>().Fire();
                         }
+                        if (gameObject.transform.parent.tag == "SniperTower")
+                        {
+                            if (invokeStarted == false)
+                            {
+                                invokeStarted = true;
+                                shootOrigin.GetComponent<SniperTower>().Fire();
+                                SniperTowerMatChangeoff();
+                            }
+                        }
+                        if (gameObject.transform.parent.tag == "SlowTower")
+                        {
+                            shootOrigin.GetComponent<BasicTower>().Fire();
+                        }
+                        if (gameObject.transform.parent.tag == "ShotgunTower")
+                        {
+                            shootOrigin.GetComponent<ShotgunTower>().Fire();
+                        }
+                        nextFire = Time.time + cooldown;
                     }
-                    if (gameObject.transform.parent.tag == "SlowTower")
-                    {
-                        shootOrigin.GetComponent<BasicTower>().Fire();
-                    }
-                    if (gameObject.transform.parent.tag == "ShotgunTower")
-                    {
-                        shootOrigin.GetComponent<ShotgunTower>().Fire();
-                    }
-                    nextFire = Time.time + cooldown;
                 }
             }
         }
