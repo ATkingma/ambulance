@@ -25,12 +25,10 @@ public class DamageCalculation : MonoBehaviour
         {
             Attack_Sniper();
         }
-        // moet nog toe gevoegd worden
-        //if (towerNumber == 12)
-        //{
-        //    AttackDamage_Slow();
-        //    AttackSpeed_Slow();
-        //}
+        if (towerNumber == 12)
+        {
+            Attack_Slow();
+        }
         if (towerNumber == 13)
         {
             Attack_Shotgun();
@@ -77,6 +75,20 @@ public class DamageCalculation : MonoBehaviour
     }
     #endregion
     #region slow
+    public void Attack_Slow()
+    {
+        upgradePoint++;
+        end_Damage = baseDamage + (upgradeDamage * upgradePoint);
+        barrel.GetComponent<SniperTower>().RecieveDamage(end_Damage);
+
+        end_Speed = 0.1f;
+        attackPerSec = 10f;
+        tower.GetComponent<TurretTargeting>().RecieveAttackSpeed(end_Speed, attackPerSec);
+        if (upgradePoint == 5)
+        {
+            barrel.GetComponent<SlowTower>().slowLvl5 = true;
+        }
+    }
     #endregion
     #region shotgun
     public void Attack_Shotgun()

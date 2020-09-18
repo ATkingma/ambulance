@@ -64,7 +64,7 @@ public class TurretTargeting : MonoBehaviour
                         }
                         if (gameObject.transform.parent.tag == "SlowTower")
                         {
-                            shootOrigin.GetComponent<BasicTower>().Fire();
+                            shootOrigin.GetComponent<SlowTower>().Fire();
                         }
                         if (gameObject.transform.parent.tag == "ShotgunTower")
                         {

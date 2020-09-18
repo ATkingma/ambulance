@@ -18,6 +18,8 @@ public class BasicBulletBehavior : MonoBehaviour
     private GameObject nextTarget;
     private float minDist = Mathf.Infinity;
 
+    //slow
+
     //shotgun
     RaycastHit hit;
     public LayerMask mask;
