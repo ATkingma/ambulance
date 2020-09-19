@@ -25,11 +25,6 @@ public class TurretTargeting : MonoBehaviour
         List<Transform> targets = new List<Transform>(1000);
         List<Transform> upgradeValues = new List<Transform>(1000);
         mainParticles = gameObject.transform.parent.GetComponentInChildren<ParticleSystem>().main;
-
-        if(transform.parent.tag == "BasicTower" || transform.parent.tag == "SniperTower" || transform.parent.tag == "SlowTower")
-        {
-            range /= 0.3f;
-        }
     }
     private void Update()
     {
@@ -143,7 +138,7 @@ public class TurretTargeting : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(transform.position + transform.up * 0.85f, transform.forward * range, Color.red, 0.5f);
+            Debug.DrawRay(transform.position + transform.up * upOffsetRaycast, transform.forward * range, Color.red, 0.5f);
         }
     }
 

@@ -46,11 +46,13 @@ public class UpgradeSelect : MonoBehaviour
         if (selectedTower.transform.parent.tag == "SlowTower")
         {
             towerSelect = 12;
+            stats[0].text = selectedTower.GetComponentInChildren<SlowTower>().end_Damage.ToString() + " Damage";
         }
         //shotgun
         if (selectedTower.transform.parent.tag == "ShotgunTower")
         {
             towerSelect = 13;
+            stats[0].text = selectedTower.GetComponentInChildren<ShotgunTower>().end_Damage.ToString() + " Damage";
         }
         //laser
         if (selectedTower.transform.parent.tag == "LaserTower")
