@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class WaveScript : MonoBehaviour
 {
     [System.Serializable]
@@ -24,52 +23,58 @@ public class WaveScript : MonoBehaviour
     public GameObject spawnPoint;
     public int maxWave,waveCount,prevuisWaveCount,maxEnemies,enemiesDied,roundCoolDown;
     public float[] nextSpawn;
-    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap;
+    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap,SpawnEnemies;
+    public float beginTime;
     public void EnemieSpawner()
     {
-        if (resettingRound == false)
-        {
-            if (waves[waveCount].enemiePrefabAmount[0] == true)
+        if (beginTime <= Time.time)
+        { 
+            if (resettingRound == false)
             {
-                if (Time.time > nextSpawn[0])
+                if (waves[waveCount].enemiePrefabAmount[0] == true)
                 {
-                    if (waves[waveCount].enemies[0].amount > 0)
+                    if (Time.time > nextSpawn[0])
                     {
-                        Instantiate(waves[waveCount].enemies[0].enemiePrefab, spawnPoint.transform.position, Quaternion.identity);
-                        nextSpawn[0] = Time.time + waves[waveCount].enemies[0].spawnRate;
-                        waves[waveCount].enemies[0].amount--;
+                        if (waves[waveCount].enemies[0].amount > 0)
+                        {
+                            Instantiate(waves[waveCount].enemies[0].enemiePrefab, spawnPoint.transform.position, Quaternion.identity);
+                            nextSpawn[0] = Time.time + waves[waveCount].enemies[0].spawnRate;
+                            waves[waveCount].enemies[0].amount--;
+                        }
                     }
                 }
-            }
-            if (waves[waveCount].enemiePrefabAmount[1] == true)
-            {
-                if (Time.time > nextSpawn[1])
+                if (waves[waveCount].enemiePrefabAmount[1] == true)
                 {
-                    if (waves[waveCount].enemies[1].amount > 0)
+                    if (Time.time > nextSpawn[1])
                     {
-                        Instantiate(waves[waveCount].enemies[1].enemiePrefab, spawnPoint.transform.position, Quaternion.identity);
-                        nextSpawn[1] = Time.time + waves[waveCount].enemies[1].spawnRate;
-                        waves[waveCount].enemies[1].amount--;
+                        if (waves[waveCount].enemies[1].amount > 0)
+                        {
+                            Instantiate(waves[waveCount].enemies[1].enemiePrefab, spawnPoint.transform.position, Quaternion.identity);
+                            nextSpawn[1] = Time.time + waves[waveCount].enemies[1].spawnRate;
+                            waves[waveCount].enemies[1].amount--;
+                        }
                     }
                 }
-            }
-            if (waves[waveCount].enemiePrefabAmount[2] == true)
-            {
-                if (Time.time > nextSpawn[2])
+                if (waves[waveCount].enemiePrefabAmount[2] == true)
                 {
-                    if (waves[waveCount].enemies[2].amount > 0)
+                    if (Time.time > nextSpawn[2])
                     {
-                        Instantiate(waves[waveCount].enemies[2].enemiePrefab, spawnPoint.transform.position, Quaternion.identity);
-                        nextSpawn[2] = Time.time + waves[waveCount].enemies[2].spawnRate;
-                        waves[waveCount].enemies[2].amount--;
+                        if (waves[waveCount].enemies[2].amount > 0)
+                        {
+                            Instantiate(waves[waveCount].enemies[2].enemiePrefab, spawnPoint.transform.position, Quaternion.identity);
+                            nextSpawn[2] = Time.time + waves[waveCount].enemies[2].spawnRate;
+                            waves[waveCount].enemies[2].amount--;
+                        }
                     }
                 }
             }
         }
     }
+    
     public void Update()
     {
         EndRoundCheck();
+
         EnemieSpawner();
         MaxWaveCheck();
         if (checkedAgain == true)
