@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    public GameObject options, credits;
+    public GameObject options, credits,mainMenu, controlls;
     public void QuitGame()
     {
         Application.Quit();
@@ -18,15 +18,28 @@ public class MainMenuScript : MonoBehaviour
     {
         UiOff();
         options.SetActive(true);
+        mainMenu.SetActive(false);
     }
     public void Credits()
     {
         UiOff();
         credits.SetActive(true);
     }
+    public void Main()
+    {
+        UiOff();
+        mainMenu.SetActive(true);
+    }
+    public void Control()
+    {
+        UiOff();
+        controlls.SetActive(true);
+    }
     public void UiOff()
     {
+        mainMenu.SetActive(false);
         options.SetActive(false);
         credits.SetActive(false);
+        controlls.SetActive(false);
     }
 }
