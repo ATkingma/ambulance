@@ -88,7 +88,7 @@ public class WaveScript : MonoBehaviour
         {
             if (isNextMap == true)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             if (isNextMap == false)
             {

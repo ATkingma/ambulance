@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class MainMenuScript : MonoBehaviour
 {
     public GameObject options, credits,mainMenu, controlls;
@@ -12,7 +11,7 @@ public class MainMenuScript : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Options()
     {
