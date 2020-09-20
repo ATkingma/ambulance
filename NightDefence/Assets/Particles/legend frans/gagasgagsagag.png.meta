@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 5fc3873b378f4d248a366cea45fb10fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8145708784400278900
+    second: gagasgagsagag_0
+  - first:
+      213: -7961550126717050566
+    second: gagasgagsagag_1
+  - first:
+      213: -4091139089302890454
+    second: gagasgagsagag_2
+  - first:
+      213: 5427528156229591835
+    second: gagasgagsagag_3
+  - first:
+      213: -6192228069028897519
+    second: gagasgagsagag_4
+  - first:
+      213: 3911121067361091856
+    second: gagasgagsagag_5
+  - first:
+      213: -5031894557817292116
+    second: gagasgagsagag_6
+  - first:
+      213: -1413226200871796373
+    second: gagasgagsagag_7
+  - first:
+      213: 6197427617572786331
+    second: gagasgagsagag_8
+  - first:
+      213: 6085442087880670432
+    second: gagasgagsagag_9
+  - first:
+      213: -2810581068671192356
+    second: gagasgagsagag_10
+  - first:
+      213: 5920774302040570831
+    second: gagasgagsagag_11
+  - first:
+      213: -5045258993850568987
+    second: gagasgagsagag_12
+  - first:
+      213: -8298264490439946016
+    second: gagasgagsagag_13
+  - first:
+      213: -8517700621666172820
+    second: gagasgagsagag_14
+  - first:
+      213: -5963789631702437441
+    second: gagasgagsagag_15
+  - first:
+      213: -3581219221752667789
+    second: gagasgagsagag_16
+  - first:
+      213: -257073625849700881
+    second: gagasgagsagag_17
+  - first:
+      213: 2952011781148642525
+    second: gagasgagsagag_18
+  - first:
+      213: 5114881393288290999
+    second: gagasgagsagag_19
+  - first:
+      213: 2840626036269298212
+    second: gagasgagsagag_20
+  - first:
+      213: -6066509310250921536
+    second: gagasgagsagag_21
+  - first:
+      213: 3895153752595433317
+    second: gagasgagsagag_22
+  - first:
+      213: 4841577363867418801
+    second: gagasgagsagag_23
+  - first:
+      213: 6790641169126747128
+    second: gagasgagsagag_24
+  - first:
+      213: 3080968868374277810
+    second: gagasgagsagag_25
+  - first:
+      213: -8220982071688307697
+    second: gagasgagsagag_26
+  - first:
+      213: -8114682284806381370
+    second: gagasgagsagag_27
+  - first:
+      213: -4993376836829696873
+    second: gagasgagsagag_28
+  - first:
+      213: -6693623920742189078
+    second: gagasgagsagag_29
+  - first:
+      213: -7792642913170107650
+    second: gagasgagsagag_30
+  - first:
+      213: -6866429260200056726
+    second: gagasgagsagag_31
+  - first:
+      213: 8422431559551521559
+    second: gagasgagsagag_32
+  - first:
+      213: 546224232388410493
+    second: gagasgagsagag_33
+  - first:
+      213: -664234374143725829
+    second: gagasgagsagag_34
+  - first:
+      213: -6652642393999916270
+    second: gagasgagsagag_35
+  - first:
+      213: -250679968987340370
+    second: gagasgagsagag_36
+  - first:
+      213: 3555486501767615009
+    second: gagasgagsagag_37
+  - first:
+      213: 7903220684616484097
+    second: gagasgagsagag_38
+  - first:
+      213: -5635517278595539307
+    second: gagasgagsagag_39
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gagasgagsagag_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 515
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ada06b401a4fe80800000000000000
+      internalID: -8145708784400278900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 515
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3160938754e28190800000000000000
+      internalID: -7961550126717050566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 514
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28d26f8caa5937c0800000000000000
+      internalID: -4091139089302890454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_3
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 514
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13ee701a14725b40800000000000000
+      internalID: 5427528156229591835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_4
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 513
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d54590169c01aa0800000000000000
+      internalID: -6192228069028897519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_5
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 513
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 011ca9583e7174630800000000000000
+      internalID: 3911121067361091856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_6
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 513
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa341e4f8e1b2ab0800000000000000
+      internalID: -5031894557817292116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_7
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 513
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6103c50246336ce0800000000000000
+      internalID: -1413226200871796373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 385
+        width: 62
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b901f92359fa10650800000000000000
+      internalID: 6197427617572786331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 384
+        width: 64
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecb65d3655d37450800000000000000
+      internalID: 6085442087880670432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_10
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 383
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd27a6db86fcef8d0800000000000000
+      internalID: -2810581068671192356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_11
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 383
+        width: 66
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbb36cabd0da2250800000000000000
+      internalID: 5920774302040570831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_12
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 383
+        width: 67
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee21bf0da3abf9b0800000000000000
+      internalID: -5045258993850568987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_13
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 383
+        width: 68
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0d61b7964a6dc80800000000000000
+      internalID: -8298264490439946016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_14
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 383
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60c67ec96c0bc980800000000000000
+      internalID: -8517700621666172820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_15
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 383
+        width: 69
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1f73f6dec5c3da0800000000000000
+      internalID: -5963789631702437441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_16
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 255
+        width: 70
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371a1a88714fc4ec0800000000000000
+      internalID: -3581219221752667789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 255
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed5b1a36e0be6cf0800000000000000
+      internalID: -257073625849700881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_18
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 255
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc02241317a7f820800000000000000
+      internalID: 2952011781148642525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_19
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 255
+        width: 72
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b224330785bbf640800000000000000
+      internalID: 5114881393288290999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_20
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 255
+        width: 73
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422be87645eeb6720800000000000000
+      internalID: 2840626036269298212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_21
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 255
+        width: 74
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1d4ef8ced6fcba0800000000000000
+      internalID: -6066509310250921536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_22
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 255
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5670bf853bd5e0630800000000000000
+      internalID: 3895153752595433317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_23
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 255
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0c3ede5fcb03340800000000000000
+      internalID: 4841577363867418801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_24
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 127
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb61fa3a243d3e50800000000000000
+      internalID: 6790641169126747128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_25
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 127
+        width: 76
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be6c73bcdcc1ca20800000000000000
+      internalID: 3080968868374277810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_26
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 127
+        width: 76
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cd928cc5439ed80800000000000000
+      internalID: -8220982071688307697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_27
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 127
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0e5f4947bd26f80800000000000000
+      internalID: -8114682284806381370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_28
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 127
+        width: 78
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c2a131936f3bab0800000000000000
+      internalID: -4993376836829696873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_29
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 127
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7ba1822887b13a0800000000000000
+      internalID: -6693623920742189078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_30
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 127
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2d703ce88fad390800000000000000
+      internalID: -7792642913170107650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_31
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 127
+        width: 75
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a686d6eb7fa85b0a0800000000000000
+      internalID: -6866429260200056726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_32
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 79
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7139b1421ec72e470800000000000000
+      internalID: 8422431559551521559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_33
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 0
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cb83b9b04949700800000000000000
+      internalID: 546224232388410493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_34
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 0
+        width: 80
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2f812b5a28c6f0800000000000000
+      internalID: -664234374143725829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_35
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 0
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2134ee76df01da3a0800000000000000
+      internalID: -6652642393999916270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_36
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 81
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1243875e7658cf0800000000000000
+      internalID: -250679968987340370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_37
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 0
+        width: 82
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1221e85b220a75130800000000000000
+      internalID: 3555486501767615009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_38
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105c510f651edad60800000000000000
+      internalID: 7903220684616484097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gagasgagsagag_39
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 0
+        width: 73
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e9cb3b4ee9ac1b0800000000000000
+      internalID: -5635517278595539307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a03e578222e5a3340bcdcc9104b852f5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
