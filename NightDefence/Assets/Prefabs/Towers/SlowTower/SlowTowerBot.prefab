@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4445b7e0e282c494186bf89b58df598e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8316725789654763307, guid: 8b19019399f0afc4fb4f381965a8a46c, type: 3}
+  bullet: {fileID: 8316725789654763307, guid: ebade3bcc0d71b64a809f9b5a0bfa524, type: 3}
   bulletSpeed: 100
   end_Damage: 3
   slowLvl5: 0
