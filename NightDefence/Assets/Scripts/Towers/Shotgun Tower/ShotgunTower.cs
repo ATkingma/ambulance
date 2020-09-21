@@ -6,7 +6,7 @@ public class ShotgunTower : MonoBehaviour
 {
     public Rigidbody bullet;
     public float bulletSpeed;
-    //public GameObject audioData;
+    public GameObject audioData;
     public float end_Damage;
     public bool shotgunLvl5;
     public int bulletAmount;
@@ -30,6 +30,7 @@ public class ShotgunTower : MonoBehaviour
             clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
             clone.velocity = transform.TransformDirection(rotations[i].forward.x, rotations[i].forward.y, rotations[i].forward.z);
         }
+            audioData.GetComponent<AudioSource>().Play();
     }
 
     public void RecieveDamage(float dmg)

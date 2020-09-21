@@ -6,7 +6,7 @@ public class SniperTower : MonoBehaviour
 {
     public Rigidbody bullet;
     public float bulletSpeed;
-    //public GameObject audioData;
+    public GameObject audioData;
     public float end_Damage;
     public bool sniperLvl5;
 
@@ -22,7 +22,7 @@ public class SniperTower : MonoBehaviour
         clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
         clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
 
-        //audioData.GetComponent<AudioSource>().Play();
+        audioData.GetComponent<AudioSource>().Play();
     }
 
     public void RecieveDamage(float dmg)

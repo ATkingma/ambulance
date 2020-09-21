@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
-    public GameObject options, credits,mainMenu, controlls;
+    public GameObject options, credits,mainMenu, controlls,hover;
     public void QuitGame()
     {
         Application.Quit();
@@ -40,5 +40,9 @@ public class MainMenuScript : MonoBehaviour
         options.SetActive(false);
         credits.SetActive(false);
         controlls.SetActive(false);
+    }
+    public void PlayerHover()
+    {
+        hover.GetComponent<AudioSource>().Play();
     }
 }
