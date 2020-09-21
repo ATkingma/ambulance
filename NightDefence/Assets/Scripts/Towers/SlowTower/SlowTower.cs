@@ -16,10 +16,10 @@ public class SlowTower : MonoBehaviour
         clone = Instantiate(bullet, transform.position, Quaternion.LookRotation(transform.forward));
         if (slowLvl5 == true)
         {
-            clone.gameObject.GetComponent<BasicBulletBehavior>().bounceEffect = true;
+            clone.gameObject.GetComponent<BulletBehavior>().bounceEffect = true;
         }
-        clone.gameObject.GetComponent<BasicBulletBehavior>().givenDamage = end_Damage;
-        clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
+        clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
+        clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
         clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
 
         //audioData.GetComponent<AudioSource>().Play();

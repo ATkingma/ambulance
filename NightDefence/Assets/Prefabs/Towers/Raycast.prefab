@@ -40,14 +40,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4781485631100374572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dabad0d2b38bc14419b1f00b2d592ecb, type: 3}
+  m_Script: {fileID: 11500000, guid: 48564ed91eb43424286d47419b497a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 0, z: 0}
   towerShop: {fileID: 0}
   upgradeShop: {fileID: 0}
+  menuUI: {fileID: 0}
+  sellPanel: {fileID: 0}
   gridCollider: {fileID: 0}
+  cancelButton: {fileID: 0}
   placable:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   towerPositions: []

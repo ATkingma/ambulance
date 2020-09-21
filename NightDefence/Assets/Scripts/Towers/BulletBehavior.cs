@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicBulletBehavior : MonoBehaviour
+public class BulletBehavior : MonoBehaviour
 {
     public float givenDamage, bulletSpeed;
     private bool expired = false;

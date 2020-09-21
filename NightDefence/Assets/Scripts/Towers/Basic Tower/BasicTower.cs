@@ -21,10 +21,10 @@ public class BasicTower : MonoBehaviour
             clone = Instantiate(bullet, left.position, Quaternion.LookRotation(transform.forward));
             if(basicLvl5 == true)
             {
-                clone.gameObject.GetComponent<BasicBulletBehavior>().burningEffect = true;
+                clone.gameObject.GetComponent<BulletBehavior>().burningEffect = true;
             }
-            clone.gameObject.GetComponent<BasicBulletBehavior>().givenDamage = end_Damage;
-            clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
+            clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
+            clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
             clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
             Toggle();
         }
@@ -33,10 +33,10 @@ public class BasicTower : MonoBehaviour
             clone = Instantiate(bullet, right.position, Quaternion.LookRotation(transform.forward));
             if (basicLvl5 == true)
             {
-                clone.gameObject.GetComponent<BasicBulletBehavior>().burningEffect = true;
+                clone.gameObject.GetComponent<BulletBehavior>().burningEffect = true;
             }
-            clone.gameObject.GetComponent<BasicBulletBehavior>().givenDamage = end_Damage;
-            clone.gameObject.GetComponent<BasicBulletBehavior>().bulletSpeed = bulletSpeed;
+            clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
+            clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
             clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
             Toggle();
         }

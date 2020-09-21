@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TowerSelect : MonoBehaviour
 {
-    private CubePlacer select;
+    private TowerPlacer select;
     private Centjes bank;
 
     public List<float> towerCost;
@@ -13,7 +13,7 @@ public class TowerSelect : MonoBehaviour
 
     private void Start()
     {
-        select = FindObjectOfType<CubePlacer>();
+        select = FindObjectOfType<TowerPlacer>();
         bank = FindObjectOfType<Centjes>();
         List<Transform> towers = new List<Transform>();
         List<float> towerCost = new List<float>();

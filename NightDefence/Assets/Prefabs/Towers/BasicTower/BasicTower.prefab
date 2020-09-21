@@ -263,7 +263,7 @@ MonoBehaviour:
   right: {fileID: 3383537364829577138}
   toggle: 0
   audioData: {fileID: 1847035403814044787}
-  end_Damage: 20
+  end_Damage: 5
   basicLvl5: 0
   burnDamagerecieve: 0
 --- !u!1 &3383537364829577133
@@ -5232,9 +5232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0
+  baseDamage: 5
   upgradeDamage: 5
-  baseSpeed: 0
+  baseSpeed: 1
   upgradeSpeed: 0.2
   tower: {fileID: 7319361034425659285}
   barrel: {fileID: 3383537364641468085}

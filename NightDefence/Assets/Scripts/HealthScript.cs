@@ -24,8 +24,6 @@ public class HealthScript : MonoBehaviour
             isBurning = true;
             burnDamage = overTimeDamage;
             burning = Time.time + 5;
-            print(burning);
-            print(Time.time);
         }
     }
 

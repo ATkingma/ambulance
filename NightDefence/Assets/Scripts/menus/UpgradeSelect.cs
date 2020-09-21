@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UpgradeSelect : MonoBehaviour
 {
-    private CubePlacer select;
+    private TowerPlacer select;
 
     public List<TextMeshProUGUI> stats;
     public GameObject selectedTower, parent;
@@ -15,7 +15,7 @@ public class UpgradeSelect : MonoBehaviour
 
     private void Start()
     {
-        select = FindObjectOfType<CubePlacer>();
+        select = FindObjectOfType<TowerPlacer>();
         List<Transform> towers = new List<Transform>();
         parent = selectedTower.transform.parent.gameObject;
     }
@@ -24,6 +24,7 @@ public class UpgradeSelect : MonoBehaviour
         selectedTower = tower;
         parent = selectedTower.transform.parent.gameObject;
         stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+        stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
         UpgradeSelection();
     }
 

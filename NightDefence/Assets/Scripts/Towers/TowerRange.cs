@@ -18,7 +18,7 @@ public class TowerRange : MonoBehaviour
     {
         if(Input.GetButtonUp("Fire1"))
         {
-            rangePosition = FindObjectOfType<CubePlacer>().finalPosition;
+            rangePosition = FindObjectOfType<TowerPlacer>().finalPosition;
         }
     }
 

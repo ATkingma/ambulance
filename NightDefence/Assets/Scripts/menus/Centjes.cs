@@ -35,7 +35,7 @@ public class Centjes : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<CubePlacer>().CloseShop();
+            FindObjectOfType<TowerPlacer>().CloseShop();
         }
     }
 }
