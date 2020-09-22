@@ -10676,12 +10676,14 @@ MonoBehaviour:
       amountChanged: 1
     enemiePrefabAmount: 010101
   spawnPoint: {fileID: 641505954}
+  button: {fileID: 0}
   maxWave: 10
   waveCount: 0
   prevuisWaveCount: 0
   maxEnemies: 0
   enemiesDied: 0
   roundCoolDown: 15
+  roundCoolDownMore: 0
   nextSpawn:
   - 0
   - 0
@@ -10691,6 +10693,7 @@ MonoBehaviour:
   amountIsChanging: 0
   isNextMap: 0
   SpawnEnemies: 0
+  skipPressed: 0
   beginTime: 0
 --- !u!1001 &164482639
 PrefabInstance:
@@ -44543,12 +44546,14 @@ MonoBehaviour:
       amountChanged: 1
     enemiePrefabAmount: 010101
   spawnPoint: {fileID: 641505954}
+  button: {fileID: 0}
   maxWave: 10
   waveCount: 0
   prevuisWaveCount: 0
   maxEnemies: 0
   enemiesDied: 0
   roundCoolDown: 15
+  roundCoolDownMore: 0
   nextSpawn:
   - 0
   - 0
@@ -44558,6 +44563,7 @@ MonoBehaviour:
   amountIsChanging: 0
   isNextMap: 0
   SpawnEnemies: 0
+  skipPressed: 0
   beginTime: 0
 --- !u!1 &794550977 stripped
 GameObject:
@@ -87849,12 +87855,14 @@ MonoBehaviour:
       amountChanged: 1
     enemiePrefabAmount: 010101
   spawnPoint: {fileID: 641505954}
+  button: {fileID: 0}
   maxWave: 10
   waveCount: 0
   prevuisWaveCount: 0
   maxEnemies: 0
   enemiesDied: 0
   roundCoolDown: 15
+  roundCoolDownMore: 0
   nextSpawn:
   - 0
   - 0
@@ -87864,6 +87872,7 @@ MonoBehaviour:
   amountIsChanging: 0
   isNextMap: 0
   SpawnEnemies: 0
+  skipPressed: 0
   beginTime: 0
 --- !u!114 &1867190126
 MonoBehaviour:
@@ -94667,12 +94676,14 @@ MonoBehaviour:
       amountChanged: 1
     enemiePrefabAmount: 010101
   spawnPoint: {fileID: 641505954}
+  button: {fileID: 3570175188322416955}
   maxWave: 10
   waveCount: 0
   prevuisWaveCount: 0
   maxEnemies: 0
   enemiesDied: 0
   roundCoolDown: 15
+  roundCoolDownMore: 0
   nextSpawn:
   - 0
   - 0
@@ -94682,6 +94693,7 @@ MonoBehaviour:
   amountIsChanging: 0
   isNextMap: 0
   SpawnEnemies: 0
+  skipPressed: 0
   beginTime: 0
 --- !u!4 &2079244712
 Transform:
@@ -102673,7 +102685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1138938402845702004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2079244711}
+        m_TargetAssemblyTypeName: WaveScript, Assembly-CSharp
+        m_MethodName: Button
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2007690146473665414
 Transform:
   m_ObjectHideFlags: 0
