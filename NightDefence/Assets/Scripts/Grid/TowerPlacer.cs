@@ -55,25 +55,32 @@ public class TowerPlacer : MonoBehaviour
             {
                 RaycastHit hit = hitInfo[i];
                 GameObject gObject = hit.transform.gameObject;
-                if (gObject.tag == "Tower")
+                if(gObject.tag == "SkipButton")
                 {
-                    PlaceTower(hitInfo[i].point);
-                    uiScript.GetComponent<UIScript>().UpgradeShopOn();
-                    upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
-                    gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
-                    gridCollider.GetComponent<BoxCollider>().enabled = false;
+                    return;
                 }
                 else
                 {
-                    if (!upgradeShop.activeInHierarchy)
+                    if (gObject.tag == "Tower")
                     {
-                        if (gObject.tag == "Grid")
+                        PlaceTower(hitInfo[i].point);
+                        uiScript.GetComponent<UIScript>().UpgradeShopOn();
+                        upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
+                        gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
+                        gridCollider.GetComponent<BoxCollider>().enabled = false;
+                    }
+                    else
+                    {
+                        if (!upgradeShop.activeInHierarchy)
                         {
-                            PlaceTower(hitInfo[i].point);
-                            if (!towerPositions.Contains(finalPosition))
+                            if (gObject.tag == "Grid")
                             {
-                                uiScript.GetComponent<UIScript>().TowerShopOn();
-                                gridCollider.GetComponent<BoxCollider>().enabled = false;
+                                PlaceTower(hitInfo[i].point);
+                                if (!towerPositions.Contains(finalPosition))
+                                {
+                                    uiScript.GetComponent<UIScript>().TowerShopOn();
+                                    gridCollider.GetComponent<BoxCollider>().enabled = false;
+                                }
                             }
                         }
                     }
