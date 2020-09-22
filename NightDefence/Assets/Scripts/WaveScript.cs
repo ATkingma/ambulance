@@ -16,19 +16,27 @@ public class WaveScript : MonoBehaviour
     {
         public GameObject enemiePrefab;
         public float spawnRate;
-        public int amount,NextRoundCount;
+        public int amount, NextRoundCount;
         public bool amountChanged;
     }
     public Wave[] waves;
-    public GameObject spawnPoint;
-    public int maxWave,waveCount,prevuisWaveCount,maxEnemies,enemiesDied,roundCoolDown;
+    public GameObject spawnPoint, button;
+    public int maxWave, waveCount, prevuisWaveCount, maxEnemies, enemiesDied, roundCoolDown, roundCoolDownMore;
     public float[] nextSpawn;
-    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap,SpawnEnemies;
+    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed;
     public float beginTime;
+
+
+    public void Button()
+    {
+        Cooldown();
+        skipPressed = true;
+        Invoke("SkipButtonPressed", roundCoolDownMore);
+    }
     public void EnemieSpawner()
     {
         if (beginTime <= Time.time)
-        { 
+        {
             if (resettingRound == false)
             {
                 if (waves[waveCount].enemiePrefabAmount[0] == true)
@@ -70,7 +78,6 @@ public class WaveScript : MonoBehaviour
             }
         }
     }
-    
     public void Update()
     {
         EndRoundCheck();
@@ -99,8 +106,8 @@ public class WaveScript : MonoBehaviour
     private void EnemieAmountCounting()
     {
         checkedAgain = false;
-         if (waves[waveCount].enemiePrefabAmount[0] == true)
-         {
+        if (waves[waveCount].enemiePrefabAmount[0] == true)
+        {
             maxEnemies += waves[waveCount].enemies[0].amount;
             waves[waveCount].enemies[0].NextRoundCount += waves[waveCount].enemies[0].amount;
         }
@@ -119,6 +126,8 @@ public class WaveScript : MonoBehaviour
     {
         EnemieAmountCounting();
         prevuisWaveCount -= 1;
+        roundCoolDown += 5;
+        button.SetActive(false);
     }
     public void EndRoundCheck()
     {
@@ -126,22 +135,33 @@ public class WaveScript : MonoBehaviour
         {
             if (resettingRound == false)
             {
-                StartCoroutine(ResetRound());
+                Reset();
             }
         }
     }
-    public IEnumerator ResetRound()
+    public void SkipButtonPressed()
     {
+        skipPressed = false;
+    }
+    public void Reset()
+    {
+        button.SetActive(true);
         resettingRound = true;
         maxEnemies = 0;
         enemiesDied = 0;
-        yield return new WaitForSeconds(roundCoolDown);
-        AmountChange();
-        checkedAgain = true;
-        Invoke("MoreEnemies", 0.3f);   
-        Invoke("ResetBoolHolder", 1.0f);
-        waveCount++;
-        prevuisWaveCount++;
+        Invoke("Cooldown", roundCoolDown);
+    }
+    public void Cooldown()
+    {
+        if (skipPressed == false)
+        {
+            checkedAgain = true;
+            Invoke("MoreEnemies", 0.3f);
+            Invoke("ResetBoolHolder", 1.0f);
+            waveCount++;
+            prevuisWaveCount++;
+            button.SetActive(false);
+        }
     }
     public void AmountChange()
     {
@@ -149,7 +169,7 @@ public class WaveScript : MonoBehaviour
         if (waves[waveCount].enemiePrefabAmount[0] == true)
         {
             if (waves[waveCount].enemies[0].amountChanged == false)
-            {               
+            {
                 waves[waveCount].enemies[0].NextRoundCount += 10;
             }
         }
