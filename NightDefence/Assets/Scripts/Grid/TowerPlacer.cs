@@ -30,7 +30,7 @@ public class TowerPlacer : MonoBehaviour
             Raycast();
             gridCollider.GetComponent<BoxCollider>().enabled = true;
         }
-        if (towerShop.activeInHierarchy || upgradeShop.activeInHierarchy || menuUI.activeInHierarchy || sellPanel.activeInHierarchy)
+        if (towerShop.activeInHierarchy || upgradeShop.activeInHierarchy || sellPanel.activeInHierarchy)
         {
             uiIsON = true;
             gridCollider.GetComponent<BoxCollider>().enabled = false;

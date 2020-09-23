@@ -150,16 +150,32 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 81a7891c94445a64e878272a0e6c7b0d
+    name: MyExposedParam 7
+  - guid: 086c238f3691d0043847a9186da2a3ce
+    name: MyExposedParam 6
+  - guid: 4dc4510e22a7c4d41a4919f5a4dbaa7e
+    name: MyExposedParam 4
+  - guid: 17e4d29f35dd6ae4ab8dec0b03ce8c34
+    name: MyExposedParam
+  - guid: 3c834f5f4721cac4b992102ba9610f83
+    name: MyExposedParam 1
+  - guid: fafae7856f3b6e3439d1986da16dd325
+    name: MyExposedParam 2
+  - guid: f64f7bafa2e3ac441b62bafa7e8c37f1
+    name: MyExposedParam 3
+  - guid: 949f9a370428db24889c63c93c23a7c6
+    name: MyExposedParam 5
   m_AudioMixerGroupViews:
   - guids:
     - 12b4a9bcb72928044824d830bf9d8db3
     - 989523f8b7498d94488e0ae93e154c47
     - bd828f5877b127f4a9760b8dba9a8113
-    - e79a1c685c6b843498faf6ded270320a
-    - cee0fb6d93bd21549a920d9e0168b7d7
     - e38635999465c104284572e9d35bed30
     - daadf33181e715542b41719aa824743a
+    - e79a1c685c6b843498faf6ded270320a
+    - cee0fb6d93bd21549a920d9e0168b7d7
     - e44305d64b3a3b5488a60ceaf06b4fac
     name: View
   m_CurrentViewIndex: 0
@@ -211,7 +227,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 12e581c1bdb4e194db09f91c4065e819
   m_FloatValues:
-    917b8ef86984b5d49b2758e26ce4a438: -0.27209902
+    917b8ef86984b5d49b2758e26ce4a438: 0
     bd21d2af632f5da4c8951cfca32c2c0c: -0.102314055
   m_TransitionOverrides: {}
 --- !u!243 &3503395647434586945
