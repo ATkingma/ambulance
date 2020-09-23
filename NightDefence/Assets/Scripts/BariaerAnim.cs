@@ -9,7 +9,7 @@ public class BariaerAnim : MonoBehaviour
     void Update()
     {
         OffSet += Time.deltaTime;
-        gameObject.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, OffSet));
+        gameObject.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, -OffSet));
 
     }
 }
