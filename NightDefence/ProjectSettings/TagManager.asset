@@ -25,6 +25,7 @@ TagManager:
   - SlowTower
   - ShotgunTower
   - LaserTower
+  - SkipButton
   layers:
   - Default
   - TransparentFX

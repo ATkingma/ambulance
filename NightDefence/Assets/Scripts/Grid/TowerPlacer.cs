@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TowerPlacer : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class TowerPlacer : MonoBehaviour
             {
                 RaycastHit hit = hitInfo[i];
                 GameObject gObject = hit.transform.gameObject;
-                if(gObject.tag == "SkipButton")
+                if(EventSystem.current.IsPointerOverGameObject())
                 {
                     return;
                 }
