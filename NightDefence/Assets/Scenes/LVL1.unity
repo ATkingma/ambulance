@@ -55862,8 +55862,7 @@ AudioSource:
   m_GameObject: {fileID: 987319494}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4745165668502202660, guid: 5df41950fd2489b4eafc6e8fb7558a87,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3a1ef758649d26645812a99d6e4986c7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.04
@@ -108549,7 +108548,7 @@ GameObject:
   - component: {fileID: 8887558537347813339}
   - component: {fileID: 7686955758505620876}
   m_Layer: 0
-  m_Name: placementsound
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
