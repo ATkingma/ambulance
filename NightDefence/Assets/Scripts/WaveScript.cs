@@ -95,10 +95,13 @@ public class WaveScript : MonoBehaviour
         {
             if (isNextMap == true)
             {
+                resettingRound = true;
                 SceneManager.LoadScene(2);
+
             }
             if (isNextMap == false)
             {
+                resettingRound = true;
                 SceneManager.LoadScene(2);
             }
         }

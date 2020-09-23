@@ -6,12 +6,15 @@ using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
-    public Text money, baseHP, EnemiesAlive;
+    public Text money, baseHP, enemiesAliveText,waveCount;
     public int wave, enemiesAlive;
     public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, sellPanel, GameManager, optionsMenu;
     public bool toggle;
 
-
+    private void Start()
+    {
+        wave = 1;
+    }
     public void Update()
     {
         InGameUIUpdate();
@@ -30,8 +33,9 @@ public class UIScript : MonoBehaviour
         wave = GameManager.GetComponent<WaveScript>().waveCount;
         money.text = GameManager.GetComponent<Centjes>().centjes.ToString();
         enemiesAlive = GameManager.GetComponent<WaveScript>().maxEnemies - GameManager.GetComponent<WaveScript>().enemiesDied;
-        EnemiesAlive.text = enemiesAlive.ToString();
+        enemiesAliveText.text = enemiesAlive.ToString();
         baseHP.text = basis.GetComponent<HealthScript>().health.ToString();
+        waveCount.text = wave.ToString();
     }
     public void ESCMenu()
     {
@@ -39,10 +43,12 @@ public class UIScript : MonoBehaviour
         {
             UIOff();
             inGameMenu.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
             inGameMenu.SetActive(false);
+            Time.timeScale = 1;
             if (optionsMenu.activeInHierarchy == false)
             {
                 return;
