@@ -152,21 +152,21 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 81a7891c94445a64e878272a0e6c7b0d
-    name: MyExposedParam 7
+    name: background
   - guid: 086c238f3691d0043847a9186da2a3ce
-    name: MyExposedParam 6
+    name: buttons
   - guid: 4dc4510e22a7c4d41a4919f5a4dbaa7e
-    name: MyExposedParam 4
+    name: enemies
   - guid: 17e4d29f35dd6ae4ab8dec0b03ce8c34
-    name: MyExposedParam
+    name: master
   - guid: 3c834f5f4721cac4b992102ba9610f83
-    name: MyExposedParam 1
+    name: music
   - guid: fafae7856f3b6e3439d1986da16dd325
-    name: MyExposedParam 2
+    name: sfx
   - guid: f64f7bafa2e3ac441b62bafa7e8c37f1
-    name: MyExposedParam 3
+    name: towers
   - guid: 949f9a370428db24889c63c93c23a7c6
-    name: MyExposedParam 5
+    name: ui
   m_AudioMixerGroupViews:
   - guids:
     - 12b4a9bcb72928044824d830bf9d8db3

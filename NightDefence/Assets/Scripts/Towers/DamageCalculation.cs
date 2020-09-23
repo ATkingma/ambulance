@@ -33,11 +33,10 @@ public class DamageCalculation : MonoBehaviour
         {
             Attack_Shotgun();
         }
-        //if (towerNumber == 14)
-        //{
-        //    AttackDamage_Laser();
-        //    AttackSpeed_Laser();
-        //}
+        if (towerNumber == 14)
+        {
+            Attack_Laser();
+        }
     }
     #region basic
     public void Attack_Basic()
@@ -106,6 +105,22 @@ public class DamageCalculation : MonoBehaviour
         if (upgradePoint == 5)
         {
             barrel.GetComponent<ShotgunTower>().shotgunLvl5 = true;
+        }
+    }
+    #endregion
+    #region laser
+    public void Attack_Laser()
+    {
+        upgradePoint++;
+        end_Damage = baseDamage + (upgradeDamage * upgradePoint);
+        tower.GetComponent<LaserTargeting>().RecieveDamage(end_Damage);
+
+        end_Speed = 0.1f;
+        attackPerSec = 10;
+        tower.GetComponent<LaserTargeting>().RecieveAttackSpeed(end_Speed, attackPerSec);
+        if (upgradePoint == 5)
+        {
+            tower.GetComponent<LaserTargeting>().laserLvl5 = true;
         }
     }
     #endregion

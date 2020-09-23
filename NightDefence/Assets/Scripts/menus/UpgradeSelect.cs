@@ -23,8 +23,6 @@ public class UpgradeSelect : MonoBehaviour
     {
         selectedTower = tower;
         parent = selectedTower.transform.parent.gameObject;
-        stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
-        stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
         UpgradeSelection();
     }
 
@@ -36,29 +34,40 @@ public class UpgradeSelect : MonoBehaviour
         {
             towerSelect = 10;
             stats[0].text = selectedTower.GetComponentInChildren<BasicTower>().end_Damage.ToString() + " Damage";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
         }
         //sniper
         if (parent.tag == "SniperTower")
         {
             towerSelect = 11;
             stats[0].text = selectedTower.GetComponentInChildren<SniperTower>().end_Damage.ToString() + " Damage";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
         }
         //slow
         if (selectedTower.transform.parent.tag == "SlowTower")
         {
             towerSelect = 12;
             stats[0].text = selectedTower.GetComponentInChildren<SlowTower>().end_Damage.ToString() + " Damage";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
         }
         //shotgun
         if (selectedTower.transform.parent.tag == "ShotgunTower")
         {
             towerSelect = 13;
             stats[0].text = selectedTower.GetComponentInChildren<ShotgunTower>().end_Damage.ToString() + " Damage";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
         }
         //laser
         if (selectedTower.transform.parent.tag == "LaserTower")
         {
             towerSelect = 14;
+            stats[0].text = selectedTower.GetComponentInChildren<LaserTargeting>().damage.ToString() + " Damage";
+            stats[1].text = selectedTower.GetComponent<LaserTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[2].text = "Upgrades : " + selectedTower.GetComponent<LaserTargeting>().upgradeCount.ToString();
         }
     }
     //checking if you have enough centjes
@@ -66,7 +75,14 @@ public class UpgradeSelect : MonoBehaviour
     {
         if(selectedTower.transform.parent.GetComponentInChildren<DamageCalculation>().upgradePoint < 5)
         {
-            FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<TurretTargeting>().upgradeCost, towerSelect);
+            if (selectedTower.transform.parent.tag == "LaserTower")
+            {
+                FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<LaserTargeting>().upgradeCost, towerSelect);
+            }
+            else
+            {
+                FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<TurretTargeting>().upgradeCost, towerSelect);
+            }
         }
     }
 
@@ -74,7 +90,6 @@ public class UpgradeSelect : MonoBehaviour
     public void Return()
     {
         selectedTower.transform.parent.GetComponentInChildren<DamageCalculation>().UpgradesRecieved(towerSelect);
-
         CloseShop();
     }
 
@@ -84,7 +99,14 @@ public class UpgradeSelect : MonoBehaviour
     }
     public void SellIsTrue()
     {
-        FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<TurretTargeting>().upgradeCost * 0.5f);
+        if (selectedTower.transform.parent.tag == "LaserTower")
+        {
+            FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<LaserTargeting>().upgradeCost * 0.5f);
+        }
+        else
+        {
+            FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<TurretTargeting>().upgradeCost * 0.5f);
+        }
         FindObjectOfType<UIScript>().InGameUIOn();
         Destroy(parent);
         select.RemoveTower();

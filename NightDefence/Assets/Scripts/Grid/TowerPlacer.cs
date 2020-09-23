@@ -66,8 +66,16 @@ public class TowerPlacer : MonoBehaviour
                     {
                         PlaceTower(hitInfo[i].point);
                         uiScript.GetComponent<UIScript>().UpgradeShopOn();
-                        upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
-                        gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
+                        if(gObject.transform.parent.tag == "LaserTower")
+                        {
+                            upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<LaserTargeting>().gameObject);
+                            gObject.transform.parent.GetComponentInChildren<LaserTargeting>().rangeOn = true;
+                        }
+                        else
+                        {
+                            upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
+                            gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
+                        }
                         gridCollider.GetComponent<BoxCollider>().enabled = false;
                     }
                     else
