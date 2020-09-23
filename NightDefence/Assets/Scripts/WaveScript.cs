@@ -126,7 +126,7 @@ public class WaveScript : MonoBehaviour
     {
         EnemieAmountCounting();
         prevuisWaveCount -= 1;
-        roundCoolDown += 5;
+        roundCoolDownMore=roundCoolDown + 5;
         button.SetActive(false);
     }
     public void EndRoundCheck()
