@@ -20,7 +20,7 @@ public class WaveScript : MonoBehaviour
         public bool amountChanged;
     }
     public Wave[] waves;
-    public GameObject spawnPoint, button, skipButtonHitbox;
+    public GameObject spawnPoint, button;
     public int maxWave, waveCount, prevuisWaveCount, maxEnemies, enemiesDied, roundCoolDown, roundCoolDownMore;
     public float[] nextSpawn;
     public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed;
@@ -128,7 +128,6 @@ public class WaveScript : MonoBehaviour
         prevuisWaveCount -= 1;
         roundCoolDownMore=roundCoolDown + 5;
         button.SetActive(false);
-        skipButtonHitbox.SetActive(false);
     }
     public void EndRoundCheck()
     {
@@ -147,7 +146,6 @@ public class WaveScript : MonoBehaviour
     public void Reset()
     {
         button.SetActive(true);
-        skipButtonHitbox.SetActive(true);
         resettingRound = true;
         maxEnemies = 0;
         enemiesDied = 0;
@@ -163,7 +161,6 @@ public class WaveScript : MonoBehaviour
             waveCount++;
             prevuisWaveCount++;
             button.SetActive(false);
-            skipButtonHitbox.SetActive(false);
         }
     }
     public void AmountChange()

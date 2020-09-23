@@ -339,6 +339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: legende mike
       objectReference: {fileID: 0}
+    - target: {fileID: 2551713879169674582, guid: 2b3f3ab94a984114a97fa96e62af61e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2551713879169674583, guid: 2b3f3ab94a984114a97fa96e62af61e6,
         type: 3}
       propertyPath: m_Materials.Array.size
