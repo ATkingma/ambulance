@@ -49527,6 +49527,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ef_IceMagicGlowFree01
       objectReference: {fileID: 0}
+    - target: {fileID: 6775163740762971241, guid: 889dd67908ff48640a817f0b0074814e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -7239370203506192253, guid: 5df41950fd2489b4eafc6e8fb7558a87,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 889dd67908ff48640a817f0b0074814e, type: 3}
 --- !u!4 &3287807586604024729 stripped

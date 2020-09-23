@@ -11,18 +11,18 @@ public class AudioManager : MonoBehaviour
 
     public void SetMasterVolume(Slider volume)
     {
-        _MasterMixer.SetFloat("Master", volume.value);
+        _MasterMixer.SetFloat("master", volume.value);
     }
     public void SetSFXVolume(Slider volume)
     {
-        _MasterMixer.SetFloat("SFX", volume.value);
+        _MasterMixer.SetFloat("sfx", volume.value);
     }
     public void SetMusicVolume(Slider volume)
     {
-        _MasterMixer.SetFloat("Music", volume.value);
+        _MasterMixer.SetFloat("music", volume.value);
     }
     public void SetUIVolume(Slider volume)
     {
-        _MasterMixer.SetFloat("UI", volume.value);
+        _MasterMixer.SetFloat("ui", volume.value);
     }
 }
