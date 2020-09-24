@@ -15,6 +15,7 @@ public class TowerPlacer : MonoBehaviour
     private bool uiIsON = false;
     private GameObject uiScript;
     public List<Vector3> towerPositions;
+    public Transform target;
 
     private void Awake()
     {
@@ -45,28 +46,29 @@ public class TowerPlacer : MonoBehaviour
 
     public void Raycast()
     {
-        if (Input.GetMouseButtonDown(0))
+        
+        RaycastHit[] hitInfo;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        hitInfo = Physics.RaycastAll(Camera.main.transform.position, ray.direction);
+
+        for (int i = 0; i < hitInfo.Length; i++)
         {
-            RaycastHit[] hitInfo;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            hitInfo = Physics.RaycastAll(Camera.main.transform.position, ray.direction);
-
-            for (int i = 0; i < hitInfo.Length; i++)
+            RaycastHit hit = hitInfo[i];
+            GameObject gObject = hit.transform.gameObject;
+            if(EventSystem.current.IsPointerOverGameObject())
             {
-                RaycastHit hit = hitInfo[i];
-                GameObject gObject = hit.transform.gameObject;
-                if(EventSystem.current.IsPointerOverGameObject())
+                return;
+            }
+            else
+            {
+                if (gObject.tag == "Tower")
                 {
-                    return;
-                }
-                else
-                {
-                    if (gObject.tag == "Tower")
+                    if (Input.GetMouseButtonDown(0))
                     {
                         PlaceTower(hitInfo[i].point);
                         uiScript.GetComponent<UIScript>().UpgradeShopOn();
-                        if(gObject.transform.parent.tag == "LaserTower")
+                        if (gObject.transform.parent.tag == "LaserTower")
                         {
                             upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<LaserTargeting>().gameObject);
                             gObject.transform.parent.GetComponentInChildren<LaserTargeting>().rangeOn = true;
@@ -78,14 +80,18 @@ public class TowerPlacer : MonoBehaviour
                         }
                         gridCollider.GetComponent<BoxCollider>().enabled = false;
                     }
-                    else
+                }
+                else
+                {
+                    if (!upgradeShop.activeInHierarchy)
                     {
-                        if (!upgradeShop.activeInHierarchy)
+                        if (gObject.tag == "Grid")
                         {
-                            if (gObject.tag == "Grid")
+                            PlaceTower(hitInfo[i].point);
+                            target.position = finalPosition;
+                            if (!towerPositions.Contains(finalPosition))
                             {
-                                PlaceTower(hitInfo[i].point);
-                                if (!towerPositions.Contains(finalPosition))
+                                if (Input.GetMouseButtonDown(0))
                                 {
                                     uiScript.GetComponent<UIScript>().TowerShopOn();
                                     gridCollider.GetComponent<BoxCollider>().enabled = false;
