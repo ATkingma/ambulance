@@ -16686,6 +16686,7 @@ MonoBehaviour:
   burnDamage: 0
   burning: 0
   isBurning: 0
+  flames: {fileID: 2064683490073907436}
 --- !u!54 &8488968479601292609
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18225,6 +18226,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.479
       objectReference: {fileID: 0}
+    - target: {fileID: 6170940700694163230, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6170940700694163424, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
         type: 3}
       propertyPath: m_Name
@@ -18277,6 +18283,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b64fb4b1e026e0429a1e6c33cc47a98, type: 3}
+--- !u!1 &2064683490073907436 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6170940700694163424, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
+    type: 3}
+  m_PrefabInstance: {fileID: 5261523154435063564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2064683490073907222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6170940700694163226, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
@@ -18299,6 +18311,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728572788490928378, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.275001
+      objectReference: {fileID: 0}
+    - target: {fileID: 728572788490928378, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20.55
       objectReference: {fileID: 0}
     - target: {fileID: 2900827282125856909, guid: 2e0ae4b5f46975e49937251f7c68630f,
         type: 3}

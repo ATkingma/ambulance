@@ -29750,6 +29750,7 @@ MonoBehaviour:
   burnDamage: 0
   burning: 0
   isBurning: 0
+  flames: {fileID: 8873007774812728176}
 --- !u!114 &22012358206122412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39862,15 +39863,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe70adfa26cbf754bae77da5405cfac6, type: 3}
---- !u!4 &3330753237482113685 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2316652179518433151, guid: fe70adfa26cbf754bae77da5405cfac6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1017620612544081386}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5050584497006382954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5190424243491775104, guid: fe70adfa26cbf754bae77da5405cfac6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1017620612544081386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3330753237482113685 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2316652179518433151, guid: fe70adfa26cbf754bae77da5405cfac6,
     type: 3}
   m_PrefabInstance: {fileID: 1017620612544081386}
   m_PrefabAsset: {fileID: 0}
@@ -39956,6 +39957,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.479
       objectReference: {fileID: 0}
+    - target: {fileID: 6170940700694163230, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
+        type: 3}
+      propertyPath: prewarm
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6170940700694163424, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
         type: 3}
       propertyPath: m_Name
@@ -39989,6 +39995,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3350911563096507536}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8873007774812728176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6170940700694163424, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
+    type: 3}
+  m_PrefabInstance: {fileID: 3350911563096507536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9003371078178256538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40005,6 +40017,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728572788490928378, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.8449874
+      objectReference: {fileID: 0}
+    - target: {fileID: 728572788490928378, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 19.690025
+      objectReference: {fileID: 0}
+    - target: {fileID: 728572788490928378, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0015683174
+      objectReference: {fileID: 0}
+    - target: {fileID: 728572788490928378, guid: 2e0ae4b5f46975e49937251f7c68630f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.0031366348
       objectReference: {fileID: 0}
     - target: {fileID: 3988467997293370969, guid: 2e0ae4b5f46975e49937251f7c68630f,
         type: 3}

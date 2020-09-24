@@ -10,6 +10,7 @@ public class HealthScript : MonoBehaviour
 
     public float burnDamage, burning;
     public bool isBurning;
+    public GameObject flames;
 
     private void Start()
     {
@@ -21,9 +22,14 @@ public class HealthScript : MonoBehaviour
 
         if(overTimeDamage > 0)
         {
+            flames.SetActive(true);
             isBurning = true;
             burnDamage = overTimeDamage;
             burning = Time.time + 5;
+        }
+        else
+        {
+            flames.SetActive(false);
         }
     }
 

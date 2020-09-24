@@ -5233,7 +5233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 5
-  upgradeDamage: 5
+  upgradeDamage: 1
   baseSpeed: 1
   upgradeSpeed: 0.2
   tower: {fileID: 7319361034425659285}
