@@ -48,10 +48,12 @@ public class UIScript : MonoBehaviour
         else
         {
             inGameMenu.SetActive(false);
+            ingameUi.SetActive(true);
             Time.timeScale = 1;
             if (optionsMenu.activeInHierarchy == false)
             {
                 return;
+
             }
             else
             {
