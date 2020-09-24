@@ -8,7 +8,7 @@ public class BasicTower : MonoBehaviour
     public float bulletSpeed;
     public Transform left, right;
     public bool toggle;
-    public GameObject audioData;
+    public GameObject audioData,leftParticle,rightParticle;
     public float end_Damage;
     public bool basicLvl5;
     public float burnDamagerecieve;
@@ -22,6 +22,8 @@ public class BasicTower : MonoBehaviour
             if(basicLvl5 == true)
             {
                 clone.gameObject.GetComponent<BulletBehavior>().burningEffect = true;
+                rightParticle.SetActive(false);
+                leftParticle.SetActive(true);
             }
             clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
             clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
@@ -34,6 +36,8 @@ public class BasicTower : MonoBehaviour
             if (basicLvl5 == true)
             {
                 clone.gameObject.GetComponent<BulletBehavior>().burningEffect = true;
+                leftParticle.SetActive(false);
+                rightParticle.SetActive(true);
             }
             clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
             clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
