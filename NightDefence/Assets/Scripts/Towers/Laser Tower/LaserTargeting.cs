@@ -19,6 +19,8 @@ public class LaserTargeting : MonoBehaviour
     public float damage;
     public Vector3 offsettBEAM;
     public bool laserLvl5;
+    public Rigidbody BEAM;
+    public LayerMask mask;
     //public GameObject audioData;
 
     private void Start()
@@ -29,28 +31,45 @@ public class LaserTargeting : MonoBehaviour
         beam.SetPosition(0, shootOrigin.position);
         beam.SetPosition(1, shootOrigin.position);
     }
-    private void Update()
+    private void FixedUpdate()
     {
         targets.RemoveAll(GameObject => GameObject == null);
 
-        //tower rotation
-        if (targets.Count > 0)
+        //tower 
+        if(laserLvl5 == true)
         {
-            beam.gameObject.SetActive(true);
-            beam.SetPosition(0, shootOrigin.position + offsettBEAM);
-            beam.SetPosition(1, targets[0].transform.position + offsettBEAM);
-            if (Time.time > nextFire)
+            beam.gameObject.SetActive(false);
+            foreach (Transform tar in targets)
             {
-                targets[0].GetComponent<HealthScript>().DoDamage(damage, default, default);
-                //audioData.GetComponent<AudioSource>().Play();
-                nextFire = Time.time + cooldown;
+                Rigidbody clone;
+                clone = Instantiate(BEAM, transform.position, Quaternion.identity, transform);
+                clone.gameObject.SetActive(true);
+                clone.gameObject.GetComponent<LineRenderer>().SetPosition(0, shootOrigin.position + offsettBEAM);
+                clone.gameObject.GetComponent<LineRenderer>().SetPosition(1, tar.position + offsettBEAM);
+                tar.GetComponent<HealthScript>().DoDamage(damage, default);
+                Destroy(clone.gameObject, 0.05f);
             }
         }
         else
         {
-            beam.gameObject.SetActive(false);
+            if (targets.Count > 0)
+            {
+                beam.gameObject.SetActive(true);
+                beam.SetPosition(0, shootOrigin.position + offsettBEAM);
+                beam.SetPosition(1, targets[0].transform.position + offsettBEAM);
+                if (Time.time > nextFire)
+                {
+                    targets[0].GetComponent<HealthScript>().DoDamage(damage, default);
+                    //audioData.GetComponent<AudioSource>().Play();
+                    nextFire = Time.time + cooldown;
+                }
+            }
+            else
+            {
+                beam.gameObject.SetActive(false);
+            }
+            RangeActive();
         }
-        RangeActive();
     }
     //check enemy inrange
     private void OnTriggerEnter(Collider enemyInRange)

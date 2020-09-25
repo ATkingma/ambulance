@@ -13,12 +13,12 @@ public class SlowTower : MonoBehaviour
     public void Fire()
     {
         Rigidbody clone;
-        clone = Instantiate(bullet, transform.position, Quaternion.LookRotation(transform.forward));
+        clone = Instantiate(bullet, transform.position, Quaternion.LookRotation(transform.forward), transform);
         if (slowLvl5 == true)
         {
-            clone.gameObject.GetComponent<BulletBehavior>().bounceEffect = true;
+            clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
         }
-        clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
+        clone.gameObject.GetComponent<BulletBehavior>().frozenEffect = true;
         clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
         clone.velocity = transform.TransformDirection(transform.forward.x, transform.forward.y, bulletSpeed);
 

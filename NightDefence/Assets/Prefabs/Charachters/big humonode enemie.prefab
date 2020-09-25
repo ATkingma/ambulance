@@ -16649,13 +16649,13 @@ MonoBehaviour:
   index: 0
   damage: 59
   MaxDestinations: 7
-  slowAmount: 5
   burningDamage: 5
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
   gameManager: []
+  slowParticles: {fileID: 5082508266436409071}
 --- !u!114 &8488968479601292614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18138,6 +18138,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe70adfa26cbf754bae77da5405cfac6, type: 3}
+--- !u!1 &5082508266436409071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5190424243491775135, guid: fe70adfa26cbf754bae77da5405cfac6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1045016595212702832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5082508266436409072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5190424243491775104, guid: fe70adfa26cbf754bae77da5405cfac6,

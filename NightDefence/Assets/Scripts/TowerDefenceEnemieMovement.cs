@@ -23,7 +23,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des7"));
         gameManager = GameObject.FindGameObjectsWithTag("GameManager");
     }
-    public void Update()
+    public void FixedUpdate()
     {
         enemieHealth = gameObject.GetComponent<HealthScript>().health;
         if (burn == true)
@@ -90,7 +90,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
     public IEnumerator EndDesDestroy()
     {   
         //hier miss geld weg halen ook ;)        
-        basehp.GetComponent<HealthScript>().DoDamage(damage, default, default);
+        basehp.GetComponent<HealthScript>().DoDamage(damage, default);
         if (givingVaraible == false)
         {
             GiveVariableToWaveScript();

@@ -13,7 +13,7 @@ public class SniperTower : MonoBehaviour
     public void Fire()
     {
         Rigidbody clone;
-        clone = Instantiate(bullet, transform.position, Quaternion.LookRotation(transform.forward));
+        clone = Instantiate(bullet, transform.position, Quaternion.LookRotation(transform.forward), transform);
         if(sniperLvl5 == true)
         {
             clone.gameObject.GetComponent<BulletBehavior>().bounceEffect = true;

@@ -16,7 +16,7 @@ public class HealthScript : MonoBehaviour
     {
         gameManager = FindObjectOfType<Centjes>().gameObject;
     }
-    public void DoDamage(float oof, float overTimeDamage, float isSlowed)
+    public void DoDamage(float oof, float overTimeDamage)
     {
         health -= oof;
 
@@ -33,7 +33,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isBurning == true)
         {

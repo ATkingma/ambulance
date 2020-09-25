@@ -78,7 +78,7 @@ public class WaveScript : MonoBehaviour
             }
         }
     }
-    public void Update()
+    public void FixedUpdate()
     {
         EndRoundCheck();
 

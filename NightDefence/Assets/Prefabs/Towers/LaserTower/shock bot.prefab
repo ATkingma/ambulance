@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 2
-  upgradeDamage: 2
+  upgradeDamage: 1
   baseSpeed: 0.1
   upgradeSpeed: 0
   tower: {fileID: 8645952164257734381}
@@ -5178,6 +5178,10 @@ MonoBehaviour:
   damage: 2
   offsettBEAM: {x: 0, y: 1, z: 0}
   laserLvl5: 0
+  BEAM: {fileID: 4147019698780948336, guid: c1803f9645c541d48ab3cbfe554fde6d, type: 3}
+  mask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!1 &9065853760195716146
 GameObject:
   m_ObjectHideFlags: 0

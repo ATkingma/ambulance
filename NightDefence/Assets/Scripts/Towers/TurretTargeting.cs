@@ -26,7 +26,7 @@ public class TurretTargeting : MonoBehaviour
         List<Transform> upgradeValues = new List<Transform>(1000);
         mainParticles = gameObject.transform.parent.GetComponentInChildren<ParticleSystem>().main;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         //tower rotation
         if(targetPos != null && targets.Count > 0)

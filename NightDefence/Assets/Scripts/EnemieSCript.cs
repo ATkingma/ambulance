@@ -7,9 +7,12 @@ public class EnemieSCript : MonoBehaviour
     public List<GameObject> locations;
     public GameObject endLocation, basehp;
     public int index, damage, MaxDestinations;
-    public float slowAmount, burningDamage, enemieHealth;
+    public float burningDamage, enemieHealth;
     public bool Plus1, burn, givingVaraible;
     public GameObject[] gameManager;
+    private float speed;
+    public GameObject slowParticles;
+
     private void Start()
     {
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des1"));
@@ -20,8 +23,10 @@ public class EnemieSCript : MonoBehaviour
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des6"));
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des7"));
         gameManager = GameObject.FindGameObjectsWithTag("GameManager");
+        speed = gameObject.GetComponent<NavMeshAgent>().speed;
+        slowParticles.SetActive(false);
     }
-    void Update()
+    void FixedUpdate()
     {
         enemieHealth = gameObject.GetComponent<HealthScript>().health;
         if (burn == true)
@@ -66,15 +71,6 @@ public class EnemieSCript : MonoBehaviour
                 }
             }
         }
-        if (trigger.gameObject.transform.tag == "Freezer")
-        {
-            StartCoroutine(FreezeEnemie());
-        }
-        if (trigger.gameObject.transform.tag == "burning")
-        {
-            StartCoroutine(BurningDamage());
-        }
-
         if (trigger.gameObject.transform.tag == "EndPos")
         {
             StartCoroutine(EndDesDestroy());
@@ -85,7 +81,7 @@ public class EnemieSCript : MonoBehaviour
 
         //hier miss geld weg halen ook ;)
 
-        basehp.GetComponent<HealthScript>().DoDamage(damage, default, default);
+        basehp.GetComponent<HealthScript>().DoDamage(damage, default);
         if (givingVaraible == false)
         {
             GiveVariableToWaveScript();
@@ -107,17 +103,24 @@ public class EnemieSCript : MonoBehaviour
         Destroy(gameObject);
 
     }
-    public IEnumerator BurningDamage()
+    public void FreezeEnemie(float slowAmount, bool slow)
     {
-        burn = true;
-        yield return new WaitForSeconds(4f);
-        burn = false;
+        if (slow == true)
+        {
+            slowParticles.SetActive(true);
+            float cooldown = 0;
+            if (Time.time == cooldown + Time.time)
+            {
+                gameObject.GetComponent<NavMeshAgent>().speed = Mathf.Clamp(gameObject.GetComponent<NavMeshAgent>().speed *= slowAmount, 1, 10);
+                cooldown = 5;
+                Invoke("SpeedToNormal",cooldown);
+            }
+        }
     }
-    public IEnumerator FreezeEnemie()
+    public void SpeedToNormal()
     {
-        gameObject.GetComponent<NavMeshAgent>().speed -= slowAmount;
-        yield return new WaitForSeconds(4f);
-        gameObject.GetComponent<NavMeshAgent>().speed += slowAmount;
+        gameObject.GetComponent<NavMeshAgent>().speed = speed;
+        slowParticles.SetActive(false);
     }
     public void GiveVariableToWaveScript()
     {

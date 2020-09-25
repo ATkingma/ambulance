@@ -132,7 +132,8 @@ MonoBehaviour:
   burningEffect: 0
   burnDamage: 0
   bounceEffect: 0
-  bounceAmount: 1
+  bounceAmount: 4
+  frozenEffect: 0
   mask:
     serializedVersion: 2
     m_Bits: 1024

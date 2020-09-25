@@ -15,7 +15,7 @@ public class UIScript : MonoBehaviour
     {
         wave = 1;
     }
-    public void Update()
+    public void FixedUpdate()
     {
         InGameUIUpdate();
         EscapeButton();

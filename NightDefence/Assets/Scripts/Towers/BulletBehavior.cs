@@ -20,7 +20,7 @@ public class BulletBehavior : MonoBehaviour
 
     //slow
     public bool frozenEffect;
-    private float frozenSlow;
+    private float frozenSlow = 0;
 
     //shotgun
     RaycastHit hit;
@@ -32,7 +32,7 @@ public class BulletBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.TransformDirection(0,0,bulletSpeed);
     }
-    private void Update()
+    private void FixedUpdate()
     {
         IsBouncable();
     }
@@ -45,7 +45,7 @@ public class BulletBehavior : MonoBehaviour
                 if (bounceEffect == true)
                 {
                     bounceAmount--;
-                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage, default);
+                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
 
                     Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1000, mask);
                     foreach(Collider tar in hitColliders)
@@ -77,7 +77,12 @@ public class BulletBehavior : MonoBehaviour
                 }
                 else
                 {
+                    gameObject.GetComponent<BoxCollider>().enabled = false;
+                    gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    gameObject.GetComponent<Light>().enabled = false;
+                    rb.isKinematic = true;
                     expired = true;
+
                     Destroy(gameObject, 2);
                     if (burningEffect == true)
                     {
@@ -85,13 +90,14 @@ public class BulletBehavior : MonoBehaviour
                     }
                     if(frozenEffect == true)
                     {
-                        frozenSlow = 30;
+                        frozenSlow = 0.7f;
+                        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2, mask);
+                        foreach (Collider tar in hitColliders)
+                        {
+                            tar.gameObject.GetComponent<EnemieSCript>().FreezeEnemie(frozenSlow, frozenEffect);
+                        }
                     }
-                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage, frozenSlow);
-                    gameObject.GetComponent<BoxCollider>().enabled = false;
-                    gameObject.GetComponent<MeshRenderer>().enabled = false;
-                    gameObject.GetComponent<Light>().enabled = false;
-                    rb.isKinematic = true;
+                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
                 }
             }
         }

@@ -29770,13 +29770,13 @@ MonoBehaviour:
   index: 0
   damage: 0
   MaxDestinations: 7
-  slowAmount: 5
   burningDamage: 5
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
   gameManager: []
+  slowParticles: {fileID: 5050584497006382965}
 --- !u!195 &22012358206122413
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -39863,6 +39863,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe70adfa26cbf754bae77da5405cfac6, type: 3}
+--- !u!1 &5050584497006382965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5190424243491775135, guid: fe70adfa26cbf754bae77da5405cfac6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1017620612544081386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5050584497006382954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5190424243491775104, guid: fe70adfa26cbf754bae77da5405cfac6,
@@ -39989,15 +39995,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b64fb4b1e026e0429a1e6c33cc47a98, type: 3}
---- !u!4 &8873007774812728202 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6170940700694163226, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
-    type: 3}
-  m_PrefabInstance: {fileID: 3350911563096507536}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8873007774812728176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6170940700694163424, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
+    type: 3}
+  m_PrefabInstance: {fileID: 3350911563096507536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8873007774812728202 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6170940700694163226, guid: 4b64fb4b1e026e0429a1e6c33cc47a98,
     type: 3}
   m_PrefabInstance: {fileID: 3350911563096507536}
   m_PrefabAsset: {fileID: 0}

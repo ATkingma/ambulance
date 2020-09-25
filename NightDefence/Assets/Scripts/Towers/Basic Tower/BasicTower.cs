@@ -18,7 +18,7 @@ public class BasicTower : MonoBehaviour
         Rigidbody clone;
         if (toggle == true)
         {
-            clone = Instantiate(bullet, left.position, Quaternion.LookRotation(transform.forward));
+            clone = Instantiate(bullet, left.position, Quaternion.LookRotation(transform.forward), transform);
             if(basicLvl5 == true)
             {
                 clone.gameObject.GetComponent<BulletBehavior>().burningEffect = true;
@@ -32,7 +32,7 @@ public class BasicTower : MonoBehaviour
         }
         else
         {
-            clone = Instantiate(bullet, right.position, Quaternion.LookRotation(transform.forward));
+            clone = Instantiate(bullet, right.position, Quaternion.LookRotation(transform.forward), transform);
             if (basicLvl5 == true)
             {
                 clone.gameObject.GetComponent<BulletBehavior>().burningEffect = true;
