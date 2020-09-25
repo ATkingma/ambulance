@@ -19,6 +19,8 @@ public class BulletBehavior : MonoBehaviour
     private float minDist = Mathf.Infinity;
 
     //slow
+    public bool frozenEffect;
+    private float frozenSlow;
 
     //shotgun
     RaycastHit hit;
@@ -43,7 +45,7 @@ public class BulletBehavior : MonoBehaviour
                 if (bounceEffect == true)
                 {
                     bounceAmount--;
-                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
+                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage, default);
 
                     Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1000, mask);
                     foreach(Collider tar in hitColliders)
@@ -81,7 +83,11 @@ public class BulletBehavior : MonoBehaviour
                     {
                         burnDamage = 50;
                     }
-                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
+                    if(frozenEffect == true)
+                    {
+                        frozenSlow = 30;
+                    }
+                    col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage, frozenSlow);
                     gameObject.GetComponent<BoxCollider>().enabled = false;
                     gameObject.GetComponent<MeshRenderer>().enabled = false;
                     gameObject.GetComponent<Light>().enabled = false;

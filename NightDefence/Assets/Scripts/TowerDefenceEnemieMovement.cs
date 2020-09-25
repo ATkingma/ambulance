@@ -90,7 +90,7 @@ public class TowerDefenceEnemieMovement : MonoBehaviour
     public IEnumerator EndDesDestroy()
     {   
         //hier miss geld weg halen ook ;)        
-        basehp.GetComponent<HealthScript>().DoDamage(damage, default);
+        basehp.GetComponent<HealthScript>().DoDamage(damage, default, default);
         if (givingVaraible == false)
         {
             GiveVariableToWaveScript();

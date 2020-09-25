@@ -41,7 +41,7 @@ public class LaserTargeting : MonoBehaviour
             beam.SetPosition(1, targets[0].transform.position + offsettBEAM);
             if (Time.time > nextFire)
             {
-                targets[0].GetComponent<HealthScript>().DoDamage(damage, default);
+                targets[0].GetComponent<HealthScript>().DoDamage(damage, default, default);
                 //audioData.GetComponent<AudioSource>().Play();
                 nextFire = Time.time + cooldown;
             }
