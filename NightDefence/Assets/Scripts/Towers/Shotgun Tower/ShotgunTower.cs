@@ -25,7 +25,7 @@ public class ShotgunTower : MonoBehaviour
         for(int i = 0; i < bulletAmount; i++)
         {
             Rigidbody clone;
-            clone = Instantiate(bullet, rotations[i].position, Quaternion.LookRotation(rotations[i].forward), transform);
+            clone = Instantiate(bullet, rotations[i].position, Quaternion.LookRotation(rotations[i].forward));
             clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
             clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;
             clone.velocity = transform.TransformDirection(rotations[i].forward.x, rotations[i].forward.y, rotations[i].forward.z);

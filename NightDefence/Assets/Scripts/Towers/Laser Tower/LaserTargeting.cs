@@ -62,7 +62,7 @@ public class LaserTargeting : MonoBehaviour
                     clone.gameObject.GetComponent<LineRenderer>().SetPosition(0, shootOrigin.position + offsettBEAM);
                     clone.gameObject.GetComponent<LineRenderer>().SetPosition(1, tar.position + offsettBEAM);
                     tar.GetComponent<HealthScript>().DoDamage(damage, default);
-                    Destroy(clone.gameObject, 0.05f);
+                    Destroy(clone.gameObject, 0.12f);
                 }
                 nextFire = Time.time + cooldown;
             }
