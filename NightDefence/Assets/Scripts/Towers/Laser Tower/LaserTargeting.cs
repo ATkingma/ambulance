@@ -21,6 +21,8 @@ public class LaserTargeting : MonoBehaviour
     public bool laserLvl5;
     public Rigidbody BEAM;
     public LayerMask mask;
+    private bool toggle;
+    public Material lightning1, lightning2;
     //public GameObject audioData;
 
     private void Start()
@@ -46,6 +48,17 @@ public class LaserTargeting : MonoBehaviour
                     Rigidbody clone;
                     clone = Instantiate(BEAM, transform.position, Quaternion.identity, transform);
                     clone.gameObject.SetActive(true);
+                    clone.gameObject.GetComponent<LineRenderer>().startWidth = 1;
+                    if(toggle == true)
+                    {
+                        clone.gameObject.GetComponent<LineRenderer>().material = lightning1;
+                        toggle = !toggle;
+                    }
+                    else
+                    {
+                        clone.gameObject.GetComponent<LineRenderer>().material = lightning2;
+                        toggle = !toggle;
+                    }
                     clone.gameObject.GetComponent<LineRenderer>().SetPosition(0, shootOrigin.position + offsettBEAM);
                     clone.gameObject.GetComponent<LineRenderer>().SetPosition(1, tar.position + offsettBEAM);
                     tar.GetComponent<HealthScript>().DoDamage(damage, default);

@@ -5182,6 +5182,8 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 1024
+  lightning1: {fileID: 2100000, guid: 6af0b5a3f46b3f740bc7fc9a2fa47bd8, type: 2}
+  lightning2: {fileID: 2100000, guid: db349c05e62ef924b81234ca1aa62c36, type: 2}
 --- !u!1 &9065853760195716146
 GameObject:
   m_ObjectHideFlags: 0
@@ -5221,7 +5223,7 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9065853760195716146}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 0
@@ -5263,13 +5265,13 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        time: 0.97106934
+        value: 0.97445107
+        inSlope: -0.054258123
+        outSlope: -0.054258123
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0.19072935
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
