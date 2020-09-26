@@ -38,16 +38,20 @@ public class LaserTargeting : MonoBehaviour
         //tower 
         if(laserLvl5 == true)
         {
-            beam.gameObject.SetActive(false);
-            foreach (Transform tar in targets)
+            if (Time.time > nextFire)
             {
-                Rigidbody clone;
-                clone = Instantiate(BEAM, transform.position, Quaternion.identity, transform);
-                clone.gameObject.SetActive(true);
-                clone.gameObject.GetComponent<LineRenderer>().SetPosition(0, shootOrigin.position + offsettBEAM);
-                clone.gameObject.GetComponent<LineRenderer>().SetPosition(1, tar.position + offsettBEAM);
-                tar.GetComponent<HealthScript>().DoDamage(damage, default);
-                Destroy(clone.gameObject, 0.05f);
+                beam.gameObject.SetActive(false);
+                foreach (Transform tar in targets)
+                {
+                    Rigidbody clone;
+                    clone = Instantiate(BEAM, transform.position, Quaternion.identity, transform);
+                    clone.gameObject.SetActive(true);
+                    clone.gameObject.GetComponent<LineRenderer>().SetPosition(0, shootOrigin.position + offsettBEAM);
+                    clone.gameObject.GetComponent<LineRenderer>().SetPosition(1, tar.position + offsettBEAM);
+                    tar.GetComponent<HealthScript>().DoDamage(damage, default);
+                    Destroy(clone.gameObject, 0.05f);
+                }
+                nextFire = Time.time + cooldown;
             }
         }
         else

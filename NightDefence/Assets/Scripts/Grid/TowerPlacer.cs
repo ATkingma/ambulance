@@ -24,7 +24,7 @@ public class TowerPlacer : MonoBehaviour
         grid = FindObjectOfType<Grid>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(uiIsON == false)
         {
