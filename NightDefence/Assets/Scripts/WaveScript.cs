@@ -20,13 +20,16 @@ public class WaveScript : MonoBehaviour
         public bool amountChanged;
     }
     public Wave[] waves;
-    public GameObject spawnPoint, button;
+    public GameObject spawnPoint, button,beginButt;
     public int maxWave, waveCount, prevuisWaveCount, maxEnemies, enemiesDied, roundCoolDown, roundCoolDownMore;
     public float[] nextSpawn;
-    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed;
-    public float beginTime;
+    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed, beginButton;
 
-
+    public void BeginButton()
+    {
+        beginButton = true;
+        beginButt.SetActive(false);
+    }
     public void Button()
     {
         Cooldown();
@@ -35,8 +38,8 @@ public class WaveScript : MonoBehaviour
     }
     public void EnemieSpawner()
     {
-        if (beginTime <= Time.time)
-        {
+        if (beginButton == true)
+        { 
             if (resettingRound == false)
             {
                 if (waves[waveCount].enemiePrefabAmount[0] == true)
@@ -127,6 +130,7 @@ public class WaveScript : MonoBehaviour
     }
     public void Start()
     {
+        beginButt.SetActive(true);
         EnemieAmountCounting();
         prevuisWaveCount -= 1;
         roundCoolDownMore=roundCoolDown + 5;
