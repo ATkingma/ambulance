@@ -43,13 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 2
+  baseDamage: 1
   upgradeDamage: 1
   baseSpeed: 0.1
   upgradeSpeed: 0
   tower: {fileID: 8645952164257734381}
   barrel: {fileID: 9065853760763131037}
-  end_Damage: 2
+  end_Damage: 1
   end_Speed: 0.1
   attackPerSec: 10
   upgradePoint: 0
@@ -5163,16 +5163,16 @@ MonoBehaviour:
     m_Bits: 1024
   targets: []
   upgradeValues:
-  - 30
-  - 35
-  - 40
-  - 45
-  - 50
-  - 55
-  - 60
-  - 65
+  - 0
+  - 150
+  - 200
+  - 250
+  - 300
+  - 400
+  - 0
+  - 0
   rangeOn: 0
-  upgradeCost: 30
+  upgradeCost: 100
   upgradeCount: 0
   beam: {fileID: 9065853760195716144}
   damage: 2

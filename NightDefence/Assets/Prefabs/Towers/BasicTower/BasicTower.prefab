@@ -358,7 +358,7 @@ MonoBehaviour:
   audioData: {fileID: 1847035403814044787}
   leftParticle: {fileID: 8662482650837985339}
   rightParticle: {fileID: 4335590973507945851}
-  end_Damage: 5
+  end_Damage: 25
   basicLvl5: 0
   burnDamagerecieve: 0
 --- !u!1 &3383537364829577133
@@ -5420,8 +5420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 5
-  upgradeDamage: 1
+  baseDamage: 25
+  upgradeDamage: 5
   baseSpeed: 1
   upgradeSpeed: 0.2
   tower: {fileID: 7319361034425659285}
@@ -5549,14 +5549,14 @@ MonoBehaviour:
     m_Bits: 5120
   targets: []
   upgradeValues:
-  - 25
+  - 0
   - 30
-  - 35
   - 40
-  - 45
   - 50
-  - 55
   - 60
+  - 100
+  - 0
+  - 0
   rangeOn: 0
   invokeStarted: 0
   upgradeCost: 20
@@ -5877,6 +5877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: boem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972861423214496966, guid: 128e3d69919104e439b3595012c0ed3a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 128e3d69919104e439b3595012c0ed3a, type: 3}

@@ -9,6 +9,7 @@ public class UpgradeSelect : MonoBehaviour
     private TowerPlacer select;
 
     public List<TextMeshProUGUI> stats;
+    public TextMeshProUGUI towerCost;
     public GameObject selectedTower, parent;
     public Button upgradeButton;
     private int towerSelect;
@@ -36,6 +37,7 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<BasicTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
+            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
         }
         //sniper
         if (parent.tag == "SniperTower")
@@ -44,6 +46,7 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<SniperTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
+            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
         }
         //slow
         if (selectedTower.transform.parent.tag == "SlowTower")
@@ -52,6 +55,7 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<SlowTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
+            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
         }
         //shotgun
         if (selectedTower.transform.parent.tag == "ShotgunTower")
@@ -60,6 +64,7 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<ShotgunTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
+            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
         }
         //laser
         if (selectedTower.transform.parent.tag == "LaserTower")
@@ -68,6 +73,7 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<LaserTargeting>().damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<LaserTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<LaserTargeting>().upgradeCount.ToString();
+            towerCost.text = "(" + selectedTower.GetComponent<LaserTargeting>().upgradeCost.ToString() + ")";
         }
     }
     //checking if you have enough centjes

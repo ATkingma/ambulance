@@ -227,7 +227,7 @@ MonoBehaviour:
   bullet: {fileID: 1716455057210964512, guid: 084d0778110a8864a829a9df8386e004, type: 3}
   bulletSpeed: 120
   audioData: {fileID: 6642465179498898116}
-  end_Damage: 60
+  end_Damage: 100
   sniperLvl5: 0
 --- !u!1 &6642465179498898116
 GameObject:
@@ -5289,17 +5289,17 @@ MonoBehaviour:
     m_Bits: 5120
   targets: []
   upgradeValues:
-  - 30
-  - 40
-  - 50
-  - 60
-  - 70
+  - 0
   - 75
-  - 80
-  - 85
+  - 100
+  - 125
+  - 150
+  - 200
+  - 0
+  - 0
   rangeOn: 0
   invokeStarted: 0
-  upgradeCost: 20
+  upgradeCost: 50
   upgradeCount: 0
   range: 100
   upOffsetRaycast: 0.85
@@ -5364,13 +5364,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 60
-  upgradeDamage: 10
-  baseSpeed: 0.2
+  baseDamage: 100
+  upgradeDamage: 50
+  baseSpeed: 1
   upgradeSpeed: 0
   tower: {fileID: 7626464773228631044}
   barrel: {fileID: 6456761849105658927}
-  end_Damage: 0
+  end_Damage: 10
   end_Speed: 0
   attackPerSec: 0
   upgradePoint: 0

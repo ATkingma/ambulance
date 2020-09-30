@@ -5401,7 +5401,7 @@ MonoBehaviour:
   bullet: {fileID: 4779824640518906061, guid: 59c7f12114b5c6444aaa9d199fc1ea31, type: 3}
   bulletSpeed: 60
   audioData: {fileID: 7531782925123004563}
-  end_Damage: 10
+  end_Damage: 15
   shotgunLvl5: 0
   bulletAmount: 3
   rotations:
@@ -5453,8 +5453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f65274a78cc174a9e7ecbab5a32609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 20
-  upgradeDamage: 10
+  baseDamage: 15
+  upgradeDamage: 3
   baseSpeed: 1
   upgradeSpeed: 0.1
   tower: {fileID: 8980017100434140088}
@@ -5663,17 +5663,17 @@ MonoBehaviour:
     m_Bits: 1024
   targets: []
   upgradeValues:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 0
+  - 45
+  - 60
+  - 75
+  - 100
+  - 150
+  - 0
+  - 0
   rangeOn: 0
   invokeStarted: 0
-  upgradeCost: 10
+  upgradeCost: 30
   upgradeCount: 0
   range: 30
   upOffsetRaycast: 1

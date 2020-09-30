@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8316725789654763307, guid: ebade3bcc0d71b64a809f9b5a0bfa524, type: 3}
   bulletSpeed: 20
-  end_Damage: 3
+  end_Damage: 5
   slowLvl5: 0
 --- !u!1 &2258100926004775499
 GameObject:
@@ -152,17 +152,17 @@ MonoBehaviour:
     m_Bits: 1024
   targets: []
   upgradeValues:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 0
+  - 75
+  - 100
+  - 125
+  - 150
+  - 200
+  - 0
+  - 0
   rangeOn: 0
   invokeStarted: 0
-  upgradeCost: 10
+  upgradeCost: 50
   upgradeCount: 0
   range: 12
   upOffsetRaycast: 1
