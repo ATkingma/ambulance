@@ -119,7 +119,7 @@ public class TurretTargeting : MonoBehaviour
         {
             mainParticles.maxParticles = 0;
         }
-        else
+        if (rangeOn == true)
         {
             mainParticles.startLifetime = 2;
             mainParticles.maxParticles = 10000;
