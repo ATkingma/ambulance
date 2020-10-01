@@ -16,6 +16,8 @@ public class TowerPlacer : MonoBehaviour
     private GameObject uiScript;
     public List<Vector3> towerPositions;
     public Transform target;
+    public Vector3 roof;
+    private GameObject tagCheck;
 
     private void Awake()
     {
@@ -85,7 +87,7 @@ public class TowerPlacer : MonoBehaviour
                 {
                     if (!upgradeShop.activeInHierarchy)
                     {
-                        if (gObject.tag == "Grid")
+                        if (gObject.tag == "roof")
                         {
                             PlaceTower(hitInfo[i].point);
                             target.position = finalPosition;
@@ -95,6 +97,23 @@ public class TowerPlacer : MonoBehaviour
                                 {
                                     uiScript.GetComponent<UIScript>().TowerShopOn();
                                     gridCollider.GetComponent<BoxCollider>().enabled = false;
+                                    tagCheck = hit.transform.gameObject;
+                                    print(tagCheck.name);
+                                }
+                            }
+                        }
+                        if (gObject.tag == "Grid")
+                        {
+                            PlaceTower(hitInfo[i].point);
+                            target.position = finalPosition;
+                            if (towerPositions.Contains(finalPosition))
+                            {
+                                print(gObject.name);
+                                if (Input.GetMouseButtonDown(0))
+                                {
+                                    uiScript.GetComponent<UIScript>().TowerShopOn();
+                                    gridCollider.GetComponent<BoxCollider>().enabled = false;
+                                    tagCheck = hit.transform.gameObject;
                                 }
                             }
                         }
@@ -112,11 +131,14 @@ public class TowerPlacer : MonoBehaviour
     }
     public void Placement(Transform tower)
     {
-        select = tower;
-        Instantiate(select, finalPosition, Quaternion.identity);
-        towerPositions.Add(finalPosition);
-        uiScript.GetComponent<UIScript>().UIOff();
-        uiScript.GetComponent<UIScript>().InGameUIOn();
+        if (tagCheck.tag == "Grid")
+        {
+            select = tower;
+            Instantiate(select, finalPosition, Quaternion.identity);
+            towerPositions.Add(finalPosition);
+            uiScript.GetComponent<UIScript>().UIOff();
+            uiScript.GetComponent<UIScript>().InGameUIOn();
+        }
     }
     #endregion
     #region upgrades
