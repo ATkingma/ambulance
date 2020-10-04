@@ -15,12 +15,16 @@ public class UIScript : MonoBehaviour
     {
         wave = 1;
     }
-    public void FixedUpdate()
+    private void Update()
     {
         InGameUIUpdate();
         EscapeButton();
     }
-
+    public void Resume()
+    {
+        ESCMenu();
+        Time.timeScale = 1;
+    }
     public void EscapeButton()
     {
         if (Input.GetButtonDown("Esc"))
@@ -67,6 +71,11 @@ public class UIScript : MonoBehaviour
     {
         UIOff();
         optionsMenu.SetActive(true);
+    }
+    public void OptionsBackToMenu()
+    {
+        UIOff();
+        inGameMenu.SetActive(true);
     }
     public void MainMenu()
     {

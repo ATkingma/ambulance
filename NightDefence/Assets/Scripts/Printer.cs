@@ -1,0 +1,1 @@
+﻿using UnityEngine;public class Printer : MonoBehaviour{  public float time;  void Start()   {     Time.timeScale = 1; }   void Update()   {       time = Time.deltaTime;    }}
