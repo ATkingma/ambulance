@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
-    public GameObject options, credits,mainMenu, controlls,hover;
+    public GameObject options, credits,mainMenu, controlls,hover,x;
     Resolution[] resolutions;
     public Dropdown resolutionDropDown;
     public void Start()
@@ -78,5 +78,13 @@ public class MainMenuScript : MonoBehaviour
     public void SetFullScreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        if (isFullscreen == true)
+        {
+            x.SetActive(true);
+        }
+        if (isFullscreen == false)
+        {
+            x.SetActive(false);
+        }
     }
 }
