@@ -108,7 +108,6 @@ public class TowerPlacer : MonoBehaviour
                             target.position = finalPosition;
                             if (towerPositions.Contains(finalPosition))
                             {
-                            //    print(gObject.name);
                                 if (Input.GetMouseButtonDown(0))
                                 {
                                     uiScript.GetComponent<UIScript>().TowerShopOn();
@@ -135,7 +134,7 @@ public class TowerPlacer : MonoBehaviour
         {
             select = tower;
             Instantiate(select, finalPosition, Quaternion.identity);
-            towerPositions.Add(finalPosition);
+            towerPositions.Remove(finalPosition);
             uiScript.GetComponent<UIScript>().UIOff();
             uiScript.GetComponent<UIScript>().InGameUIOn();
         }

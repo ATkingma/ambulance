@@ -9,7 +9,7 @@ public class HealthScript : MonoBehaviour
     private GameObject gameManager;
 
     public float burnDamage, burning;
-    public bool isBurning;
+    public bool isBurning, isDead;
     public GameObject flames;
 
     private void Start()
@@ -33,7 +33,7 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (isBurning == true)
         {
@@ -45,8 +45,12 @@ public class HealthScript : MonoBehaviour
         }
         if (health <= 0)
         {
-            //ragdol ding
-            gameManager.GetComponent<Centjes>().CentjesErBij(centjes);
+            if(isDead == false)
+            {
+                isDead = true;
+                //ragdol ding
+                gameManager.GetComponent<Centjes>().CentjesErBij(centjes);
+            }
         }
     }
 }
