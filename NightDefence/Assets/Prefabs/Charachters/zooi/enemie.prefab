@@ -52,7 +52,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524321400279823012}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -150,6 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  centjes: 0
+  burnDamage: 0
+  burning: 0
+  isBurning: 0
+  flames: {fileID: 0}
 --- !u!114 &-8988539717105825540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,10 +174,10 @@ MonoBehaviour:
   index: 0
   damage: 55
   MaxDestinations: 7
-  slowAmount: 4
   burningDamage: 4
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
   gameManager: []
+  slowParticles: {fileID: 0}
