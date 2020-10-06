@@ -20,7 +20,7 @@ public class WaveScript : MonoBehaviour
         public bool amountChanged;
     }
     public Wave[] waves;
-    public GameObject spawnPoint, button,beginButt;
+    public GameObject spawnPoint, button,beginButt, newRoundSound;
     public int maxWave, waveCount, prevuisWaveCount, maxEnemies, enemiesDied, roundCoolDown, roundCoolDownMore;
     public float[] nextSpawn;
     public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed, beginButton;
@@ -167,6 +167,7 @@ public class WaveScript : MonoBehaviour
             Invoke("ResetBoolHolder", 1.0f);
             waveCount++;
             prevuisWaveCount++;
+            newRoundSound.GetComponent<AudioSource>().Play();
             button.SetActive(false);
         }
     }

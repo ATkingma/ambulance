@@ -23,7 +23,7 @@ public class LaserTargeting : MonoBehaviour
     public LayerMask mask;
     private bool toggle;
     public Material lightning1, lightning2;
-    //public GameObject audioData;
+    public GameObject audioData;
 
     private void Start()
     {
@@ -77,7 +77,7 @@ public class LaserTargeting : MonoBehaviour
                 if (Time.time > nextFire)
                 {
                     targets[0].GetComponent<HealthScript>().DoDamage(damage, default);
-                    //audioData.GetComponent<AudioSource>().Play();
+                    audioData.GetComponent<AudioSource>().Play();
                     nextFire = Time.time + cooldown;
                 }
             }
