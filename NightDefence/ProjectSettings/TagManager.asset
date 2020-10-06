@@ -27,6 +27,7 @@ TagManager:
   - LaserTower
   - SkipButton
   - roof
+  - BeamTower
   layers:
   - Default
   - TransparentFX

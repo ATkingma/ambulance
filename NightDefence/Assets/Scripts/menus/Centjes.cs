@@ -38,4 +38,12 @@ public class Centjes : MonoBehaviour
             FindObjectOfType<TowerPlacer>().CloseShop();
         }
     }
+    public void Centjes100()
+    {
+        CentjesErBij(100);
+    }
+    public void Centjes1000()
+    {
+        CentjesErBij(1000);
+    }
 }

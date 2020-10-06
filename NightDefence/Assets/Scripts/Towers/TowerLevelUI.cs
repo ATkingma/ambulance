@@ -16,7 +16,14 @@ public class TowerLevelUI : MonoBehaviour
         }
         else
         {
-            text.text = tower.GetComponent<LaserTargeting>().upgradeCount.ToString();
+            if(tower.GetComponent<LaserBeam>() != null)
+            {
+                text.text = tower.GetComponent<LaserBeam>().upgradeCount.ToString();
+            }
+            else
+            {
+                text.text = tower.GetComponent<LaserTargeting>().upgradeCount.ToString();
+            }
         }
     }
 }

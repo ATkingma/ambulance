@@ -107,13 +107,16 @@ public class EnemieSCript : MonoBehaviour
     {
         if (slow == true)
         {
-            slowParticles.SetActive(true);
-            float cooldown = 0;
-            if (Time.time == cooldown + Time.time)
+            if (gameObject.GetComponent<HealthScript>().isBurning == false)
             {
-                gameObject.GetComponent<NavMeshAgent>().speed = Mathf.Clamp(gameObject.GetComponent<NavMeshAgent>().speed *= slowAmount, 1, 10);
-                cooldown = 5;
-                Invoke("SpeedToNormal",cooldown);
+                slowParticles.SetActive(true);
+                float cooldown = 0;
+                if (Time.time == cooldown + Time.time)
+                {
+                    gameObject.GetComponent<NavMeshAgent>().speed = Mathf.Clamp(gameObject.GetComponent<NavMeshAgent>().speed *= slowAmount, 1, 10);
+                    cooldown = 5;
+                    Invoke("SpeedToNormal", cooldown);
+                }
             }
         }
     }
