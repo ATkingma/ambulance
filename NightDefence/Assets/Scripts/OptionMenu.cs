@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OptionMenu : MonoBehaviour
 
 {
+    public GameObject x;
     public Dropdown resolutionDropDown;
     Resolution[] resolutions;
     // Start is called before the first frame update
@@ -39,11 +40,13 @@ public class OptionMenu : MonoBehaviour
     public void SetFullScreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+        if (isFullscreen == true)
+        {
+            x.SetActive(true);
+        }
+        if (isFullscreen == false)
+        {
+            x.SetActive(false);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
-}
