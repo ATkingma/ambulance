@@ -85,8 +85,8 @@ public class LaserTargeting : MonoBehaviour
             {
                 beam.gameObject.SetActive(false);
             }
-            RangeActive();
         }
+        RangeActive();
     }
     //check enemy inrange
     private void OnTriggerEnter(Collider enemyInRange)

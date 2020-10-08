@@ -42,10 +42,10 @@ public class LaserBeam : MonoBehaviour
         if (targets.Count > 0)
         {
             targetPos = targets[0].gameObject.transform;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, GetComponent<CapsuleCollider>().radius, mask))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 10000, mask))
             {
                 beam.gameObject.SetActive(true);
-                beam.SetPosition(1, new Vector3(0,0,1) * hit.distance * 2);
+                beam.SetPosition(1, new Vector3(0,0,1) * hit.distance);
                 if (Time.time > nextFire)
                 {
                     hit.transform.GetComponent<HealthScript>().DoDamage(damage, default);
