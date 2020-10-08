@@ -30,6 +30,7 @@ public class UIScript : MonoBehaviour
         if (Input.GetButtonDown("Esc"))
         {
             ESCMenu();
+            FindObjectOfType<Saves>().SaveEveryFuckingThing();
         }
     }
     public void InGameUIUpdate()

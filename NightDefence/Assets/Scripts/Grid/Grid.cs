@@ -42,9 +42,9 @@ public class Grid : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        for (float x = 0; x < 100; x += sizeDefault)
+        for (float x = -200; x < 200; x += sizeDefault)
         {
-            for (float z = 0; z < 210; z += sizeDefault)
+            for (float z = -200; z < 200; z += sizeDefault)
             {
                 var point = GetNearestPointOnGrid(new Vector3(x, 0, z));
                 var pointy = GetNearestPointOnGrid(new Vector3(x, 3, z));
