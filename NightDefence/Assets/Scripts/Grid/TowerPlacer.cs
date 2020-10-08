@@ -150,7 +150,7 @@ public class TowerPlacer : MonoBehaviour
     #region sell
     public void RemoveTower()
     {
-        towerPositions.Remove(finalPosition);
+        towerPositions.Add(finalPosition);
     }
     #endregion
     public void Debugf()

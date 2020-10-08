@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
-    public Text money, baseHP, enemiesAliveText,waveCount;
+    public Text money, baseHP, enemiesAliveText, waveCount;
     public int wave, enemiesAlive;
     public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, sellPanel, GameManager, optionsMenu;
     public bool toggle;
