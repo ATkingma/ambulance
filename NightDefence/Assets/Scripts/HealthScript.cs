@@ -18,6 +18,10 @@ public class HealthScript : MonoBehaviour
     }
     public void DoDamage(float oof, float overTimeDamage)
     {
+        if(tag == "Enemy")
+        {
+            oof *= 0.75f;
+        }
         health -= oof;
 
         if(overTimeDamage > 0)
