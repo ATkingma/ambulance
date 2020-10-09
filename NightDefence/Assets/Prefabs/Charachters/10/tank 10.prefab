@@ -16702,10 +16702,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 700
-  centjes: 20
+  centjes: 10
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 1235048641060347566}
 --- !u!54 &8667779297816902403
 Rigidbody:

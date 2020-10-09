@@ -5582,10 +5582,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 90
-  centjes: 10
+  centjes: 5
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 3618729385229306196}
 --- !u!114 &9027374128135428871
 MonoBehaviour:
@@ -5604,7 +5605,7 @@ MonoBehaviour:
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
   index: 0
-  damage: 59
+  damage: 50
   MaxDestinations: 7
   burningDamage: 4
   enemieHealth: 0

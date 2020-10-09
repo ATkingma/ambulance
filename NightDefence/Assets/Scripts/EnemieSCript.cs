@@ -5,11 +5,10 @@ using UnityEngine.AI;
 public class EnemieSCript : MonoBehaviour
 {
     public List<GameObject> locations;
-    public GameObject endLocation, basehp;
+    public GameObject endLocation, basehp, gameManager;
     public int index, damage, MaxDestinations;
     public float burningDamage, enemieHealth;
     public bool Plus1, burn, givingVaraible;
-    public GameObject[] gameManager;
     private float speed;
     public GameObject slowParticles;
 
@@ -22,8 +21,11 @@ public class EnemieSCript : MonoBehaviour
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des5"));
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des6"));
         locations.AddRange(GameObject.FindGameObjectsWithTag("Des7"));
-        gameManager = GameObject.FindGameObjectsWithTag("GameManager");
+
+
         speed = gameObject.GetComponent<NavMeshAgent>().speed;
+        basehp= GameObject.FindWithTag("Base");
+        gameManager =GameObject.FindWithTag("GameManager");
         slowParticles.SetActive(false);
     }
     void FixedUpdate()
@@ -74,22 +76,22 @@ public class EnemieSCript : MonoBehaviour
         if (trigger.gameObject.transform.tag == "EndPos")
         {
             StartCoroutine(EndDesDestroy());
+            print("pannekoek!");
         }
     }
     public IEnumerator EndDesDestroy()
     {
-
-        //hier miss geld weg halen ook ;)
-
         basehp.GetComponent<HealthScript>().DoDamage(damage, default);
         if (givingVaraible == false)
         {
             GiveVariableToWaveScript();
         }
-        yield return new WaitForSeconds(2f);
+        print("gaat dood");
+        yield return new WaitForSeconds(0.2f);
+        print("is dood");
         Destroy(gameObject);
     }
-    public IEnumerator DeadEnemie()
+public IEnumerator DeadEnemie()
     {
         //ergens count dr bij op zodat die checked dat alle enemies dood zijn
         // animatie dede
@@ -128,7 +130,7 @@ public class EnemieSCript : MonoBehaviour
     public void GiveVariableToWaveScript()
     {
         givingVaraible = true;
-        gameManager[0].GetComponent<WaveScript>().enemiesDied++;
+        gameManager.GetComponent<WaveScript>().enemiesDied++;
 
     }
 }

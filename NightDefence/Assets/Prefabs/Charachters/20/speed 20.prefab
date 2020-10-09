@@ -15024,10 +15024,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  centjes: 5
+  centjes: 2.5
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 733491270958327237}
 --- !u!114 &8160689635096569625
 MonoBehaviour:

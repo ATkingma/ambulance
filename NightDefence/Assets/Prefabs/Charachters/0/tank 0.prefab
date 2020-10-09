@@ -11149,7 +11149,7 @@ MonoBehaviour:
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
   index: 0
-  damage: 59
+  damage: 50
   MaxDestinations: 7
   burningDamage: 5
   enemieHealth: 0
@@ -11184,10 +11184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 300
-  centjes: 20
+  centjes: 10
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 2812429977653352233}
 --- !u!54 &5651497751428952708
 Rigidbody:

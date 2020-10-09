@@ -28,6 +28,7 @@ TagManager:
   - SkipButton
   - roof
   - BeamTower
+  - Base
   layers:
   - Default
   - TransparentFX

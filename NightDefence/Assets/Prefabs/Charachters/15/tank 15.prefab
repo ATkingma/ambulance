@@ -8102,10 +8102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 900
-  centjes: 20
+  centjes: 10
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 6836192208140380290}
 --- !u!54 &4014657788896038191
 Rigidbody:

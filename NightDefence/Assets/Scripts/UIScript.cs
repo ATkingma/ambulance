@@ -14,6 +14,7 @@ public class UIScript : MonoBehaviour
     private void Start()
     {
         wave = 1;
+        basis = GameObject.FindWithTag("Base");
     }
     private void Update()
     {

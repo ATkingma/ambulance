@@ -34723,10 +34723,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 120
-  centjes: 5
+  centjes: 2.5
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 6021503381936243067}
 --- !u!114 &2953755511552017319
 MonoBehaviour:

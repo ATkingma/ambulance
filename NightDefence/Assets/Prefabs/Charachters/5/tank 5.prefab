@@ -6098,10 +6098,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
-  centjes: 20
+  centjes: 10
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 4902578818020528269}
 --- !u!54 &3269771793297093920
 Rigidbody:
