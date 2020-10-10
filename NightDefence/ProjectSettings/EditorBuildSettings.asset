@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Reflexiemoment.unity
     guid: 247d36965db4de5438401db30627f57a
   - enabled: 1
-    path: Assets/Scenes/Eindebuild.unity
+    path: Assets/Scenes/death.unity
     guid: 8676e238d228fc045aa42de47da75410
   - enabled: 0
     path: Assets/Scenes/PrefabProduction.unity

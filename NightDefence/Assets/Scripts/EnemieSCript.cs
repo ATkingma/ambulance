@@ -76,7 +76,6 @@ public class EnemieSCript : MonoBehaviour
         if (trigger.gameObject.transform.tag == "EndPos")
         {
             StartCoroutine(EndDesDestroy());
-            print("pannekoek!");
         }
     }
     public IEnumerator EndDesDestroy()
@@ -86,9 +85,7 @@ public class EnemieSCript : MonoBehaviour
         {
             GiveVariableToWaveScript();
         }
-        print("gaat dood");
         yield return new WaitForSeconds(0.2f);
-        print("is dood");
         Destroy(gameObject);
     }
 public IEnumerator DeadEnemie()
