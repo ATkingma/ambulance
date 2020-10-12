@@ -15024,7 +15024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 30
-  centjes: 2.5
+  centjes: 2
   burnDamage: 0
   burning: 0
   isBurning: 0
@@ -15046,6 +15046,7 @@ MonoBehaviour:
   endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
+  gameManager: {fileID: 0}
   index: 0
   damage: 0
   MaxDestinations: 7
@@ -15054,7 +15055,6 @@ MonoBehaviour:
   Plus1: 0
   burn: 0
   givingVaraible: 0
-  gameManager: []
   slowParticles: {fileID: 3970455461270307264}
 --- !u!195 &8160689635096569624
 NavMeshAgent:

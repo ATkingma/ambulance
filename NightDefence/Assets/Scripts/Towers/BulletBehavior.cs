@@ -51,7 +51,6 @@ public class BulletBehavior : MonoBehaviour
                     foreach(Collider tar in hitColliders)
                     {
                         float dist = Vector3.Distance(transform.position, tar.transform.position);
-                        print(dist);
                         if (dist < minDist)
                         {
                             if (tar.gameObject != col.gameObject)
