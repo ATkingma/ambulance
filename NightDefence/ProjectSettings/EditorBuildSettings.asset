@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LVL1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Reflexiemoment.unity
-    guid: 247d36965db4de5438401db30627f57a
+    path: Assets/Scenes/LVL2.unity
+    guid: f585419dd74ef9644972c0abcad903c8
   - enabled: 1
-    path: Assets/Scenes/death.unity
+    path: Assets/Scenes/death 1.unity
+    guid: 176b57d68f422c84c9503a64a465eba5
+  - enabled: 1
+    path: Assets/Scenes/death 2.unity
     guid: 8676e238d228fc045aa42de47da75410
-  - enabled: 0
-    path: Assets/Scenes/PrefabProduction.unity
-    guid: 2e2150a6ecab4db40a0a80f21a8ee13a
   m_configObjects: {}

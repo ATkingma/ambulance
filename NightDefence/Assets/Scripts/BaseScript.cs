@@ -8,7 +8,7 @@ public class BaseScript : MonoBehaviour
     {
         if (gameObject.GetComponent<HealthScript>().health <= 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(Scene);
         }
     }
 }

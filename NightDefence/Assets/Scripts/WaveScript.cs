@@ -105,7 +105,7 @@ public class WaveScript : MonoBehaviour
             if (lvl2 == true)
             {
 
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(0);
             }
         }
     }
