@@ -17,9 +17,13 @@ public class Saves : MonoBehaviour
         audioSaves[2] = FindObjectOfType<AudioManager>().savedValue[2];
         audioSaves[3] = FindObjectOfType<AudioManager>().savedValue[3];
 
-        PlayerPrefs.SetFloat("uiValue", audioSaves[0]);
-        PlayerPrefs.SetFloat("uiValue", audioSaves[1]);
-        PlayerPrefs.SetFloat("uiValue", audioSaves[2]);
+        PlayerPrefs.SetFloat("masterValue", audioSaves[0]);
+        PlayerPrefs.SetFloat("sfxValue", audioSaves[1]);
+        PlayerPrefs.SetFloat("musicValue", audioSaves[2]);
         PlayerPrefs.SetFloat("uiValue", audioSaves[3]);
+    }
+    public void SaveTimeScale()
+    {
+        PlayerPrefs.SetFloat("timeScale", Time.timeScale);
     }
 }

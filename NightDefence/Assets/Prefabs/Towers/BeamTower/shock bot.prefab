@@ -5409,6 +5409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootOrigin: {fileID: 9065853760763131036}
   cooldown: 0.1
+  cooldownSound: 0
   attacksPerSec: 10
   enemies:
     serializedVersion: 2
@@ -5613,6 +5614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Volume
       value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 288875133935865175, guid: dc049920327c9a84f8d3aa69021cf321,
+        type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3403844328786261142, guid: dc049920327c9a84f8d3aa69021cf321,
         type: 3}

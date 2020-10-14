@@ -5,7 +5,7 @@ using UnityEngine;
 public class LaserTargeting : MonoBehaviour
 {
     public Transform shootOrigin;
-    public float cooldown;
+    public float cooldown, cooldownSound;
     public float attacksPerSec;
     private float nextFire;
     public LayerMask enemies;
@@ -64,6 +64,7 @@ public class LaserTargeting : MonoBehaviour
                     tar.GetComponent<HealthScript>().DoDamage(damage, default);
                     Destroy(clone.gameObject, 0.12f);
                 }
+                //audioData.GetComponent<AudioSource>().Play();
                 nextFire = Time.time + cooldown;
             }
         }
@@ -77,7 +78,6 @@ public class LaserTargeting : MonoBehaviour
                 if (Time.time > nextFire)
                 {
                     targets[0].GetComponent<HealthScript>().DoDamage(damage, default);
-                    audioData.GetComponent<AudioSource>().Play();
                     nextFire = Time.time + cooldown;
                 }
             }
@@ -87,6 +87,23 @@ public class LaserTargeting : MonoBehaviour
             }
         }
         RangeActive();
+
+        if(targets.Count > 0)
+        {
+            if(Time.time == cooldownSound + Time.time)
+            {
+                Sound();
+                cooldownSound = 10000;
+            }
+        }
+        if (targets.Count == 0)
+        {
+            cooldownSound = 0;
+        }
+    }
+    public void Sound()
+    {
+        audioData.GetComponent<AudioSource>().Play();
     }
     //check enemy inrange
     private void OnTriggerEnter(Collider enemyInRange)
