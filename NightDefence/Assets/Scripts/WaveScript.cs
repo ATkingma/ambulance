@@ -94,17 +94,18 @@ public class WaveScript : MonoBehaviour
     }
     private void MaxWaveCheck()
     {
-        if (maxWave == waveCount)
+        if (maxWave <= waveCount)
         {
+            print("my neger");
             resettingRound = true;
             if (lvl1 == true)
             {
                 SceneManager.LoadScene(2);
-
+                print("1");
             }
             if (lvl2 == true)
             {
-
+                print("2");
                 SceneManager.LoadScene(0);
             }
         }

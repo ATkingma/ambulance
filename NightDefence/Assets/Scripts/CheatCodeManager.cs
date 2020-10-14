@@ -7,7 +7,7 @@ public class CheatCodeManager : MonoBehaviour
     [SerializeField]
     private bool playerTyping = false;
     [SerializeField]
-    private string currentString = "";
+    public string currentString = "";
 
     [SerializeField]
     private List<CheatCodeInstances> cheatCodeList = new List<CheatCodeInstances>();

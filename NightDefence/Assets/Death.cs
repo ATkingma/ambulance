@@ -8,7 +8,7 @@ public class Death : MonoBehaviour
     public int scene;
     void Start()
     {
-        Invoke("LevelLoader", 4);
+        Invoke("LevelLoader", 10);
     }
     public void LevelLoader()
     {

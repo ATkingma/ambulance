@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpeedDeltaTime : MonoBehaviour
 {
-
+    private bool pause;
+    public GameObject pauze, play;
     public void Keer1()
     {
         Time.timeScale = 1;
@@ -13,12 +14,24 @@ public class SpeedDeltaTime : MonoBehaviour
     {
         Time.timeScale = 2;
     }
-    public void Keer5()
+    public void Keer15()
     {
-        Time.timeScale = 5;
+        Time.timeScale = 1.5f;
     }
-    public void Keer10()
+    public void Pause()
     {
-        Time.timeScale = 10;
+        pause=!pause;
+        if (pause == true)
+        {
+            Time.timeScale = 0;
+            pauze.SetActive(false);
+            play.SetActive(true);
+        }
+        if (pause == false)
+        {
+            Time.timeScale = 1;
+            play.SetActive(false);
+            pauze.SetActive(true);
+        }
     }
 }

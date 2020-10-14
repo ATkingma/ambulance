@@ -46,4 +46,8 @@ public class Centjes : MonoBehaviour
     {
         CentjesErBij(1000);
     }
+    public void Centjes10000()
+    {
+        CentjesErBij(10000);
+    }
 }
