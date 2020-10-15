@@ -17,11 +17,14 @@ public class LoadingScreen : MonoBehaviour
 
     public GameObject loadingScreen;
     public TextMeshProUGUI text;
+    public bool endLoadingScreen;
     void Start()
     {
-        Level1();
-     //   slider.maxValue = 5000;
-     //   slider.minValue = 0;
+        if (endLoadingScreen == true)
+        {
+        slider.maxValue = 5000;
+        slider.minValue = 0;
+        }
         PickNextLine();
         GenRandom();
         sliderHandel.GetComponent<Image>().sprite = teacherList[randomTeacher].GetComponent<Image>().sprite;
@@ -32,12 +35,16 @@ public class LoadingScreen : MonoBehaviour
     }
     void Update()
     {
-        if (time >= 5000)
+        if (endLoadingScreen == true)
         {
-         //   SceneManager.LoadScene(scene);
-        }
-     //   slider.value = time;
+            if (time >= 5000)
+            {
+                SceneManager.LoadScene(scene);
+            }
+            slider.value = time;
         Counter();
+        }
+
     }
     public void Counter()
     {
@@ -61,7 +68,7 @@ public class LoadingScreen : MonoBehaviour
         boelshitAdvice.text = advice[currentLine].ToString();
         Invoke("PickNextLine", 2.5f);
     }
-    public void Level1()
+    public void StartLoadingScreen()
     {
         StartCoroutine(LoadSceneEnumerator());
     }

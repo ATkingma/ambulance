@@ -20,7 +20,7 @@ public class WaveScript : MonoBehaviour
         public bool amountChanged;
     }
     public Wave[] waves;
-    public GameObject spawnPoint, button,beginButt, newRoundSound;
+    public GameObject spawnPoint, button,beginButt, newRoundSound, loader;
     public int maxWave, waveCount, prevuisWaveCount, maxEnemies, enemiesDied, roundCoolDown, roundCoolDownMore;
     public float[] nextSpawn;
     public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed, beginButton,lvl1,lvl2;
@@ -98,16 +98,7 @@ public class WaveScript : MonoBehaviour
         {
             print("my neger");
             resettingRound = true;
-            if (lvl1 == true)
-            {
-                SceneManager.LoadScene(2);
-                print("1");
-            }
-            if (lvl2 == true)
-            {
-                print("2");
-                SceneManager.LoadScene(0);
-            }
+            loader.GetComponent<LoadingScreen>().StartLoadingScreen();
         }
     }
     private void EnemieAmountCounting()
