@@ -18,6 +18,8 @@ public class TowerPlacer : MonoBehaviour
     public Transform target;
     public Vector3 roof;
     private GameObject tagCheck;
+    //target colors
+    public Material good, bad;
 
     private void Awake()
     {
@@ -108,12 +110,17 @@ public class TowerPlacer : MonoBehaviour
                             target.position = finalPosition;
                             if (towerPositions.Contains(finalPosition))
                             {
+                                target.GetComponent<ParticleSystemRenderer>().material = good;
                                 if (Input.GetMouseButtonDown(0))
                                 {
                                     uiScript.GetComponent<UIScript>().TowerShopOn();
                                     gridCollider.GetComponent<BoxCollider>().enabled = false;
                                     tagCheck = hit.transform.gameObject;
                                 }
+                            }
+                            else
+                            {
+                                target.GetComponent<ParticleSystemRenderer>().material = bad;
                             }
                         }
                     }
