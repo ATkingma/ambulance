@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
-    public int scene;
+    public GameObject loader;
     void Start()
     {
         Invoke("LevelLoader", 10);
     }
     public void LevelLoader()
     {
-        SceneManager.LoadScene(scene);
+        loader.GetComponent<LoadingScreen>().StartLoadingScreen();
     }
 }
