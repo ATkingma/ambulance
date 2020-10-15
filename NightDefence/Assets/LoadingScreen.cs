@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,10 +14,14 @@ public class LoadingScreen : MonoBehaviour
     public  string []advice;
     public GameObject sliderHandel;
     public GameObject[] teacherList;
+
+    public GameObject loadingScreen;
+    public TextMeshProUGUI text;
     void Start()
     {
-        slider.maxValue = 5000;
-        slider.minValue = 0;
+        Level1();
+     //   slider.maxValue = 5000;
+     //   slider.minValue = 0;
         PickNextLine();
         GenRandom();
         sliderHandel.GetComponent<Image>().sprite = teacherList[randomTeacher].GetComponent<Image>().sprite;
@@ -29,9 +34,9 @@ public class LoadingScreen : MonoBehaviour
     {
         if (time >= 5000)
         {
-            SceneManager.LoadScene(scene);
+         //   SceneManager.LoadScene(scene);
         }
-        slider.value = time;
+     //   slider.value = time;
         Counter();
     }
     public void Counter()
@@ -55,5 +60,21 @@ public class LoadingScreen : MonoBehaviour
     {
         boelshitAdvice.text = advice[currentLine].ToString();
         Invoke("PickNextLine", 2.5f);
+    }
+    public void Level1()
+    {
+        StartCoroutine(LoadSceneEnumerator());
+    }
+    IEnumerator LoadSceneEnumerator()
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+            slider.value = progress;
+            text.text = progress * 100f + "%";
+            yield return null;
+        }
     }
 }
