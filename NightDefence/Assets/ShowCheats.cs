@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ShowCheats : MonoBehaviour
@@ -27,5 +28,13 @@ public class ShowCheats : MonoBehaviour
         {
             text.SetActive(false);
         }
+    }
+    public void LoadLvl1()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void LoadLvl2()
+    {
+        SceneManager.LoadScene(2);
     }
 }

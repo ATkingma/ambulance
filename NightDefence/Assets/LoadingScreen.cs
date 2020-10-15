@@ -8,11 +8,22 @@ public class LoadingScreen : MonoBehaviour
 {
     public float time;
     public Slider slider;
-    public int scene;
+    public Text boelshitAdvice;
+    public int scene, randomTeacher,maxLines,currentLine;
+    public  string []advice;
+    public GameObject sliderHandel;
+    public GameObject[] teacherList;
     void Start()
     {
         slider.maxValue = 5000;
         slider.minValue = 0;
+        PickNextLine();
+        GenRandom();
+        sliderHandel.GetComponent<Image>().sprite = teacherList[randomTeacher].GetComponent<Image>().sprite;
+    }
+    public void GenRandom()
+    {
+        randomTeacher = Random.Range(0, 4);
     }
     void Update()
     {
@@ -26,5 +37,23 @@ public class LoadingScreen : MonoBehaviour
     public void Counter()
     {
         time++;
+    }
+    public void PickNextLine()
+    {
+        if (currentLine >= maxLines)
+        {
+            currentLine = 0;
+        }
+        if (currentLine == maxLines)
+        {
+            currentLine = 0;
+        }
+        currentLine++;
+        ShowNextLine();
+    }
+    public void ShowNextLine()
+    {
+        boelshitAdvice.text = advice[currentLine].ToString();
+        Invoke("PickNextLine", 2.5f);
     }
 }
