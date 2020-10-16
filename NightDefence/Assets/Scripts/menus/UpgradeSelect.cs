@@ -37,7 +37,14 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<BasicTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
-            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            if (selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
+            {
+                towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            }
+            else
+            {
+                towerCost.text = "(MAX)";
+            }
         }
         //sniper
         if (parent.tag == "SniperTower")
@@ -46,7 +53,14 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<SniperTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
-            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            if (selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
+            {
+                towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            }
+            else
+            {
+                towerCost.text = "(MAX)";
+            }
         }
         //slow
         if (selectedTower.transform.parent.tag == "SlowTower")
@@ -55,7 +69,14 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<SlowTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
-            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            if (selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
+            {
+                towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            }
+            else
+            {
+                towerCost.text = "(MAX)";
+            }
         }
         //shotgun
         if (selectedTower.transform.parent.tag == "ShotgunTower")
@@ -64,7 +85,15 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<ShotgunTower>().end_Damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
-            towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            if(selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
+            {
+                towerCost.text = "(" + selectedTower.GetComponent<TurretTargeting>().upgradeCost.ToString() + ")";
+            }
+            else
+            {
+                towerCost.text = "(MAX)";
+            }
+            
         }
         //laser
         if (selectedTower.transform.parent.tag == "LaserTower")
@@ -73,7 +102,14 @@ public class UpgradeSelect : MonoBehaviour
             stats[0].text = selectedTower.GetComponentInChildren<LaserTargeting>().damage.ToString() + " Damage";
             stats[1].text = selectedTower.GetComponent<LaserTargeting>().attacksPerSec.ToString("F1") + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<LaserTargeting>().upgradeCount.ToString();
-            towerCost.text = "(" + selectedTower.GetComponent<LaserTargeting>().upgradeCost.ToString() + ")";
+            if (selectedTower.GetComponent<LaserTargeting>().upgradeCount < 5)
+            {
+                towerCost.text = "(" + selectedTower.GetComponent<LaserTargeting>().upgradeCost.ToString() + ")";
+            }
+            else
+            {
+                towerCost.text = "(MAX)";
+            }
         }
     }
     //checking if you have enough centjes

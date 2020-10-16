@@ -100,22 +100,18 @@ public IEnumerator DeadEnemie()
         }
         yield return new WaitForSeconds(0.1f);
         Destroy(gameObject);
-
     }
     public void FreezeEnemie(float slowAmount, bool slow)
     {
         if (slow == true)
         {
-            if (gameObject.GetComponent<HealthScript>().isBurning == false)
+            slowParticles.SetActive(true);
+            float cooldown = 0;
+            if (Time.time == cooldown + Time.time)
             {
-                slowParticles.SetActive(true);
-                float cooldown = 0;
-                if (Time.time == cooldown + Time.time)
-                {
-                    gameObject.GetComponent<NavMeshAgent>().speed = Mathf.Clamp(gameObject.GetComponent<NavMeshAgent>().speed *= slowAmount, 1, 10);
-                    cooldown = 5;
-                    Invoke("SpeedToNormal", cooldown);
-                }
+                gameObject.GetComponent<NavMeshAgent>().speed = Mathf.Clamp(gameObject.GetComponent<NavMeshAgent>().speed *= slowAmount, 1, 10);
+                cooldown = 5;
+                Invoke("SpeedToNormal", cooldown);
             }
         }
     }

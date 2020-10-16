@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 3383537362889073568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.08, y: -0.52, z: -0.18}
-  m_LocalScale: {x: 15, y: 1.1111112, z: 15}
+  m_LocalScale: {x: 26, y: 1.1111112, z: 26}
   m_Children: []
   m_Father: {fileID: 1984892087569818540}
   m_RootOrder: 0
@@ -264,8 +264,6 @@ MonoBehaviour:
   right: {fileID: 3383537364829577138}
   toggle: 0
   audioData: {fileID: 4774133074191591680}
-  leftParticle: {fileID: 0}
-  rightParticle: {fileID: 0}
   end_Damage: 25
   basicLvl5: 0
   burnDamagerecieve: 0

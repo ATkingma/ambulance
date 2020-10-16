@@ -6,21 +6,22 @@ public class SpeedDeltaTime : MonoBehaviour
 {
     private bool pause;
     public GameObject pauze, play;
+    public float ditWasTimeScale;
 
     public void Keer1()
     {
         Time.timeScale = 1;
-        FindObjectOfType<Saves>().SaveTimeScale();
+        ditWasTimeScale = 1;
     }
     public void Keer2()
     {
         Time.timeScale = 2;
-        FindObjectOfType<Saves>().SaveTimeScale();
+        ditWasTimeScale = 2;
     }
     public void Keer15()
     {
         Time.timeScale = 1.5f;
-        FindObjectOfType<Saves>().SaveTimeScale();
+        ditWasTimeScale = 1.5f;
     }
     public void Pause()
     {
@@ -33,7 +34,7 @@ public class SpeedDeltaTime : MonoBehaviour
         }
         if (pause == false)
         {
-            Time.timeScale = PlayerPrefs.GetFloat("timeScale", 1);
+            Time.timeScale = ditWasTimeScale;
             play.SetActive(false);
             pauze.SetActive(true);
         }

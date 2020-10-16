@@ -31,7 +31,6 @@ public class UIScript : MonoBehaviour
         if (Input.GetButtonDown("Esc"))
         {
             ESCMenu();
-            FindObjectOfType<Saves>().SaveEveryFuckingThing();
         }
     }
     public void InGameUIUpdate()
@@ -55,7 +54,7 @@ public class UIScript : MonoBehaviour
         {
             inGameMenu.SetActive(false);
             ingameUi.SetActive(true);
-            Time.timeScale = 1;
+            Time.timeScale = FindObjectOfType<SpeedDeltaTime>().ditWasTimeScale;
             if (optionsMenu.activeInHierarchy == false)
             {
                 return;

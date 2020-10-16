@@ -93,7 +93,10 @@ public class BulletBehavior : MonoBehaviour
                         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 2, mask);
                         foreach (Collider tar in hitColliders)
                         {
-                            tar.gameObject.GetComponent<EnemieSCript>().FreezeEnemie(frozenSlow, frozenEffect);
+                            if(tar.GetComponent<EnemieSCript>())
+                            {
+                                tar.gameObject.GetComponent<EnemieSCript>().FreezeEnemie(frozenSlow, frozenEffect);
+                            }
                         }
                     }
                     col.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);

@@ -19,7 +19,8 @@ public class TowerPlacer : MonoBehaviour
     public Vector3 roof;
     private GameObject tagCheck;
     //target colors
-    public Material good, bad;
+    public Material good, bad, ugrade;
+    private bool notTouchingAnything1, notTouchingAnything2;
 
     private void Awake()
     {
@@ -56,6 +57,10 @@ public class TowerPlacer : MonoBehaviour
 
         hitInfo = Physics.RaycastAll(Camera.main.transform.position, ray.direction);
 
+        if (notTouchingAnything1 || notTouchingAnything2)
+        {
+            target.GetComponent<ParticleSystemRenderer>().material = bad;
+        }
         for (int i = 0; i < hitInfo.Length; i++)
         {
             RaycastHit hit = hitInfo[i];
@@ -68,6 +73,8 @@ public class TowerPlacer : MonoBehaviour
             {
                 if (gObject.tag == "Tower")
                 {
+                    target.GetComponent<ParticleSystemRenderer>().material = ugrade;
+                    notTouchingAnything1 = true;
                     if (Input.GetMouseButtonDown(0))
                     {
                         PlaceTower(hitInfo[i].point);
@@ -83,29 +90,16 @@ public class TowerPlacer : MonoBehaviour
                             gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
                         }
                         gridCollider.GetComponent<BoxCollider>().enabled = false;
-                    }
+                    }  
                 }
                 else
                 {
+                    notTouchingAnything1 = false;
                     if (!upgradeShop.activeInHierarchy)
                     {
-                        if (gObject.tag == "roof")
-                        {
-                            PlaceTower(hitInfo[i].point);
-                            target.position = finalPosition;
-                            if (!towerPositions.Contains(finalPosition))
-                            {
-                                if (Input.GetMouseButtonDown(0))
-                                {
-                                    uiScript.GetComponent<UIScript>().TowerShopOn();
-                                    gridCollider.GetComponent<BoxCollider>().enabled = false;
-                                    tagCheck = hit.transform.gameObject;
-                                    print(tagCheck.name);
-                                }
-                            }
-                        }
                         if (gObject.tag == "Grid")
                         {
+                            notTouchingAnything2 = true;
                             PlaceTower(hitInfo[i].point);
                             target.position = finalPosition;
                             if (towerPositions.Contains(finalPosition))
@@ -118,10 +112,10 @@ public class TowerPlacer : MonoBehaviour
                                     tagCheck = hit.transform.gameObject;
                                 }
                             }
-                            else
-                            {
-                                target.GetComponent<ParticleSystemRenderer>().material = bad;
-                            }
+                        }
+                        else
+                        {
+                            notTouchingAnything2 = false;
                         }
                     }
                 }
