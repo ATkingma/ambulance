@@ -41,7 +41,7 @@ public class MainMenuScript : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+         SceneManager.LoadScene(1);
     }
     public void Options()
     {
