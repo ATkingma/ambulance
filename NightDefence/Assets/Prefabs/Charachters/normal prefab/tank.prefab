@@ -16550,7 +16550,7 @@ GameObject:
   - component: {fileID: 8488968479601292615}
   - component: {fileID: 8488968479601292609}
   m_Layer: 10
-  m_Name: big humonode enemie
+  m_Name: tank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16646,15 +16646,15 @@ MonoBehaviour:
   endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
+  gameManager: {fileID: 0}
   index: 0
-  damage: 59
+  damage: 30
   MaxDestinations: 7
   burningDamage: 5
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
-  gameManager: []
   slowParticles: {fileID: 5082508266436409071}
 --- !u!114 &8488968479601292614
 MonoBehaviour:
@@ -16686,6 +16686,7 @@ MonoBehaviour:
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 2064683490073907436}
 --- !u!54 &8488968479601292609
 Rigidbody:

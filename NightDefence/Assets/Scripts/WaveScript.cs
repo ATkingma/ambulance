@@ -96,7 +96,6 @@ public class WaveScript : MonoBehaviour
     {
         if (maxWave <= waveCount)
         {
-            print("my neger");
             resettingRound = true;
             loader.GetComponent<LoadingScreen>().StartLoadingScreen();
         }

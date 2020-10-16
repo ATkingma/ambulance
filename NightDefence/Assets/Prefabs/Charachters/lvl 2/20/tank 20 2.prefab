@@ -2099,7 +2099,7 @@ GameObject:
   - component: {fileID: 1038840844423458479}
   - component: {fileID: 1038840844423458473}
   m_Layer: 10
-  m_Name: tank 20
+  m_Name: tank 20 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2167,7 +2167,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 2
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
   gameManager: {fileID: 0}
   index: 0
-  damage: 59
+  damage: 30
   MaxDestinations: 7
   burningDamage: 5
   enemieHealth: 0

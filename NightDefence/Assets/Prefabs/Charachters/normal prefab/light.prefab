@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 1817676929819091893}
   - component: {fileID: 1817676929819091894}
   m_Layer: 10
-  m_Name: female ahoe enemie
+  m_Name: light
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,6 +1248,7 @@ MonoBehaviour:
   burnDamage: 0
   burning: 0
   isBurning: 0
+  isDead: 0
   flames: {fileID: 6216740219505750503}
 --- !u!114 &1817676929819091892
 MonoBehaviour:
@@ -1265,15 +1266,15 @@ MonoBehaviour:
   endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
+  gameManager: {fileID: 0}
   index: 0
-  damage: 59
+  damage: 20
   MaxDestinations: 7
   burningDamage: 4
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
-  gameManager: []
   slowParticles: {fileID: 3545731004441840866}
 --- !u!195 &1817676929819091893
 NavMeshAgent:

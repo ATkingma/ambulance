@@ -5604,15 +5604,15 @@ MonoBehaviour:
   endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
+  gameManager: {fileID: 0}
   index: 0
-  damage: 50
+  damage: 20
   MaxDestinations: 7
   burningDamage: 4
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
-  gameManager: []
   slowParticles: {fileID: 6145993981995136081}
 --- !u!195 &9027374128135428870
 NavMeshAgent:

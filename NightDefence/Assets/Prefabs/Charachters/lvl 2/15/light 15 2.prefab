@@ -3002,7 +3002,7 @@ GameObject:
   - component: {fileID: 4499235589280597843}
   - component: {fileID: 4499235589280597840}
   m_Layer: 10
-  m_Name: light 15
+  m_Name: light 15 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3103,7 +3103,7 @@ MonoBehaviour:
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
   gameManager: {fileID: 0}
   index: 0
-  damage: 59
+  damage: 20
   MaxDestinations: 7
   burningDamage: 4
   enemieHealth: 0

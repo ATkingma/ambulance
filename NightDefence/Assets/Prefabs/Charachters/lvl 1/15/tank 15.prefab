@@ -8066,15 +8066,15 @@ MonoBehaviour:
   endLocation: {fileID: 1805901525443189382, guid: ab7b24089de434a428acb57eec1de599,
     type: 3}
   basehp: {fileID: 6114793078479043192, guid: 790e226d18a91ee4b9ef40d8e1ff79d6, type: 3}
+  gameManager: {fileID: 0}
   index: 0
-  damage: 59
+  damage: 30
   MaxDestinations: 7
   burningDamage: 5
   enemieHealth: 0
   Plus1: 0
   burn: 0
   givingVaraible: 0
-  gameManager: []
   slowParticles: {fileID: 355925593735663233}
 --- !u!114 &4014657788896038184
 MonoBehaviour:
