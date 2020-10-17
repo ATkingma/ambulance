@@ -533,6 +533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauze: {fileID: 1124835651}
   play: {fileID: 1208146665}
+  ditWasTimeScale: 0
 --- !u!1 &41526921
 GameObject:
   m_ObjectHideFlags: 0
@@ -81355,10 +81356,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 7781917716083222244}
   m_HandleRect: {fileID: 7781917716004712780}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -40
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -83461,10 +83462,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 7781917715561368384}
   m_HandleRect: {fileID: 7781917715885889167}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -40
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -84266,10 +84267,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 7781917715883783204}
   m_HandleRect: {fileID: 7781917717277410166}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -40
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -84688,10 +84689,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 7781917716800678476}
   m_HandleRect: {fileID: 7781917716298281383}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: -40
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

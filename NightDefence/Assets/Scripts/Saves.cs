@@ -22,8 +22,4 @@ public class Saves : MonoBehaviour
         PlayerPrefs.SetFloat("musicValue", audioSaves[2]);
         PlayerPrefs.SetFloat("uiValue", audioSaves[3]);
     }
-    public void SaveTimeScale()
-    {
-        PlayerPrefs.SetFloat("timeScale", Time.timeScale);
-    }
 }

@@ -151,21 +151,21 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: 81a7891c94445a64e878272a0e6c7b0d
+  - guid: be226b740ca4a6d4580a476d3e276ce8
     name: background
-  - guid: 086c238f3691d0043847a9186da2a3ce
+  - guid: 0437460db3f327645afe12e361111e8c
     name: buttons
-  - guid: 4dc4510e22a7c4d41a4919f5a4dbaa7e
+  - guid: 0eed8eef6283f9f4084fb357029fd287
     name: enemies
-  - guid: 17e4d29f35dd6ae4ab8dec0b03ce8c34
+  - guid: 917b8ef86984b5d49b2758e26ce4a438
     name: master
-  - guid: 3c834f5f4721cac4b992102ba9610f83
+  - guid: 37222c1b1773e3749930e9eddb5e6f04
     name: music
-  - guid: fafae7856f3b6e3439d1986da16dd325
+  - guid: bd21d2af632f5da4c8951cfca32c2c0c
     name: sfx
-  - guid: f64f7bafa2e3ac441b62bafa7e8c37f1
+  - guid: 03d27f88c06105c4187acb3da312bbb7
     name: towers
-  - guid: 949f9a370428db24889c63c93c23a7c6
+  - guid: e41f91c3b0fb04243b244516d9d710ae
     name: ui
   m_AudioMixerGroupViews:
   - guids:

@@ -4794,6 +4794,26 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 7781917715669495146}
+    - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 7781917715601499509, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4844,6 +4864,26 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 7781917715669495145}
+    - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 7781917716057681051, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -4924,6 +4964,26 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 7781917715669495144}
+    - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 7781917716294764472, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -5029,6 +5089,26 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 7781917715669495143}
+    - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 7781917716714055737, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
