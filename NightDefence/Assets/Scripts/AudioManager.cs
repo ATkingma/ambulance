@@ -8,19 +8,26 @@ public class AudioManager : MonoBehaviour
 {
     public AudioMixer _MasterMixer;
 
+    public Slider slider, slider1, slider2, slider3;
+
     public List<float> savedValue;
 
     public void Start()
     {
         savedValue[0] = PlayerPrefs.GetFloat("master", 0);
-        savedValue[1] = PlayerPrefs.GetFloat("sfxValue", 0);
-        savedValue[2] = PlayerPrefs.GetFloat("musicValue", 0);
-        savedValue[3] = PlayerPrefs.GetFloat("uiValue", 0);
+        savedValue[1] = PlayerPrefs.GetFloat("sfxvalue", 0);
+        savedValue[2] = PlayerPrefs.GetFloat("musicvalue", 0);
+        savedValue[3] = PlayerPrefs.GetFloat("uivalue", 0);
 
         _MasterMixer.SetFloat("master", savedValue[0]);
-        _MasterMixer.SetFloat("sfxValue", savedValue[1]);
-        _MasterMixer.SetFloat("musicValue", savedValue[2]);
-        _MasterMixer.SetFloat("uiValue", savedValue[3]);
+        _MasterMixer.SetFloat("sfx", savedValue[1]);
+        _MasterMixer.SetFloat("music", savedValue[2]);
+        _MasterMixer.SetFloat("ui", savedValue[3]);
+
+        slider.value = savedValue[0];
+        slider1.value = savedValue[1];
+        slider2.value = savedValue[2];
+        slider3.value = savedValue[3];
     }
 
     public void SetMasterVolume(Slider volume)

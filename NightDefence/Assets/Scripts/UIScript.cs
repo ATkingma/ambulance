@@ -48,6 +48,7 @@ public class UIScript : MonoBehaviour
         {
             UIOff();
             inGameMenu.SetActive(true);
+            FindObjectOfType<SpeedDeltaTime>().ditWasTimeScale = Time.timeScale;
             Time.timeScale = 0;
         }
         else

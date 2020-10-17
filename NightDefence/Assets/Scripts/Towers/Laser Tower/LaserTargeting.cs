@@ -24,6 +24,7 @@ public class LaserTargeting : MonoBehaviour
     private bool toggle;
     public Material lightning1, lightning2;
     public GameObject audioData;
+    private Transform soundCount;
 
     private void Start()
     {
@@ -88,17 +89,13 @@ public class LaserTargeting : MonoBehaviour
         }
         RangeActive();
 
-        if(targets.Count > 0)
+        if (targets.Count > 0)
         {
-            if(Time.time == cooldownSound + Time.time)
+            if (soundCount != targets[0])
             {
                 Sound();
-                cooldownSound = 10000;
+                soundCount = targets[0];
             }
-        }
-        if (targets.Count == 0)
-        {
-            cooldownSound = 0;
         }
     }
     public void Sound()

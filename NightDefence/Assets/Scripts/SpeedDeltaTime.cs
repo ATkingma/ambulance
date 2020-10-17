@@ -8,6 +8,11 @@ public class SpeedDeltaTime : MonoBehaviour
     public GameObject pauze, play;
     public float ditWasTimeScale;
 
+    private void Start()
+    {
+        ditWasTimeScale = 1;
+    }
+
     public void Keer1()
     {
         Time.timeScale = 1;
