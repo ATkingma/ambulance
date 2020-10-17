@@ -4979,3 +4979,6 @@ MonoBehaviour:
   towerPositions: []
   target: {fileID: 221061917968243293}
   roof: {x: 0, y: 5, z: 0}
+  good: {fileID: 2100000, guid: a5a9eb130bfc88546866d673486c960f, type: 2}
+  bad: {fileID: 2100000, guid: eedd147036d702b4f864a1ac49c22bd3, type: 2}
+  ugrade: {fileID: 2100000, guid: c8c90dbe735a6ee43ad9701b19e0cabe, type: 2}
