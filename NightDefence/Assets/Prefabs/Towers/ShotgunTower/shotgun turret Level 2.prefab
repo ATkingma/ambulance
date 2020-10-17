@@ -5742,7 +5742,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c63592b8cc3f4f74da111f704285fda8, type: 2}
+  - {fileID: 2100000, guid: b16b43c9774253d4aa9b401a7afa0341, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5825,7 +5825,7 @@ GameObject:
   - component: {fileID: 4646420416580506668}
   - component: {fileID: 7466846727710417126}
   m_Layer: 0
-  m_Name: shotgun turret base
+  m_Name: shotgun turret Level 2
   m_TagString: ShotgunTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5878,7 +5878,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19100abe38a82e146b0743c22a37380e, type: 2}
+  - {fileID: 2100000, guid: 14ca607c141a490459b6e3ab2faebf9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
