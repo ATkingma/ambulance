@@ -190,10 +190,9 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 12b4a9bcb72928044824d830bf9d8db3
   m_Children:
-  - {fileID: -7980821122485744722}
+  - {fileID: 4745165668502202660}
   - {fileID: -2937996264407990453}
   - {fileID: -2408349497273670641}
-  - {fileID: 4745165668502202660}
   m_Volume: 917b8ef86984b5d49b2758e26ce4a438
   m_Pitch: 17e4d29f35dd6ae4ab8dec0b03ce8c34
   m_Send: 00000000000000000000000000000000
@@ -286,7 +285,8 @@ AudioMixerGroupController:
   m_Name: Background
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e44305d64b3a3b5488a60ceaf06b4fac
-  m_Children: []
+  m_Children:
+  - {fileID: -7980821122485744722}
   m_Volume: be226b740ca4a6d4580a476d3e276ce8
   m_Pitch: 81a7891c94445a64e878272a0e6c7b0d
   m_Send: 00000000000000000000000000000000
