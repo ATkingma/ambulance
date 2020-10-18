@@ -104,6 +104,13 @@ public class BulletBehavior : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.GetComponent<HealthScript>())
+        {
+            other.gameObject.GetComponent<HealthScript>().DoDamage(givenDamage, burnDamage);
+        }
+    }
     private void IsBouncable()
     {
         if (bounceAmount == 0)

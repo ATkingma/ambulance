@@ -16,7 +16,8 @@ public class SniperTower : MonoBehaviour
         clone = Instantiate(bullet, transform.position, Quaternion.LookRotation(transform.forward));
         if(sniperLvl5 == true)
         {
-            clone.gameObject.GetComponent<BulletBehavior>().bounceEffect = true;
+            //clone.gameObject.GetComponent<BulletBehavior>().bounceEffect = true;
+            clone.gameObject.GetComponent<BoxCollider>().isTrigger = true;
         }
         clone.gameObject.GetComponent<BulletBehavior>().givenDamage = end_Damage;
         clone.gameObject.GetComponent<BulletBehavior>().bulletSpeed = bulletSpeed;

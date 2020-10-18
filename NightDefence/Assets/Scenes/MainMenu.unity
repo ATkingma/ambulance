@@ -2205,7 +2205,8 @@ AudioSource:
   m_GameObject: {fileID: 675320979}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2408349497273670641, guid: 5df41950fd2489b4eafc6e8fb7558a87,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: f64b609f16a706c4f907577c01601a62, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4
@@ -4886,7 +4887,7 @@ PrefabInstance:
     - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MaxValue
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -4901,7 +4902,7 @@ PrefabInstance:
     - target: {fileID: 7781917715531593083, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MinValue
-      value: -40
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917715601499509, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -4956,7 +4957,7 @@ PrefabInstance:
     - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MaxValue
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -4971,7 +4972,7 @@ PrefabInstance:
     - target: {fileID: 7781917716057681048, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MinValue
-      value: -40
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917716057681051, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -5056,7 +5057,7 @@ PrefabInstance:
     - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MaxValue
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -5071,7 +5072,7 @@ PrefabInstance:
     - target: {fileID: 7781917716216931550, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MinValue
-      value: -40
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917716294764472, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -5181,7 +5182,7 @@ PrefabInstance:
     - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MaxValue
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
@@ -5196,7 +5197,7 @@ PrefabInstance:
     - target: {fileID: 7781917716652661763, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
       propertyPath: m_MinValue
-      value: -40
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7781917716714055737, guid: f735d2ce1d3587f4bab9d63caf3f867b,
         type: 3}
