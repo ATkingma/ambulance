@@ -8194,7 +8194,7 @@ GameObject:
   - component: {fileID: 221230470}
   - component: {fileID: 221230469}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: infpannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8232,7 +8232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.41960785}
+  m_Color: {r: 0.16862746, g: 0.49888223, b: 0.5377358, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22253,7 +22253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 124.50003, y: -269}
+  m_AnchoredPosition: {x: 656, y: -145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496884797
@@ -22289,7 +22289,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.50980395, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -22345,7 +22345,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &496884798
@@ -23151,7 +23151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 124.50003, y: -269}
+  m_AnchoredPosition: {x: 656, y: -145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543141781
@@ -23186,7 +23186,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.50980395, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -23242,7 +23242,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: -55.461, z: -4.345825, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &543141782
@@ -26541,7 +26541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 124.50003, y: -269}
+  m_AnchoredPosition: {x: 656, y: -145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751925882
@@ -26577,7 +26577,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.50980395, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -26633,7 +26633,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &751925883
@@ -26656,7 +26656,7 @@ GameObject:
   - component: {fileID: 756009814}
   - component: {fileID: 756009813}
   m_Layer: 0
-  m_Name: Panel (1)
+  m_Name: infpannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26694,7 +26694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.41960785}
+  m_Color: {r: 0.16862746, g: 0.49888223, b: 0.5377358, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -27191,7 +27191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 124.50003, y: -269}
+  m_AnchoredPosition: {x: 656, y: -145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &807036414
@@ -27227,7 +27227,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.50980395, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -27283,7 +27283,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &807036415
@@ -34276,7 +34276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 124.50003, y: -269}
+  m_AnchoredPosition: {x: 656, y: -145}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005477955
@@ -34312,7 +34312,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.50980395, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -34368,7 +34368,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1005477956
@@ -36179,7 +36179,7 @@ GameObject:
   - component: {fileID: 1148759701}
   - component: {fileID: 1148759700}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: infpannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36217,7 +36217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.41960785}
+  m_Color: {r: 0.16862746, g: 0.49888223, b: 0.5377358, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -40674,7 +40674,7 @@ GameObject:
   - component: {fileID: 1504967119}
   - component: {fileID: 1504967118}
   m_Layer: 0
-  m_Name: Panel (1)
+  m_Name: infpannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40712,7 +40712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.41960785}
+  m_Color: {r: 0.16862746, g: 0.49888223, b: 0.5377358, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -45827,7 +45827,7 @@ GameObject:
   - component: {fileID: 1817098615}
   - component: {fileID: 1817098614}
   m_Layer: 0
-  m_Name: Panel
+  m_Name: infpannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45865,7 +45865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.41960785}
+  m_Color: {r: 0.16862746, g: 0.49888223, b: 0.5377358, a: 0.41960785}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -76867,8 +76867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 239.85489, y: -812.3352}
-  m_SizeDelta: {x: 159.90326, y: 83.1861}
+  m_AnchoredPosition: {x: 239.99997, y: -429.20343}
+  m_SizeDelta: {x: 159.99998, y: 83.1861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3917093148743510539
 GameObject:
@@ -77277,8 +77277,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 719.5647, y: -812.3352}
-  m_SizeDelta: {x: 159.90326, y: 83.1861}
+  m_AnchoredPosition: {x: 719.99994, y: -429.20343}
+  m_SizeDelta: {x: 159.99998, y: 83.1861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3917093148974787645
 GameObject:
@@ -77662,8 +77662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 399.75815, y: -812.3352}
-  m_SizeDelta: {x: 159.90326, y: 83.1861}
+  m_AnchoredPosition: {x: 399.99997, y: -429.20343}
+  m_SizeDelta: {x: 159.99998, y: 83.1861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3917093149251305596
 CanvasRenderer:
@@ -77720,8 +77720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.95163, y: -812.3352}
-  m_SizeDelta: {x: 159.90326, y: 83.1861}
+  m_AnchoredPosition: {x: 79.99999, y: -429.20343}
+  m_SizeDelta: {x: 159.99998, y: 83.1861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3917093149406385391
 GameObject:
@@ -77930,8 +77930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 559.6614, y: -812.3352}
-  m_SizeDelta: {x: 159.90326, y: 83.1861}
+  m_AnchoredPosition: {x: 559.99994, y: -429.20343}
+  m_SizeDelta: {x: 159.99998, y: 83.1861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3917093149416913060
 CanvasRenderer:
