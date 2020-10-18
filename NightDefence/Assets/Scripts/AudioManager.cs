@@ -9,12 +9,13 @@ public class AudioManager : MonoBehaviour
     public AudioMixer _MasterMixer;
 
     public Slider slider, slider1, slider2, slider3;
+    public float sliderF, slider1F, slider2F, slider3F;
 
     public List<float> savedValue;
 
-    public void Start()
+    public void Awake()
     {
-        savedValue[0] = PlayerPrefs.GetFloat("master", 0);
+        savedValue[0] = PlayerPrefs.GetFloat("mastervalue", 0);
         savedValue[1] = PlayerPrefs.GetFloat("sfxvalue", 0);
         savedValue[2] = PlayerPrefs.GetFloat("musicvalue", 0);
         savedValue[3] = PlayerPrefs.GetFloat("uivalue", 0);
@@ -33,21 +34,25 @@ public class AudioManager : MonoBehaviour
     public void SetMasterVolume(Slider volume)
     {
         _MasterMixer.SetFloat("master", volume.value);
-        FindObjectOfType<Saves>().SaveEveryFuckingThing();
+        sliderF = volume.value;
+        FindObjectOfType<Saves>().SaveEveryFuckingThing(sliderF, slider1F, slider2F, slider3F);
     }
     public void SetSFXVolume(Slider volume)
     {
         _MasterMixer.SetFloat("sfx", volume.value);
-        FindObjectOfType<Saves>().SaveEveryFuckingThing();
+        slider1F = volume.value;
+        FindObjectOfType<Saves>().SaveEveryFuckingThing(sliderF, slider1F, slider2F, slider3F);
     }
     public void SetMusicVolume(Slider volume)
     {
         _MasterMixer.SetFloat("music", volume.value);
-        FindObjectOfType<Saves>().SaveEveryFuckingThing();
+        slider2F = volume.value;
+        FindObjectOfType<Saves>().SaveEveryFuckingThing(sliderF, slider1F, slider2F, slider3F);
     }
     public void SetUIVolume(Slider volume)
     {
         _MasterMixer.SetFloat("ui", volume.value);
-        FindObjectOfType<Saves>().SaveEveryFuckingThing();
+        slider3F = volume.value;
+        FindObjectOfType<Saves>().SaveEveryFuckingThing(sliderF, slider1F, slider2F, slider3F);
     }
 }

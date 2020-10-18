@@ -6,16 +6,12 @@ public class Saves : MonoBehaviour
 {
     public List<float> audioSaves;
 
-    private void Start()
+    public void SaveEveryFuckingThing(float ooga1,float ooga2,float ooga3,float ooga4)
     {
-        List<float> audioSaves = new List<float>(1000);
-    }
-    public void SaveEveryFuckingThing()
-    {
-        audioSaves[0] = FindObjectOfType<AudioManager>().savedValue[0];
-        audioSaves[1] = FindObjectOfType<AudioManager>().savedValue[1];
-        audioSaves[2] = FindObjectOfType<AudioManager>().savedValue[2];
-        audioSaves[3] = FindObjectOfType<AudioManager>().savedValue[3];
+        audioSaves[0] = ooga1;
+        audioSaves[1] = ooga2;
+        audioSaves[2] = ooga3;
+        audioSaves[3] = ooga4;
 
         PlayerPrefs.SetFloat("mastervalue", audioSaves[0]);
         PlayerPrefs.SetFloat("sfxvalue", audioSaves[1]);

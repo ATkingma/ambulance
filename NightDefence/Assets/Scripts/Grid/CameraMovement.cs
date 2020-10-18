@@ -21,12 +21,11 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0f) // forward
         {
-            mainCam.fieldOfView += zoomSpeed;
+            controller.Move(new Vector3(Input.GetAxis("Mouse ScrollWheel"), Input.GetAxis("Mouse ScrollWheel"), 0) * -zoomSpeed);
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
-            mainCam.fieldOfView -= zoomSpeed;
+            controller.Move(new Vector3(Input.GetAxis("Mouse ScrollWheel"), Input.GetAxis("Mouse ScrollWheel"), 0) * -zoomSpeed);
         }
-        mainCam.fieldOfView = Mathf.Clamp(mainCam.fieldOfView, 30, 70);
     }
 }
