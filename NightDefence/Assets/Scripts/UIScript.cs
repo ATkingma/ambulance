@@ -30,7 +30,14 @@ public class UIScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Esc"))
         {
-            ESCMenu();
+            if(towerShop.activeInHierarchy || upgradeShop.activeInHierarchy)
+            {
+                EscWhiletowershop();
+            }
+            else
+            {
+                ESCMenu();
+            }
         }
     }
     public void InGameUIUpdate()
@@ -139,6 +146,11 @@ public class UIScript : MonoBehaviour
         upgradeShop.SetActive(false);
         sellPanel.SetActive(false);
         optionsMenu.SetActive(false);
+    }
+    public void EscWhiletowershop()
+    {
+        towerShop.SetActive(false);
+        upgradeShop.SetActive(false);
     }
 
     public void QuitGame()
