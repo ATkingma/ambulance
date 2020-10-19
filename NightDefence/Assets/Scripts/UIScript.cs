@@ -8,7 +8,7 @@ public class UIScript : MonoBehaviour
 {
     public Text money, baseHP, enemiesAliveText, waveCount;
     public int wave, enemiesAlive;
-    public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, sellPanel, GameManager, optionsMenu;
+    public GameObject basis, ingameUi, inGameMenu, towerShop, upgradeShop, sellPanel, GameManager, optionsMenu, bottomInGame;
     public bool toggle;
 
     private void Start()
@@ -33,6 +33,7 @@ public class UIScript : MonoBehaviour
             if(towerShop.activeInHierarchy || upgradeShop.activeInHierarchy)
             {
                 EscWhiletowershop();
+
             }
             else
             {
@@ -101,6 +102,7 @@ public class UIScript : MonoBehaviour
     {
         UIOff();
         ingameUi.SetActive(true);
+        bottomInGame.SetActive(true);
     }
     public void InGameMenuOn()
     {
@@ -120,6 +122,7 @@ public class UIScript : MonoBehaviour
         UIOff();
         InGameUIOn();
         towerShop.SetActive(true);
+        bottomInGame.SetActive(false);
     }
     public void UpgradeShopOn()
     {
@@ -151,6 +154,7 @@ public class UIScript : MonoBehaviour
     {
         towerShop.SetActive(false);
         upgradeShop.SetActive(false);
+        bottomInGame.SetActive(true);
     }
 
     public void QuitGame()

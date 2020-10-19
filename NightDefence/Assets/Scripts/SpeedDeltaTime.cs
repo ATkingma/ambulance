@@ -28,6 +28,21 @@ public class SpeedDeltaTime : MonoBehaviour
         Time.timeScale = 1.5f;
         ditWasTimeScale = 1.5f;
     }
+    public void Keer5()
+    {
+        Time.timeScale = 5f;
+        ditWasTimeScale = 5f;
+    }
+    public void Keer10()
+    {
+        Time.timeScale = 10f;
+        ditWasTimeScale = 10f;
+    }
+    public void Keer115()
+    {
+        Time.timeScale = 15f;
+        ditWasTimeScale = 15f;
+    }
     public void Pause()
     {
         pause=!pause;
@@ -44,4 +59,5 @@ public class SpeedDeltaTime : MonoBehaviour
             pauze.SetActive(true);
         }
     }
+
 }
