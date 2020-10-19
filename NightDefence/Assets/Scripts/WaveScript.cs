@@ -23,7 +23,7 @@ public class WaveScript : MonoBehaviour
     public GameObject spawnPoint, button,beginButt, newRoundSound, loader;
     public int maxWave, waveCount, prevuisWaveCount, maxEnemies, enemiesDied, roundCoolDown, roundCoolDownMore;
     public float[] nextSpawn;
-    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed, beginButton,lvl1,lvl2;
+    public bool resettingRound, checkedAgain, amountIsChanging, isNextMap, SpawnEnemies, skipPressed, beginButton, NewRoundStart;
 
     public void BeginButton()
     {
@@ -96,8 +96,12 @@ public class WaveScript : MonoBehaviour
     {
         if (maxWave <= waveCount)
         {
+            if (NewRoundStart == false)
+            {
             resettingRound = true;
             loader.GetComponent<LoadingScreen>().StartLoadingScreen();
+                NewRoundStart = true;
+            }
         }
     }
     private void EnemieAmountCounting()

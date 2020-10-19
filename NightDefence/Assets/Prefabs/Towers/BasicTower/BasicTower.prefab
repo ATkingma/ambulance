@@ -5693,10 +5693,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: basic tower
       objectReference: {fileID: 0}
+    - target: {fileID: 3444294177623018726, guid: 43b85674026f5174ba402a6a6928eee7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4818725422873194650, guid: 43b85674026f5174ba402a6a6928eee7,
         type: 3}
       propertyPath: m_Volume
-      value: 0.16
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4818725422873194650, guid: 43b85674026f5174ba402a6a6928eee7,
         type: 3}
