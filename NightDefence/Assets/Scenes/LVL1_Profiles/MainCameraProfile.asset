@@ -103,14 +103,14 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 0
+    overrideState: 1
     value: {x: 1, y: 1, z: 1, w: 0}
   gamma:
-    overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    overrideState: 1
+    value: {x: 0.9692186, y: 0.94405615, z: 1, w: -0.11912642}
   gain:
-    overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    overrideState: 1
+    value: {x: 1, y: 0.9844067, z: 0.9376265, w: 0.039708808}
   masterCurve:
     overrideState: 0
     value:
@@ -1448,10 +1448,10 @@ MonoBehaviour:
     value: 0
   speedUp:
     overrideState: 1
-    value: 2
+    value: 0.1
   speedDown:
     overrideState: 1
-    value: 1
+    value: 0.1
 --- !u!114 &6684139665091305991
 MonoBehaviour:
   m_ObjectHideFlags: 3
