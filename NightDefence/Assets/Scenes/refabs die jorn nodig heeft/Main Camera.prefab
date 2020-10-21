@@ -101,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 2960605994456473895}
   zoomSpeed: 10
+  minHeight: 10
+  maxHeight: 30
 --- !u!143 &2960605994456473893
 CharacterController:
   m_ObjectHideFlags: 0
