@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ using TMPro;
 public class Tutorial : MonoBehaviour
 {
     public TextMeshProUGUI insertHere;
+    public GameObject imige;
     [TextArea(5, 5)] public List<string> objectives;
     private int textNumba;
 
@@ -20,12 +22,13 @@ public class Tutorial : MonoBehaviour
         insertHere.text = objectives[textNumba];
         if(textNumba > 3)
         {
-            Invoke("AWAYYOUGO", 5);
+            Invoke("AWAYYOUGO", 4);
         }
     }
     public void AWAYYOUGO()
     {
         insertHere.gameObject.SetActive(false);
+        imige.SetActive(false);
     }
     public void Skip()
     {
