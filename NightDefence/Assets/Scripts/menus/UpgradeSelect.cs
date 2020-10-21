@@ -35,7 +35,7 @@ public class UpgradeSelect : MonoBehaviour
         {
             towerSelect = 10;
             stats[0].text = selectedTower.GetComponentInChildren<BasicTower>().end_Damage.ToString() + " Damage";
-            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString() + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
             if (selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
             {
@@ -51,7 +51,7 @@ public class UpgradeSelect : MonoBehaviour
         {
             towerSelect = 11;
             stats[0].text = selectedTower.GetComponentInChildren<SniperTower>().end_Damage.ToString() + " Damage";
-            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString() + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
             if (selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
             {
@@ -67,7 +67,7 @@ public class UpgradeSelect : MonoBehaviour
         {
             towerSelect = 12;
             stats[0].text = selectedTower.GetComponentInChildren<SlowTower>().end_Damage.ToString() + " Damage";
-            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString() + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
             if (selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
             {
@@ -83,7 +83,7 @@ public class UpgradeSelect : MonoBehaviour
         {
             towerSelect = 13;
             stats[0].text = selectedTower.GetComponentInChildren<ShotgunTower>().end_Damage.ToString() + " Damage";
-            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[1].text = selectedTower.GetComponent<TurretTargeting>().attacksPerSec.ToString() + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<TurretTargeting>().upgradeCount.ToString();
             if(selectedTower.GetComponent<TurretTargeting>().upgradeCount < 5)
             {
@@ -100,7 +100,7 @@ public class UpgradeSelect : MonoBehaviour
         {
             towerSelect = 14;
             stats[0].text = selectedTower.GetComponentInChildren<LaserTargeting>().damage.ToString() + " Damage";
-            stats[1].text = selectedTower.GetComponent<LaserTargeting>().attacksPerSec.ToString("F1") + " /sec";
+            stats[1].text = selectedTower.GetComponent<LaserTargeting>().attacksPerSec.ToString() + " /sec";
             stats[2].text = "Upgrades : " + selectedTower.GetComponent<LaserTargeting>().upgradeCount.ToString();
             if (selectedTower.GetComponent<LaserTargeting>().upgradeCount < 5)
             {

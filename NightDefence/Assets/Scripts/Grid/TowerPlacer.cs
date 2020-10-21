@@ -112,10 +112,10 @@ public class TowerPlacer : MonoBehaviour
                                     tagCheck = hit.transform.gameObject;
                                 }
                             }
-                        }
-                        else
-                        {
-                            notTouchingAnything2 = false;
+                            else
+                            {
+                                notTouchingAnything2 = false;
+                            }
                         }
                     }
                 }
