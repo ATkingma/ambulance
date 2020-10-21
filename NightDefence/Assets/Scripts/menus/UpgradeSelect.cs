@@ -14,6 +14,9 @@ public class UpgradeSelect : MonoBehaviour
     public Button upgradeButton;
     private int towerSelect;
 
+    //tutorial
+    private bool nextLine = true;
+
     private void Start()
     {
         select = FindObjectOfType<TowerPlacer>();
@@ -115,6 +118,11 @@ public class UpgradeSelect : MonoBehaviour
     //checking if you have enough centjes
     public void Tower()
     {
+        if(nextLine)
+        {
+            nextLine = false;
+            FindObjectOfType<Tutorial>().NextLine();
+        }
         if(selectedTower.transform.parent.GetComponentInChildren<DamageCalculation>().upgradePoint < 5)
         {
             if (selectedTower.transform.parent.tag == "LaserTower")

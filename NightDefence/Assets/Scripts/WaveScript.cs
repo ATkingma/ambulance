@@ -29,6 +29,7 @@ public class WaveScript : MonoBehaviour
     {
         beginButton = true;
         beginButt.SetActive(false);
+        FindObjectOfType<Tutorial>().NextLine();
     }
     public void Button()
     {

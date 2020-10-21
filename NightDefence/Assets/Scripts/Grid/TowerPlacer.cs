@@ -22,6 +22,9 @@ public class TowerPlacer : MonoBehaviour
     public Material good, bad, ugrade;
     private bool notTouchingAnything1, notTouchingAnything2;
 
+    //tutorial
+    private bool firstTower = true;
+
     private void Awake()
     {
         uiScript = FindObjectOfType<UIScript>().gameObject;
@@ -110,6 +113,11 @@ public class TowerPlacer : MonoBehaviour
                                     uiScript.GetComponent<UIScript>().TowerShopOn();
                                     gridCollider.GetComponent<BoxCollider>().enabled = false;
                                     tagCheck = hit.transform.gameObject;
+                                    if (firstTower)
+                                    {
+                                        firstTower = false;
+                                        FindObjectOfType<Tutorial>().NextLine();
+                                    }
                                 }
                             }
                             else

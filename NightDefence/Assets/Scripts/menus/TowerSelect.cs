@@ -11,6 +11,9 @@ public class TowerSelect : MonoBehaviour
     public List<Transform> towers;
     public GameObject audioSorce;
 
+    //tutorial
+    private bool firstTime = true;
+
     private void Start()
     {
         select = FindObjectOfType<TowerPlacer>();
@@ -51,6 +54,11 @@ public class TowerSelect : MonoBehaviour
     //return
     public void Return(int i)
     {
+        if (firstTime)
+        {
+            firstTime = false;
+            FindObjectOfType<Tutorial>().NextLine();
+        }
         select.Placement(towers[i]);
     }
 }

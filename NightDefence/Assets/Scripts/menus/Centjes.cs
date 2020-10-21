@@ -33,10 +33,6 @@ public class Centjes : MonoBehaviour
                 FindObjectOfType<UpgradeSelect>().Return();
             }
         }
-        else
-        {
-            FindObjectOfType<TowerPlacer>().CloseShop();
-        }
     }
     public void Centjes100()
     {
