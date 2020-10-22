@@ -31,6 +31,11 @@ public class WaveScript : MonoBehaviour
         beginButt.SetActive(false);
         FindObjectOfType<Tutorial>().NextLine();
     }
+    public void BeginButtonLVL2()
+    {
+        beginButton = true;
+        beginButt.SetActive(false);
+    }
     public void Button()
     {
         Cooldown();

@@ -622,6 +622,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: female ahoe enemie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830194325927391020, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aafb6bec0ab847240aeaa6c6d796e7f8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edcb9a28dadb30e42b874bcfc892e047, type: 3}
 --- !u!1001 &676653271
@@ -706,6 +711,11 @@ PrefabInstance:
       propertyPath: health
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 6830194325927391020, guid: edcb9a28dadb30e42b874bcfc892e047,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 70db31eacc789e64eb12a1e0f031321e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edcb9a28dadb30e42b874bcfc892e047, type: 3}
 --- !u!144 &693826650
