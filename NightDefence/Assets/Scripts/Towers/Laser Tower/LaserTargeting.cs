@@ -91,11 +91,7 @@ public class LaserTargeting : MonoBehaviour
 
         if (targets.Count > 0)
         {
-            if (soundCount != targets[0])
-            {
-                Sound();
-                soundCount = targets[0];
-            }
+            Sound();
         }
     }
     public void Sound()
