@@ -15,7 +15,6 @@ public class LaserTower : MonoBehaviour
         line.SetActive(true);
         Invoke("EndFire",5);
 
-        audioData.GetComponent<AudioSource>().Play();
     }
     public void EndFire()
     {

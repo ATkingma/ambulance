@@ -93,10 +93,18 @@ public class LaserTargeting : MonoBehaviour
         {
             Sound();
         }
+        if (targets.Count <= 0)
+        {
+            SoundOff();
+        }
     }
     public void Sound()
     {
         audioData.GetComponent<AudioSource>().Play();
+    }
+    public void SoundOff()
+    {
+        audioData.GetComponent<AudioSource>().Stop();
     }
     //check enemy inrange
     private void OnTriggerEnter(Collider enemyInRange)
