@@ -20,7 +20,6 @@ public class UpgradeSelect : MonoBehaviour
     private void Start()
     {
         select = FindObjectOfType<TowerPlacer>();
-        List<Transform> towers = new List<Transform>();
         parent = selectedTower.transform.parent.gameObject;
     }
     public void SelectedTowerInfo(GameObject tower)
@@ -114,6 +113,21 @@ public class UpgradeSelect : MonoBehaviour
                 towerCost.text = "(MAX)";
             }
         }
+        if (selectedTower.transform.parent.tag == "BeamTower")
+        {
+            towerSelect = 15;
+            stats[0].text = selectedTower.GetComponentInChildren<LaserBeam>().damage.ToString() + " Damage";
+            stats[1].text = selectedTower.GetComponent<LaserBeam>().attacksPerSec.ToString() + " /sec";
+            stats[2].text = "Upgrades : " + selectedTower.GetComponent<LaserBeam>().upgradeCount.ToString();
+            if (selectedTower.GetComponent<LaserBeam>().upgradeCount < 5)
+            {
+                towerCost.text = "(" + selectedTower.GetComponent<LaserBeam>().upgradeCost.ToString() + ")";
+            }
+            else
+            {
+                towerCost.text = "(MAX)";
+            }
+        }
     }
     //checking if you have enough centjes
     public void Tower()
@@ -131,7 +145,14 @@ public class UpgradeSelect : MonoBehaviour
             }
             else
             {
-                FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<TurretTargeting>().upgradeCost, towerSelect);
+                if (selectedTower.transform.parent.tag == "BeamTower")
+                {
+                    FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<LaserBeam>().upgradeCost, towerSelect);
+                }
+                else
+                {
+                    FindObjectOfType<Centjes>().CentjesErAf(selectedTower.GetComponent<TurretTargeting>().upgradeCost, towerSelect);
+                }
             }
         }
     }
@@ -155,7 +176,14 @@ public class UpgradeSelect : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<TurretTargeting>().upgradeCost * 0.5f);
+            if (selectedTower.transform.parent.tag == "BeamTower")
+            {
+                FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<LaserBeam>().upgradeCost * 0.5f);
+            }
+            else
+            {
+                FindObjectOfType<Centjes>().CentjesErBij(selectedTower.GetComponent<TurretTargeting>().upgradeCost * 0.5f);
+            }
         }
         FindObjectOfType<UIScript>().InGameUIOn();
         Destroy(parent);

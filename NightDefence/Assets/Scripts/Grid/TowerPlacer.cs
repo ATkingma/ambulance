@@ -89,8 +89,16 @@ public class TowerPlacer : MonoBehaviour
                         }
                         else
                         {
-                            upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
-                            gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
+                            if (gObject.transform.parent.tag == "BeamTower")
+                            {
+                                upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<LaserBeam>().gameObject);
+                                gObject.transform.parent.GetComponentInChildren<LaserBeam>().rangeOn = true;
+                            }
+                            else
+                            {
+                                upgradeShop.GetComponent<UpgradeSelect>().SelectedTowerInfo(gObject.transform.parent.GetComponentInChildren<TurretTargeting>().gameObject);
+                                gObject.transform.parent.GetComponentInChildren<TurretTargeting>().rangeOn = true;
+                            }
                         }
                         gridCollider.GetComponent<BoxCollider>().enabled = false;
                     }  

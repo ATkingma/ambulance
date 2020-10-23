@@ -29,7 +29,10 @@ public class WaveScript : MonoBehaviour
     {
         beginButton = true;
         beginButt.SetActive(false);
-        FindObjectOfType<Tutorial>().NextLine();
+        if(FindObjectOfType<Tutorial>().textNumba == 3)
+        {
+            FindObjectOfType<Tutorial>().NextLine();
+        }
     }
     public void BeginButtonLVL2()
     {

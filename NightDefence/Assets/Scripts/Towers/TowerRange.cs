@@ -87,4 +87,17 @@ public class TowerRange : MonoBehaviour
         rangeIndecators[4].SetActive(false);
         towers[4].SetActive(false);
     }
+    //beam
+    public void Range_BeamOn()
+    {
+        rangeIndecators[5].SetActive(true);
+        rangeIndecators[5].transform.position = rangePosition;
+        towers[5].SetActive(true);
+        towers[5].transform.position = rangePosition;
+    }
+    public void Range_BeamOff()
+    {
+        rangeIndecators[5].SetActive(false);
+        towers[5].SetActive(false);
+    }
 }

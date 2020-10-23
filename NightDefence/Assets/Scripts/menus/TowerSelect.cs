@@ -51,6 +51,12 @@ public class TowerSelect : MonoBehaviour
         bank.CentjesErAf(towerCost[4], 4);
         audioSorce.GetComponent<AudioSource>().Play();
     }
+    //beam
+    public void BeamTower()
+    {
+        bank.CentjesErAf(towerCost[5], 5);
+        audioSorce.GetComponent<AudioSource>().Play();
+    }
     //return
     public void Return(int i)
     {

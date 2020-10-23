@@ -23,6 +23,7 @@ public class TowerInfo : MonoBehaviour
             FreezeInfo(false);
             ShotgunInfo(false);
             LaserInfo(false);
+            BeamInfo(false);
             cost.text = "";
             cost.gameObject.SetActive(false);
         } 
@@ -51,5 +52,10 @@ public class TowerInfo : MonoBehaviour
     {
         infoList[4].SetActive(info);
         cost.text = towerShop.GetComponent<TowerSelect>().towerCost[4].ToString();
+    }
+    public void BeamInfo(bool info)
+    {
+        infoList[5].SetActive(info);
+        cost.text = towerShop.GetComponent<TowerSelect>().towerCost[5].ToString();
     }
 }

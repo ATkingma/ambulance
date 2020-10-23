@@ -8,9 +8,9 @@ using TMPro;
 public class Tutorial : MonoBehaviour
 {
     public TextMeshProUGUI insertHere;
-    public GameObject imige;
+    public GameObject imige, skippie;
     [TextArea(5, 5)] public List<string> objectives;
-    private int textNumba;
+    public int textNumba;
 
     private void Start()
     {
@@ -29,6 +29,7 @@ public class Tutorial : MonoBehaviour
     {
         insertHere.gameObject.SetActive(false);
         imige.SetActive(false);
+        skippie.SetActive(false);
     }
     public void Skip()
     {

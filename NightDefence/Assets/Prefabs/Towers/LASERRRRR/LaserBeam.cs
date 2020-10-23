@@ -22,7 +22,9 @@ public class LaserBeam : MonoBehaviour
     public LayerMask mask;
     private Transform targetPos;
     public float rotationDamping;
-    //public GameObject audioData;
+    public GameObject audioData;
+    public bool audioOn = false;
+    public float audioCancel;
 
     private void Start()
     {
@@ -41,15 +43,20 @@ public class LaserBeam : MonoBehaviour
         }
         if (targets.Count > 0)
         {
+            if (Time.time == Time.time + audioCancel)
+            {
+                audioCancel = 1000;
+                audioOn = true;
+                AudioDoen();
+            }
             targetPos = targets[0].gameObject.transform;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 10000, mask))
+            if (Physics.Raycast(shootOrigin.position, transform.forward, out hit, 10000, mask))
             {
                 beam.gameObject.SetActive(true);
-                beam.SetPosition(1, new Vector3(0,0,1) * hit.distance);
+                beam.SetPosition(1, new Vector3(0,0,1) * hit.distance * 3);
                 if (Time.time > nextFire)
                 {
                     hit.transform.GetComponent<HealthScript>().DoDamage(damage, default);
-                    //audioData.GetComponent<AudioSource>().Play();
                     nextFire = Time.time + cooldown;
                 }
             }
@@ -57,8 +64,22 @@ public class LaserBeam : MonoBehaviour
         else
         {
             beam.gameObject.SetActive(false);
+            audioCancel = 0;
+            audioOn = false;
+            AudioDoen();
         }
         RangeActive();
+    }
+    public void AudioDoen()
+    {
+        if(audioOn)
+        {
+            audioData.GetComponent<AudioSource>().Play();
+        }
+        else
+        {
+            audioData.GetComponent<AudioSource>().Stop();
+        }
     }
     //check enemy inrange
     private void OnTriggerEnter(Collider enemyInRange)
@@ -107,6 +128,14 @@ public class LaserBeam : MonoBehaviour
     }
     public void RecieveDamage(float dmg)
     {
-        damage = dmg;
+        if(laserLvl5)
+        {
+            damage = dmg;
+            damage *= 2;
+        }
+        else
+        {
+            damage = dmg;
+        }
     }
 }

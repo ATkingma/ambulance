@@ -37,6 +37,10 @@ public class DamageCalculation : MonoBehaviour
         {
             Attack_Laser();
         }
+        if (towerNumber == 15)
+        {
+            Attack_Beam();
+        }
     }
     #region basic
     public void Attack_Basic()
@@ -122,6 +126,21 @@ public class DamageCalculation : MonoBehaviour
         {
             tower.GetComponent<LaserTargeting>().laserLvl5 = true;
         }
+    }
+    #endregion
+    #region BEAM
+    public void Attack_Beam()
+    {
+        upgradePoint++;
+        end_Damage = baseDamage + (upgradeDamage * upgradePoint);
+        if (upgradePoint == 5)
+        {
+            tower.GetComponent<LaserBeam>().laserLvl5 = true;
+        }
+        tower.GetComponent<LaserBeam>().RecieveDamage(end_Damage);
+        end_Speed = 0.1f;
+        attackPerSec = 10;
+        tower.GetComponent<LaserBeam>().RecieveAttackSpeed(end_Speed, attackPerSec);
     }
     #endregion
 }
