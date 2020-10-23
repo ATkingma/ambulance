@@ -87,4 +87,8 @@ public class MainMenuScript : MonoBehaviour
             x.SetActive(false);
         }
     }
+    public void SetQuality(int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+    }
 }

@@ -229,4 +229,24 @@ public class WaveScript : MonoBehaviour
             }
         }
     }
+    public void Skip1()
+    {
+        enemiesDied = maxEnemies;
+        waveCount += 1;
+    }
+    public void Skip5()
+    {
+        enemiesDied = maxEnemies;
+        waveCount += 5;
+    }
+    public void Skip10()
+    {
+        enemiesDied = maxEnemies;
+        waveCount += 10;
+    }
+    public void Skip15()
+    {
+        enemiesDied = maxEnemies;
+        waveCount += 15;
+    }
 }
